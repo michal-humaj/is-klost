@@ -5,7 +5,7 @@
 
 create table item (
   ITEM_TYPE                 varchar(31) not null,
-  id                        bigint not null,
+  id                        bigint auto_increment not null,
   name                      varchar(255),
   category                  integer,
   amount                    decimal(9,2),
@@ -20,24 +20,16 @@ create table user (
   constraint pk_user primary key (id))
 ;
 
-create sequence item_seq;
-
-create sequence user_seq;
-
 
 
 
 # --- !Downs
 
-SET REFERENTIAL_INTEGRITY FALSE;
+SET FOREIGN_KEY_CHECKS=0;
 
-drop table if exists item;
+drop table item;
 
-drop table if exists user;
+drop table user;
 
-SET REFERENTIAL_INTEGRITY TRUE;
-
-drop sequence if exists item_seq;
-
-drop sequence if exists user_seq;
+SET FOREIGN_KEY_CHECKS=1;
 

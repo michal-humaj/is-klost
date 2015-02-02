@@ -1,5 +1,6 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
 [0m[[0mdebug[0m] [0m	(C:\Users\MiHu\Documents\projects\is-klost\is-klost\conf\application.conf,C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\MiHu\Documents\projects\is-klost\is-klost\conf\ebean.properties,C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\classes\ebean.properties)[0m
 [0m[[0mdebug[0m] [0m	(C:\Users\MiHu\Documents\projects\is-klost\is-klost\conf\evolutions,C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\classes\evolutions)[0m
 [0m[[0mdebug[0m] [0m	(C:\Users\MiHu\Documents\projects\is-klost\is-klost\conf\messages,C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\classes\messages)[0m
 [0m[[0mdebug[0m] [0m	(C:\Users\MiHu\Documents\projects\is-klost\is-klost\conf\messages.sk,C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\classes\messages.sk)[0m
