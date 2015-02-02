@@ -38,7 +38,7 @@ Seq[Any]()}
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Feb 02 11:59:56 CET 2015
+                  DATE: Mon Feb 02 12:03:46 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/item/form.scala.html
                   HASH: 66b241d4daa4592a94909d15c3d366d3f5903ab6
                   MATRIX: 
