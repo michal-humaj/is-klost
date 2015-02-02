@@ -1,4 +1,3 @@
-ECHO Hello World!
 git add . -A
 git commit -m "Deploy to dev"
 git push dev dev:master
