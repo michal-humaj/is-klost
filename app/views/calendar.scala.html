@@ -1,0 +1,8 @@
+@views.html.master.main(Messages("nav.cal"))(0) {
+
+    @views.html.master.datepicker()
+} {
+    Calendar
+} {
+    <script src='@routes.Assets.at("js/calendarAdmin.js")'></script>
+}

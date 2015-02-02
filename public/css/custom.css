@@ -1,0 +1,129 @@
+.navbar .navbar-brand {
+    padding-top: 6px;
+    padding-bottom: 0px;
+    padding-right: 21px;
+}
+
+.ui-datepicker {
+    width: 190px;
+}
+
+.ui-datepicker td>a, .ui-datepicker td>span {
+    min-width: 20px;
+}
+
+h4 {
+    padding-left: 4px;
+}
+
+.clearfix{
+    padding-left: 0px;
+}
+
+.lbl {
+    padding-left: 2px;
+}
+
+.alert {
+    max-width: 640px;
+}
+
+.widgetTentList{
+    max-width: 640px;
+}
+
+form{
+    max-width: 640px;
+}
+
+.tdAlignRight{
+    text-align:right;
+}
+
+.table>tbody>tr>td.tdSwitch{
+    padding-top: 7px;
+    padding-bottom: 0px;
+}
+
+.table>thead>tr>th.thEventStartEnd{
+    width: 100px;
+}
+
+.widgetContentWidth{
+    display: inline-block;
+}
+
+.badgeAction {
+    background-color: #7BD148;
+}
+
+.badgeReservationn {
+    background-color: #F691B2;
+}
+
+.badgeSelftransport {
+    background-color: #FAD165;
+}
+
+input[type=checkbox].ace.ace-switch.ace-switch-6:checked+.lbl::before {
+    background-color: #438eb9;
+}
+
+.textRented{
+    color: #7BD148;
+}
+
+.textReserved{
+    color: #F691B2;
+}
+
+.textBlack{
+    color: #404040;
+}
+
+.textGreen{
+    color: #2e8965;
+}
+
+table.tableScrollable thead, table.tableScrollable tbody, table.tableScrollable tr, table.tableScrollable td, table.tableScrollable th { display: block; }
+
+table.tableScrollable tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+table.tableScrollable tbody {
+    overflow-y: auto;
+}
+
+.table.tableNoBorder>thead>tr>th, .table.tableNoBorder>tbody>tr>td {
+    border-top-width: 0px;
+    border-right-width: 0px;
+}
+
+/* Cell widths*/
+table.tableScrollable .thItemName{
+    width: 380px;
+    float: left;
+}
+
+table.tableScrollable .thNumberValue{
+    width: 90px;
+    float: left;
+}
+
+table.tableScrollable .thItemControls{
+    width: 130px;
+    float: left;
+}
+
+table.tableScrollable .tdItemControls{
+    width: 113px;
+    float: left;
+}
+
+
+
+

@@ -1,0 +1,9 @@
+@views.html.master.main(Messages("nav.store"))(1) {
+
+    @views.html.master.datepicker()
+    @views.html.master.categories()
+} {
+    Store
+} {
+    <script src='@routes.Assets.at("js/storeAdmin.js")'></script>
+}

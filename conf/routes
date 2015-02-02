@@ -1,0 +1,62 @@
+GET           /                                           controllers.App.calendar(date = "TODAY")
+GET           /store                                      controllers.App.store(date = "TOMMOROW")
+GET           /store/:date                                controllers.App.store(date)
+#  pre skladnika zobrazit sklad
+GET           /store/storeman                             controllers.App.storeStrmn()
+
+# Play-authenticate routes
+GET         /login                                        controllers.App.login()
+GET         /logout                                       com.feth.play.module.pa.controllers.Authenticate.logout
+GET         /authenticate/:provider                       com.feth.play.module.pa.controllers.Authenticate.authenticate(provider)
+GET         /authenticate/:provider/denied                controllers.App.oAuthDenied(provider)
+
+
+#------------- EEVENTS
+#---------------------
+POST          /ajax/event                                 controllers.Events.add()
+GET           /event/:eventType/:id                       controllers.Events.edit(eventType, id)
+PUT           /event/:eventType/:id                       controllers.Events.update(eventType, id)
+#skladnik edit a update
+GET           /event/:eventType/:id/storeman              controllers.Events.editStrmn(eventType, id)
+PUT           /event/:eventType/:id/storeman              controllers.Events.updateStrmn(eventType, id)
+GET           /event/INSTALLATION/:id                     controllers.Events.editInstl(eventType, id)
+PUT           /event/INSTALLATION/:id                     controllers.Events.updateInstl(eventType, id)
+PUT           /ajax/event/drag                            controllers.Events.drag(eventType, id)
+PUT           /ajax/event/:eventType/:id/changeCal        controllers.Events.changeCal(eventType, id)
+DELETE        /event/:eventType/:id                       controllers.Events.delete(eventType, id)
+
+GET           /ajax/actions/upcoming                      controllers.Events.upcomingActions()
+
+
+#------------- ITEMS
+#-------------------
+GET           /ajax/items                                 controllers.Items.list()
+POST          /ajax/item                                  controllers.Items.add()
+PUT           /ajax/item/:id                              controllers.Items.update(id:Long)
+DELETE        /ajax/item/:id                              controllers.Items.delete(id:Long)
+PUT           /ajax/item/:id/import                       controllers.Items.imprt(id:Long)
+PUT           /ajax/item/:id/export                       controllers.Items.export(id:Long)
+
+#------------- AVAILABILITY
+#--------------------------
+GET           /ajax/avail                                 controllers.Avail.availability()
+
+#------------- TENTS
+#-------------------
+GET           /tents                                      controllers.Tents.list()
+GET           /tent                                       controllers.Tents.neu()
+POST          /tent                                       controllers.Tents.add()
+GET           /tent/:id                                   controllers.Tents.edit(id:Long)
+PUT           /tent/:id                                   controllers.Tents.update(id:Long)
+DELETE        /tent/:id                                   controllers.Tents.delete(id:Long)
+
+#------------- DOCUMENTS
+#-----------------------
+GET           /priceOffer/:eventType/:id                  controllers.Documents.priceOffer(eventType, id)
+GET           /contract/:eventType/:id                    controllers.Documents.contract(eventType, id)
+
+#------------- Public files and JS routes serving
+#------------------------------------------------
+GET           /assets/javascripts/routes                  controllers.App.jsRoutes()
+GET           /assets/*file                               controllers.Assets.at(path="/public", file)
+GET           /:date                                      controllers.App.calendar(date)

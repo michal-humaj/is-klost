@@ -1,0 +1,17 @@
+<ul class="nav nav-list">
+
+@for(cat <- dto.Category.values()) {
+    @if(!cat.equals(dto.Category.TENT)) {
+        <li>
+            <a href="#@cat">
+                <span class="menu-text">@Messages(cat.toString())</span>
+            </a>
+        </li>
+    }
+}
+
+</ul>
+
+<div class="sidebar-toggle">
+    <i class="ace-icon fa fa-cubes"></i>
+</div>

@@ -1,0 +1,23 @@
+@(title: String)(tabNumber: Int)(sidebar: Html)(content: Html)(javascripts: Html)
+
+@views.html.master.imports(title)("no-skin") {
+
+    @views.html.master.navbar(tabNumber)
+
+    <div class="main-container" id="main-container" data-target="#sidebar">
+
+        <div id="sidebar" class="sidebar sidebar-fixed responsive">
+        @sidebar
+        </div>
+
+        <div class="main-content">
+            <div class="page-content">
+            @content
+            </div>
+        </div>
+
+    </div>
+
+} {
+    @javascripts
+}

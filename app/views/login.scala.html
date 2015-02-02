@@ -1,0 +1,60 @@
+@import com.feth.play.module.pa.views.html._
+
+@views.html.master.imports(Messages("title.login"))("login-layout blur-login") {
+    <div class="main-container">
+        <div class="main-content">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="login-container">
+
+                        <div class="center">
+                            <h1>
+                                <i class="ace-icon fa fa-leaf green"></i>
+                                <span class="red">IS</span>
+                                <span class="white" id="id-text2">Klost</span>
+                            </h1>
+                            <h4 class="blue" id="id-company-text">&copy;  TECHNOĽAN - KLOST, s.r.o.</h4>
+                        </div>
+
+                        <div class="space-6"></div>
+
+                        <div class="position-relative">
+                            <div id="login-box" class="login-box visible widget-box no-border">
+                                <div class="widget-body">
+                                    <div class="widget-main">
+                                        <h4 class="header blue lighter bigger">
+                                            <i class="ace-icon fa fa-key green"></i>
+                                            @Messages("p.login")
+                                        </h4>
+                                        <div class="alert-message warning">
+                                            @flash.get("flash")
+
+                                            @currentAuth() { auth =>
+                                                @if(auth != null) {
+                                                    @Messages("err.unauthorized")
+                                                }
+                                            }
+                                        </div>
+                                        <div class="space-6"></div>
+
+                                        <div class="social-login center">
+                                            @forProviders() { p =>
+                                                <a class="btn btn-danger" href="@p.getUrl()">
+                                                    <i class="ace-icon fa fa-google-plus"></i>
+                                                </a>
+                                            }
+                                        </div>
+                                    </div><!-- /.widget-main -->
+                                </div><!-- /.widget-body -->
+                            </div><!-- /.login-box -->
+                        </div><!-- /.position-relative -->
+
+                    </div>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.main-content -->
+    </div> <!-- /.main-container -->
+
+} {
+
+}
