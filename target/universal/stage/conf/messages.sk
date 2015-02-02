@@ -1,0 +1,148 @@
+#Item categories
+TENT=Stany
+TABLE=Stoly
+CHAIR=Stoličky
+CLOTH=Nastieranie
+TARP=Plachty na stany
+HEATING=Kúrenie
+LIGHT=Svetlá
+INFLATABLE=Nafukovadlá
+FLOOR=Podlahy
+ACCESSORY=Doplnky
+TOOL=Náradie
+BALDACHIN=Baldachýny
+OTHER=Ostatné
+CONSTRUCTION=Konštrukcie stany
+CARPET=Koberce
+PB=PB
+
+#Event types
+ACTION=Akcia
+RESERVATION=Rezervácia
+SELFTRANSPORT=Vlastná doprava
+INSTALLATION=Montáž
+
+
+
+title.login=Prihlásenie
+
+nav.cal=Kalendár
+nav.store=Sklad
+nav.tents=Stany
+nav.admin=Admin
+nav.storeman=Skladník
+
+# Button labels
+btn.logout=Ohlásiť sa
+btn.edit=Upraviť
+btn.save=Uložiť
+
+btn.newTent=Vytvoriť stan
+btn.newItem=Pridať položku
+
+btn.addTent=Vytvoriť
+btn.addEvent=Vytvoriť 
+btn.addItem=Vytvoriť
+
+btn.import=Naskladniť
+btn.export=Vyskladniť
+
+btn.back=Späť
+btn.delete=Vymazať
+
+btn.toAction=Zmeniť na akciu
+btn.toReservation=Zmeniť na rezerváciu
+
+btn.priceOffer=Cenová ponuka
+btn.contract=Zmluva
+btn.specs=Výkaz
+
+# Labels
+lbl.name=Názov
+lbl.cat=Kategória
+lbl.amount=Množstvo
+lbl.weight=Hmotnosť
+
+lbl.start=Začiatok
+lbl.end=Koniec
+lbl.allDay=Celý deň
+lbl.eventType=Typ udalosti
+lbl.assignedAction=Priradená akcia
+lbl.calcAvail=Výpočet dostupnosti
+
+lbl.kg=kg
+lbl.pcs=ks
+lbl.m=m
+lbl.kgpm=kg/m
+
+# Headings
+h.tents=Typy stanov v ponuke
+h.events=Udalosti
+h.itemAvail=Dostupnosť položiek
+
+h.newTent=Nový typ stanu
+h.newEvent=Nová udalosť
+h.newItem=Nová položka
+
+h.editTent=Upraviť stan
+h.editInstallation=Upraviť montáž
+h.editEvent=Upraviť udalosť
+h.editItem=Upraviť položku
+
+h.eventItems=Potrebné položky
+h.eventCarpets=Potrebné koberce
+h.tentItems=Potrebné položky
+
+h.import=Naskladniť
+h.export=Vyskladniť
+
+h.deleteTent=Vymazať stan?
+h.deleteEvent=Vymazať udalosť?
+h.deleteItem=Vymazať položku?
+
+# Table headings
+t.event=Udalosť
+t.start=Začiatok
+t.end=Koniec
+t.item=Položka
+t.available=Dostupné
+t.reserved=Rezervované
+t.rented=Prenajaté
+
+# Prompts
+p.deleteTent=Naozaj chcete vymazať tento stan?
+p.deleteEvent=Naozaj chcete vymazať túto udalosť?
+p.deleteItem=Naozaj chcete vymazať túto položku?
+p.login=Prihláste sa cez Google
+p.logout=Ďakujeme za použitie, ste odhlásení
+p.accept=Musíte povoliť prístup ku kalendáru aby ste sa mohli úspešne prihlásiť
+
+# Flashes
+f.addItem=Položka {0} úspešne vytvorená.
+f.addTent=Stan {0} úspešne vytvorený.
+
+f.updateItem=Zmeny v položke {0} boli uložené.
+f.updateEvent=Zmeny v udalosti {0} boli uložené.
+f.updateTent=Zmeny v stane {0} boli uložené.
+
+f.deleteItem=Položka {0} bola vymazaná.
+f.deleteEvent=Udalosť {0} bola vymazaná.
+f.deleteTent=Stan {0} bol vymazaný.
+
+f.importItem=Množstvo položky {0} ste z zvýšili z {1} na {2}.
+f.exportItem=Množstvo položky {0} ste z znížili z {1} na {2}.
+
+# Errors
+err.deleteItem=Nemôžete vymazať položku {0} pretože je súčasťou stanu, alebo je priradená k udalosti.
+err.deleteTent=Nemôžete vymazať stan {0} pretože je priradený k udalosti.
+err.eventStartEnd=Udalosť musí končiť neskôr ako začína.
+err.googleCal=Požadovanú operáciu sme nemohli vykonať. Buď sú servery Google nedostupné alebo nemáte dostatočné oprávnenia.
+err.404=Hľadali sme všade, ale požadovanú stránku sme nenašli
+err.500.h=Nastala chyba
+err.500.p=Pracujeme však na jej odstránení!
+err.unauthorized=Prepáčte, nie ste však oprávnení pracovať s týmto systémom
+
+
+
+
+
