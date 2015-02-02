@@ -45,7 +45,7 @@ Seq[Any](_display_(/*1.2*/views/*1.7*/.html.master.main(Messages("nav.cal"))/*1.
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Feb 02 11:42:41 CET 2015
+                  DATE: Mon Feb 02 11:47:32 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/calendar.scala.html
                   HASH: d4f9e73e3a790b1c272de461ecc9ac1d0813f76d
                   MATRIX: 801->1|813->6|859->44|870->47|909->49|941->56|954->61|999->86|1018->88|1056->90|1087->95|1114->105|1152->107|1183->112|1223->126|1237->132|1290->165

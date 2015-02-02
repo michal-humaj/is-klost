@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150202114307"/>
+		date="20150202114755"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-java-ebean_2.11">
 			<revision name="2.3.7" status="release" pubdate="20141213053020" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="85">
@@ -117,13 +117,13 @@
 			</revision>
 		</module>
 		<module organisation="org.json" name="json">
-			<revision name="20141113" status="release" pubdate="20141113174813" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/douglascrockford/JSON-java" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="79">
-				<license name="The JSON License" url="http://json.org/license.html"/>
-				<metadata-artifact status="no" details="" size="3585" time="0" location="C:\Users\MiHu\.ivy2\cache\org.json\json\ivy-20141113.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/json/json/20141113/json-20141113.pom"/>
-				<caller organisation="is-klost" name="is-klost_2.11" conf="compile-internal, compile, provided, optional" rev="20141113" rev-constraint-default="20141113" rev-constraint-dynamic="20141113" callerrev="1.0"/>
+			<revision name="20090211" status="release" pubdate="20090226193142" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.json.org/java/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="79">
+				<license name="provided without support or warranty" url="http://www.json.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2937" time="0" location="C:\Users\MiHu\.ivy2\cache\org.json\json\ivy-20090211.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/json/json/20090211/json-20090211.pom"/>
+				<caller organisation="is-klost" name="is-klost_2.11" conf="compile-internal, compile, provided, optional" rev="20090211" rev-constraint-default="20090211" rev-constraint-dynamic="20090211" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="json" type="jar" ext="jar" status="no" details="" size="65050" time="0" location="C:\Users\MiHu\.ivy2\cache\org.json\json\jars\json-20141113.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/json/json/20141113/json-20141113.jar"/>
+					<artifact name="json" type="jar" ext="jar" status="no" details="" size="45944" time="0" location="C:\Users\MiHu\.ivy2\cache\org.json\json\jars\json-20090211.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/json/json/20090211/json-20090211.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

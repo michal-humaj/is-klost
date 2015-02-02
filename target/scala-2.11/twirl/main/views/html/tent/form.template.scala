@@ -47,7 +47,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Feb 02 11:42:42 CET 2015
+                  DATE: Mon Feb 02 11:47:33 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/tent/form.scala.html
                   HASH: 6ff158a575c84926048df1d1f9b0fde9a436ea92
                   MATRIX: 802->0
