@@ -50,7 +50,7 @@ function setScrollspyOffset(val){
     $('.tableScrollable > tbody').scrollspy({ offset: val });
 }
 
-function setListenerCollapseEventsWidget(){
+function setAvailTableHeightOnCollapseEventsWidget(){
     $("#btnCollapseEventsWidget").on('click', function() {
         setTimeout(function(){
             setAvailTableHeightAdmin();
@@ -85,7 +85,7 @@ function initFullcalendar(){
             title: $.trim($(this).text()) // use the element's text as the event title
         };
 
-        // store the Event Object in the DOM element so we can get to it later
+        // storeAdmin the Event Object in the DOM element so we can get to it later
         $(this).data('eventObject', eventObject);
 
         // make the event draggable using jQuery UI

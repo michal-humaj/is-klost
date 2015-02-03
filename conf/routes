@@ -4,13 +4,6 @@ GET           /store/:date                                controllers.App.store(
 #  pre skladnika zobrazit sklad
 GET           /store/storeman                             controllers.App.storeStrmn()
 
-# Play-authenticate routes
-GET         /login                                        controllers.App.login()
-GET         /logout                                       com.feth.play.module.pa.controllers.Authenticate.logout
-GET         /authenticate/:provider                       com.feth.play.module.pa.controllers.Authenticate.authenticate(provider)
-GET         /authenticate/:provider/denied                controllers.App.oAuthDenied(provider)
-
-
 #------------- EEVENTS
 #---------------------
 POST          /ajax/event                                 controllers.Events.add()
@@ -24,9 +17,7 @@ PUT           /event/INSTALLATION/:id                     controllers.Events.upd
 PUT           /ajax/event/drag                            controllers.Events.drag(eventType, id)
 PUT           /ajax/event/:eventType/:id/changeCal        controllers.Events.changeCal(eventType, id)
 DELETE        /event/:eventType/:id                       controllers.Events.delete(eventType, id)
-
 GET           /ajax/actions/upcoming                      controllers.Events.upcomingActions()
-
 
 #------------- ITEMS
 #-------------------
@@ -55,8 +46,16 @@ DELETE        /tent/:id                                   controllers.Tents.dele
 GET           /priceOffer/:eventType/:id                  controllers.Documents.priceOffer(eventType, id)
 GET           /contract/:eventType/:id                    controllers.Documents.contract(eventType, id)
 
+# Play-authenticate routes
+GET           /login                                      controllers.App.login()
+GET           /logout                                     com.feth.play.module.pa.controllers.Authenticate.logout
+GET           /authenticate/:provider                     com.feth.play.module.pa.controllers.Authenticate.authenticate(provider)
+GET           /authenticate/:provider/denied              controllers.App.oAuthDenied(provider)
+
 #------------- Public files and JS routes serving
 #------------------------------------------------
 GET           /assets/javascripts/routes                  controllers.App.jsRoutes()
 GET           /assets/*file                               controllers.Assets.at(path="/public", file)
+
 GET           /:date                                      controllers.App.calendar(date)
+

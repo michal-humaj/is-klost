@@ -1,0 +1,75 @@
+<div class="modal fade" id="modalNewItem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        @helper.form(routes.Items.add(), 'id-> "form", 'role -> "form", 'class -> "form-horizontal"){
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">@Messages("h.newItem")</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group" data-bind="attr: { class: newItem().category.isValid() ? 'form-group' : 'form-group has-info'  }">
+                        <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.cat")</label>
+
+                        <div class="col-sm-6">
+                            <select name="category" class="form-control" data-bind="value: newItem().category" autofocus>
+                            @for(cat <- dto.Category.values()) {
+                                @if(!cat.equals(dto.Category.TENT)) {
+                                    <option value="@cat">@Messages(cat.toString())</option>
+                                }
+                            }
+                            </select>
+                        </div>
+
+                        <div class="help-block col-sm-reset inline" data-bind="validationMessage: newItem().category"></div>
+                    </div>
+
+                    <div class="form-group" data-bind="attr: { class: newItem().name.isValid() ? 'form-group' : 'form-group has-info' }">
+                        <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.name")</label>
+
+                        <div class="col-sm-6">
+                            <input name="name" class="form-control" placeholder="Stolička plastová" data-bind="value: newItem().name">
+                        </div>
+
+                        <div class="help-block col-sm-reset inline" data-bind="validationMessage: newItem().name"></div>
+                    </div>
+
+                    <div class="form-group" data-bind="attr: { class: newItem().amount.isValid() ? 'form-group' : 'form-group has-info' }">
+                        <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.amount")</label>
+
+                        <div class="col-sm-3 controls">
+                            <div class="input-group">
+                                <input name="amount" class="form-control" placeholder="340" data-bind="value: newItem().amount">
+                                <span class="input-group-addon">@Messages("lbl.pcs")</span>
+                            </div>
+                        </div>
+
+                        <div class="help-block col-sm-reset inline" data-bind="validationMessage: newItem().amount"></div>
+                    </div>
+
+                    <div class="form-group" data-bind="attr: { class: newItem().weight.isValid() ? 'form-group' : 'form-group has-info'  }">
+                        <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.weight")</label>
+
+                        <div class="col-sm-3 controls">
+                            <div class="input-group">
+                                <input name="weight" class="form-control" placeholder="1,85" data-bind="value: newItem().weight">
+                                <span class="input-group-addon">@Messages("lbl.kg")</span>
+                            </div>
+                        </div>
+
+                        <div class="help-block col-sm-reset inline"  data-bind="validationMessage: newItem().weight"></div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <div class="pull-left">
+                        <button type="button" class="btn btn-primary" data-bind="click: addItem">@Messages("btn.addItem")</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">@Messages("btn.back")</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

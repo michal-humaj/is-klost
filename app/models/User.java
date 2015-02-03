@@ -54,7 +54,6 @@ public class User extends Model {
         }
         JSONTokener tokener = new JSONTokener(builder.toString());
         JSONObject obj = new JSONObject(tokener);
-        System.out.println("ACCESS TOKEN obtained: " + obj.get("access_token").toString());
         return obj.get("access_token").toString();
     }
 }

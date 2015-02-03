@@ -79,6 +79,7 @@ lbl.kgpm=kg/m
 h.tents=Typy stanov v ponuke
 h.events=Udalosti
 h.itemAvail=Dostupnosť položiek
+h.items=Položky
 
 h.newTent=Nový typ stanu
 h.newEvent=Nová udalosť
@@ -108,6 +109,7 @@ t.item=Položka
 t.available=Dostupné
 t.reserved=Rezervované
 t.rented=Prenajaté
+t.action=Akcia
 
 # Prompts
 p.deleteTent=Naozaj chcete vymazať tento stan?
@@ -137,9 +139,10 @@ err.deleteItem=Nemôžete vymazať položku {0} pretože je súčasťou stanu, a
 err.deleteTent=Nemôžete vymazať stan {0} pretože je priradený k udalosti.
 err.eventStartEnd=Udalosť musí končiť neskôr ako začína.
 err.googleCal=Požadovanú operáciu sme nemohli vykonať. Buď sú servery Google nedostupné alebo nemáte dostatočné oprávnenia.
-err.404=Hľadali sme všade, ale požadovanú stránku sme nenašli
+err.404.h=Táto stránka neexistuje
+err.404.p=Hľadali sme všade, ale požadovanú stránku sme nenašli
 err.500.h=Nastala chyba
-err.500.p=Pracujeme však na jej odstránení!
+err.500.p=Pracujeme však na jej odstránení
 err.unauthorized=Prepáčte, nie ste však oprávnení pracovať s týmto systémom
 
 
