@@ -1,8 +1,6 @@
 GET           /                                           controllers.App.calendar(date = "TODAY")
 GET           /store                                      controllers.App.store(date = "TOMMOROW")
 GET           /store/:date                                controllers.App.store(date)
-#  pre skladnika zobrazit sklad
-GET           /store/storeman                             controllers.App.storeStrmn()
 
 #------------- EEVENTS
 #---------------------
@@ -56,6 +54,7 @@ GET           /authenticate/:provider/denied              controllers.App.oAuthD
 #------------------------------------------------
 GET           /assets/javascripts/routes                  controllers.App.jsRoutes()
 GET           /assets/*file                               controllers.Assets.at(path="/public", file)
+GET           /jsmessages                                 controllers.App.jsMessages()
 
 GET           /:date                                      controllers.App.calendar(date)
 

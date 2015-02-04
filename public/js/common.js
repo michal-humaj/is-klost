@@ -62,12 +62,21 @@ function setFullcalendarHeight(){
     $("#fullcalendar").fullCalendar('option', 'contentHeight', $(window).height() - 119);
 }
 
-function showGritterNotification(){
+function showSuccessNotification(msg){
     $.gritter.add({
-        title: 'Uspech',
-        text: 'Vytvorili ste novy polozku stol novy rododendron',
-        time: 2000,
+        title: Messages('h.success'),
+        text: msg,
+        time: 1500,
         class_name: 'gritter-success gritter-light'
+    });
+}
+
+function showErrorNotification(msg){
+    $.gritter.add({
+        title: Messages('h.err'),
+        text: msg,
+        time: 6000,
+        class_name: 'gritter-error gritter-light'
     });
 }
 

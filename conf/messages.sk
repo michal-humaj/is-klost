@@ -60,8 +60,9 @@ btn.specs=Výkaz
 # Labels
 lbl.name=Názov
 lbl.cat=Kategória
-lbl.amount=Množstvo
+lbl.amount=Počet
 lbl.weight=Hmotnosť
+lbl.length=Dĺžka
 
 lbl.start=Začiatok
 lbl.end=Koniec
@@ -101,6 +102,9 @@ h.deleteTent=Vymazať stan?
 h.deleteEvent=Vymazať udalosť?
 h.deleteItem=Vymazať položku?
 
+h.success=Úspech
+h.err=Chyba
+
 # Table headings
 t.event=Udalosť
 t.start=Začiatok
@@ -135,6 +139,7 @@ f.importItem=Množstvo položky {0} ste z zvýšili z {1} na {2}.
 f.exportItem=Množstvo položky {0} ste z znížili z {1} na {2}.
 
 # Errors
+err.general=Požadovanú operáciu sa nepodarilo vykonať. Skontrolujte svoje pripojenie a skúste reštartovať prehliadač, odhlásiť sa a prihlásiť sa znova.
 err.deleteItem=Nemôžete vymazať položku {0} pretože je súčasťou stanu, alebo je priradená k udalosti.
 err.deleteTent=Nemôžete vymazať stan {0} pretože je priradený k udalosti.
 err.eventStartEnd=Udalosť musí končiť neskôr ako začína.

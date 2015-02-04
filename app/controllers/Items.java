@@ -1,6 +1,7 @@
 package controllers;
 
 import models.StoredItem;
+import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
@@ -24,7 +25,7 @@ public class Items extends Controller {
     public static Result add() {
         StoredItem item = form(StoredItem.class).bindFromRequest().get();
         item.save();
-        return ok("polozka vytvorena");
+        return created(Messages.get("f.addItem", item.name));
     }
 
     public static Result imprt(long id) {

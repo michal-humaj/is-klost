@@ -62,6 +62,7 @@ lbl.name=Name
 lbl.cat=Category
 lbl.amount=Amount
 lbl.weight=Weight
+lbl.length=Length
 
 lbl.start=Start
 lbl.end=End
@@ -101,6 +102,9 @@ h.deleteTent=Delete tent?
 h.deleteEvent=Delete event?
 h.deleteItem=Delete item?
 
+h.success=Success
+h.err=Error
+
 # Table headings
 t.event=Event
 t.start=Start
@@ -135,6 +139,7 @@ f.importItem=Amount of item {0} increased from {1} to {2}
 f.exportItem=Amount of item {0} decreased from {1} to {2}
 
 # Errors
+err.general=Operation could not be comlpeted. Check your connection and try to restart web browser, logout and login again.
 err.deleteItem=You cannot delete item {0} because it is either part of a tent or it is assigned to an event.
 err.deleteTent=You cannot delete tent {0} because it is assigned to an event.
 err.eventStartEnd=End must be later than start.
