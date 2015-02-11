@@ -1,7 +1,6 @@
 package controllers;
 
 import models.StoredItem;
-import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
@@ -25,22 +24,25 @@ public class Items extends Controller {
     public static Result add() {
         StoredItem item = form(StoredItem.class).bindFromRequest().get();
         item.save();
-        return created(Messages.get("f.addItem", item.name));
-    }
-
-    public static Result imprt(long id) {
-        return play.mvc.Results.TODO;
+        return list();
     }
 
     public static Result update(long id) {
-        return play.mvc.Results.TODO;
+        StoredItem item = StoredItem.find.byId(id);
+        if (item == null) return notFound();
+        item = form(StoredItem.class).bindFromRequest().get();
+        item.update(id);
+        return list();
     }
 
     public static Result delete(long id) {
-        return play.mvc.Results.TODO;
+        StoredItem item = StoredItem.find.byId(id);
+        if (item == null) {
+            return notFound();
+        } else {
+            item.delete();
+            return list();
+        }
     }
 
-    public static Result export(long id) {
-        return play.mvc.Results.TODO;
-    }
 }

@@ -66,7 +66,7 @@ function showSuccessNotification(msg){
     $.gritter.add({
         title: Messages('h.success'),
         text: msg,
-        time: 1500,
+        time: 3000,
         class_name: 'gritter-success gritter-light'
     });
 }

@@ -35,7 +35,7 @@ nav.storeman=Skladník
 # Button labels
 btn.logout=Ohlásiť sa
 btn.edit=Upraviť
-btn.save=Uložiť
+btn.update=Uložiť
 
 btn.newTent=Vytvoriť stan
 btn.newItem=Pridať položku
@@ -76,6 +76,9 @@ lbl.pcs=ks
 lbl.m=m
 lbl.kgpm=kg/m
 
+lbl.import=Naskladniť
+lbl.export=Vyskladniť
+
 # Headings
 h.tents=Typy stanov v ponuke
 h.events=Udalosti
@@ -95,9 +98,6 @@ h.eventItems=Potrebné položky
 h.eventCarpets=Potrebné koberce
 h.tentItems=Potrebné položky
 
-h.import=Naskladniť
-h.export=Vyskladniť
-
 h.deleteTent=Vymazať stan?
 h.deleteEvent=Vymazať udalosť?
 h.deleteItem=Vymazať položku?
@@ -114,6 +114,12 @@ t.available=Dostupné
 t.reserved=Rezervované
 t.rented=Prenajaté
 t.action=Akcia
+
+#Tooltips
+tooltip.import=Naskladniť
+tooltip.export=Vyskladniť
+tooltip.edit=Upraviť
+tooltip.delete=Vymazať
 
 # Prompts
 p.deleteTent=Naozaj chcete vymazať tento stan?

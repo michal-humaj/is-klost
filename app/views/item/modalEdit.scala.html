@@ -1,4 +1,4 @@
-<div class="modal fade" id="modalNewItem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalEditItem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog ">
 
         <form class="form-horizontal" role="form">
@@ -9,18 +9,18 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title">@Messages("h.newItem")</h4>
+                    <h4 class="modal-title">@Messages("h.editItem")</h4>
                 </div>
 
                 <div class="modal-body">
 
-                    @views.html.item.form("selectCategoryNewItem")
+                    @views.html.item.form("selectCategoryEditItem")
 
                 </div>
 
                 <div class="modal-footer">
                     <div class="pull-left">
-                        <button type="button" class="btn btn-primary" data-bind="click: add">@Messages("btn.addItem")</button>
+                        <button type="button" class="btn btn-primary" data-bind="click: update">@Messages("btn.update")</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">@Messages("btn.back")</button>
                     </div>
                 </div>

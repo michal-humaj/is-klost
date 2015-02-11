@@ -4,6 +4,14 @@
 } {
     @views.html.item.modalNew()
 
+    @views.html.item.modalEdit()
+
+    @views.html.item.modalImport()
+
+    @views.html.item.modalExport()
+
+    @views.html.item.modalDelete()
+
     <div class="row">
         <div class="col-xs-12">
 
@@ -16,7 +24,7 @@
 
                     <div class="widget-toolbar no-border">
                         <button class="btn btn-white btn-primary btn-xs" id="btnModalNewItem" data-toggle="modal"
-                        data-target="#modalNewItem"><b>@Messages("btn.newItem")</b></button>
+                        data-target="#modalNewItem" data-bind="click: modalAdd"><b>@Messages("btn.newItem")</b></button>
                     </div>
                 </div>
 
@@ -41,23 +49,27 @@
                                     <td data-bind="text: weight" class="thNumberValue"></td>
                                     <td class="tdItemControls">
                                         <div class="action-buttons">
-                                            <a class="textBlack tooltip-success" href="#" data-rel="tooltip"
-                                            title="Naskladnit">
+                                            <a class="textBlack tooltip-success linkImportItem" href="#" data-rel="tooltip"
+                                            title='@Messages("tooltip.import")' data-bind="click: $parent.edit"
+                                            data-toggle="modal" data-target="#modalImportItem">
                                                 <i class="ace-icon fa fa-plus bigger-130"></i>
                                             </a>
 
-                                            <a class="textBlack tooltip-warning" href="#" data-rel="tooltip"
-                                            title="Vyskladnit">
+                                            <a class="textBlack tooltip-warning linkExportItem" href="#" data-rel="tooltip"
+                                            title='@Messages("tooltip.export")'  data-bind="click: $parent.edit"
+                                            data-toggle="modal" data-target="#modalExportItem">
                                                 <i class="ace-icon fa fa-minus bigger-130"></i>
                                             </a>
 
-                                            <a class="textBlack tooltip-info" href="#" data-rel="tooltip"
-                                            title="Upravit">
+                                            <a class="textBlack tooltip-info linkEditItem" href="#" data-rel="tooltip"
+                                            title='@Messages("tooltip.edit")' data-bind="click: $parent.edit"
+                                            data-toggle="modal" data-target="#modalEditItem">
                                                 <i class="ace-icon fa fa-pencil bigger-130"></i>
                                             </a>
 
-                                            <a class="textBlack tooltip-error" href="#" data-rel="tooltip"
-                                            title="Vymazat">
+                                            <a class="textBlack tooltip-error linkDeleteItem" href="#" data-rel="tooltip"
+                                            title='@Messages("tooltip.delete")' data-bind="click: $parent.edit"
+                                            data-toggle="modal" data-target="#modalDeleteItem">
                                                 <i class="ace-icon fa fa-trash-o bigger-130"></i>
                                             </a>
                                         </div>

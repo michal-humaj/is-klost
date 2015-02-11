@@ -35,7 +35,7 @@ nav.storeman=Storekeeper
 # Button labels
 btn.logout=Logout
 btn.edit=Edit
-btn.save=Save
+btn.update=Save
 
 btn.newTent=Create tent type
 btn.newItem=Add new item
@@ -76,6 +76,9 @@ lbl.pcs=pcs
 lbl.m=m
 lbl.kgpm=kg/m
 
+lbl.import=Buy/import to warehouse
+lbl.export=Sell/export from warehouse
+
 # Headings
 h.tents=Offered tent types
 h.events=Events
@@ -95,9 +98,6 @@ h.eventItems=Needed items
 h.eventCarpets=Needed carpets
 h.tentItems=Needed items
 
-h.import=Buy/import to warehouse
-h.export=Sell/export from warehouse
-
 h.deleteTent=Delete tent?
 h.deleteEvent=Delete event?
 h.deleteItem=Delete item?
@@ -114,6 +114,12 @@ t.available=Available
 t.reserved=Reserved
 t.rented=Rented
 t.action=Action
+
+#Tooltips
+tooltip.import=Import
+tooltip.export=Export
+tooltip.edit=Edit
+tooltip.delete=Delete
 
 # Prompts
 p.deleteTent=Do you want to delete this tent?

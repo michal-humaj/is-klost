@@ -35,7 +35,9 @@ public class App extends Controller {
         return ok(
                 Routes.javascriptRouter("jsRoutes",
                         routes.javascript.Items.list(),
-                        routes.javascript.Items.add()
+                        routes.javascript.Items.add(),
+                        routes.javascript.Items.update(),
+                        routes.javascript.Items.delete()
                 )
         );
     }

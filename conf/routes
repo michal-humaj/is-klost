@@ -23,8 +23,6 @@ GET           /ajax/items                                 controllers.Items.list
 POST          /ajax/item                                  controllers.Items.add()
 PUT           /ajax/item/:id                              controllers.Items.update(id:Long)
 DELETE        /ajax/item/:id                              controllers.Items.delete(id:Long)
-PUT           /ajax/item/:id/import                       controllers.Items.imprt(id:Long)
-PUT           /ajax/item/:id/export                       controllers.Items.export(id:Long)
 
 #------------- AVAILABILITY
 #--------------------------
