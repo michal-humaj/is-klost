@@ -114,6 +114,7 @@ t.available=Available
 t.reserved=Reserved
 t.rented=Rented
 t.action=Action
+t.tent=Tent
 
 #Tooltips
 tooltip.import=Import
@@ -155,3 +156,4 @@ err.404.p=We looked everywhere but we could not find this page
 err.500.h=Something Went Wrong
 err.500.p=But we are working on it!
 err.unauthorized=Sorry, but you are not authorized to work with this system
+err.itemFromList=Choose only items from the list

@@ -1,6 +1,67 @@
-@views.html.master.main(Messages("nav.tents"))(2){
-}{
-  Stany
-}{
+@(tents: List[Tent])
+
+@views.html.master.main(Messages("nav.tents"))(2) {
+} {
+    <div class="row">
+        <div class="col-xs-12">
+
+            <div class="widget-box light-border widgetTentList">
+                <div class="widget-header widget-header-flat">
+                    <h4 class="widget-title ">
+                    @Messages("h.tents")
+                    </h4>
+
+                    <div class="widget-toolbar no-border">
+                        <a href="@routes.Tents.neu">
+                            <button class="btn btn-white btn-primary btn-xs"><b>@Messages("btn.newTent")</b></button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="widget-body">
+                    <div class="widget-main no-padding">
+
+                        <table class="table">
+                            <thead class="thin-border-bottom">
+                                <tr>
+                                    <th>@Messages("t.tent")</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            @for(tent <- tents) {
+                                <tr>
+                                    <td>@tent.name</td>
+
+                                    <td class="align-right">
+                                        <div class="action-buttons">
+
+                                            <a class="text-primary" href="@routes.Tents.edit(tent.id)">
+                                                <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                @Messages("btn.edit")
+                                            </a>
+
+                                            <a class="text-danger" data-toggle="modal" data-target="#modalDeleteTent">
+                                                <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                @Messages("btn.delete")
+                                            </a>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                            </tbody>
+
+                        </table>
+
+                    </div><!-- /.widget-main -->
+                </div><!-- /.widget-body -->
+            </div><!-- /.widget-box -->
+
+            <!-- page content goes here -->
+        </div>
+    </div>
+} {
 
 }

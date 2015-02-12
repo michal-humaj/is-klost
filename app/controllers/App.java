@@ -1,11 +1,17 @@
 package controllers;
 
+import jsmessages.JsMessages;
 import play.Play;
 import play.Routes;
 import play.i18n.Messages;
-import play.mvc.*;
-import jsmessages.JsMessages;
-import views.html.*;
+import play.mvc.Controller;
+import play.mvc.Http;
+import play.mvc.Result;
+import play.mvc.Security;
+import views.html.calendar;
+import views.html.login;
+import views.html.storeAdmin;
+import views.html.storeStrmn;
 
 import static controllers.LoggedAdmin.isUserAdmin;
 
@@ -22,9 +28,9 @@ public class App extends Controller {
     @Security.Authenticated(LoggedStoremanOrAdmin.class)
     public static Result store(String date) {
 
-        if( isUserAdmin() ){
+        if (isUserAdmin()) {
             return ok(storeAdmin.render());
-        }else{
+        } else {
             return ok(storeStrmn.render());
         }
     }
@@ -35,9 +41,11 @@ public class App extends Controller {
         return ok(
                 Routes.javascriptRouter("jsRoutes",
                         routes.javascript.Items.list(),
+                        routes.javascript.Items.listTentItems(),
                         routes.javascript.Items.add(),
                         routes.javascript.Items.update(),
-                        routes.javascript.Items.delete()
+                        routes.javascript.Items.delete(),
+                        routes.javascript.Tents.add()
                 )
         );
     }

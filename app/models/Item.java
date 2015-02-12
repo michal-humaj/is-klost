@@ -11,8 +11,8 @@ import java.math.BigDecimal;
  * Created by MiHu on 30.7.2014.
  */
 @Entity
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="ITEM_TYPE", discriminatorType=DiscriminatorType.STRING)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "ITEM_TYPE", discriminatorType = DiscriminatorType.STRING)
 public class Item extends Model {
 
     @Id
@@ -27,7 +27,7 @@ public class Item extends Model {
 
     public static Finder<Long, Item> find = new Finder<>(Long.class, Item.class);
 
-    public BigDecimal getWeight(){
-        return null;
+    public BigDecimal getWeight() throws Exception {
+        throw new Exception("getWeight invoked on Item which is supposed to be abstract class");
     }
 }

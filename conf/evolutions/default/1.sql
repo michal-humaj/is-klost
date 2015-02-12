@@ -3,6 +3,14 @@
 
 # --- !Ups
 
+create table accessory (
+  id                        bigint auto_increment not null,
+  tent_id                   bigint,
+  item_id                   bigint,
+  amount                    decimal(9,2),
+  constraint pk_accessory primary key (id))
+;
+
 create table item (
   ITEM_TYPE                 varchar(31) not null,
   id                        bigint auto_increment not null,
@@ -20,12 +28,18 @@ create table user (
   constraint pk_user primary key (id))
 ;
 
+alter table accessory add constraint fk_accessory_tent_1 foreign key (tent_id) references item (id) on delete restrict on update restrict;
+create index ix_accessory_tent_1 on accessory (tent_id);
+alter table accessory add constraint fk_accessory_item_2 foreign key (item_id) references item (id) on delete restrict on update restrict;
+create index ix_accessory_item_2 on accessory (item_id);
 
 
 
 # --- !Downs
 
 SET FOREIGN_KEY_CHECKS=0;
+
+drop table accessory;
 
 drop table item;
 

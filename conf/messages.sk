@@ -114,6 +114,7 @@ t.available=Dostupné
 t.reserved=Rezervované
 t.rented=Prenajaté
 t.action=Akcia
+t.tent=Stan
 
 #Tooltips
 tooltip.import=Naskladniť
@@ -155,6 +156,7 @@ err.404.p=Hľadali sme všade, ale požadovanú stránku sme nenašli
 err.500.h=Nastala chyba
 err.500.p=Pracujeme však na jej odstránení
 err.unauthorized=Prepáčte, nie ste však oprávnení pracovať s týmto systémom
+err.itemFromList=Vyberte položku zo zoznamu
 
 
 

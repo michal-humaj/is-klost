@@ -20,6 +20,7 @@ GET           /ajax/actions/upcoming                      controllers.Events.upc
 #------------- ITEMS
 #-------------------
 GET           /ajax/items                                 controllers.Items.list()
+GET           /ajax/listTentItems                         controllers.Items.listTentItems()
 POST          /ajax/item                                  controllers.Items.add()
 PUT           /ajax/item/:id                              controllers.Items.update(id:Long)
 DELETE        /ajax/item/:id                              controllers.Items.delete(id:Long)

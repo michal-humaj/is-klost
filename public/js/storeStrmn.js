@@ -5,6 +5,11 @@ function initKlostIS() {
     addEvent(window, "resize", setAvailTableHeightStoreman);
     setScrollspyOffset(140);
 
+    jsRoutes.controllers.Items.list().ajax().done(function (items) {
+        storeViewModel.items(items);
+        initTooltips();
+    });
+
     var selectCategoryEditItem = $("#selectCategoryEditItem");
     var selectCategoryNewItem = $("#selectCategoryNewItem");
     var modalNewItem = $('#modalNewItem');
@@ -68,10 +73,8 @@ function changeItemValidationBindings() {
     var amount = storeViewModel.item().amount();
     var weight = storeViewModel.item().weight();
     if (this.value === 'CARPET') {
-        console.log("CARPET zmena");
         storeViewModel.item(new Item(this.value, name, amount, weight, true));
     } else {
-        console.log("nie CARPET zmena");
         storeViewModel.item(new Item(this.value, name, amount, weight, false));
     }
     storeViewModel.item().id = id;
@@ -112,7 +115,7 @@ function StoreViewModel() {
     this.items = ko.observableArray();
     this.importAmount = ko.validatedObservable(new Amount());
 
-    this.modalAdd = function(){
+    this.modalAdd = function () {
         this.item(new Item());
     }
 
@@ -144,6 +147,7 @@ function StoreViewModel() {
         requestUpdateItem.done(function (items) {
             showSuccessNotification(Messages('f.updateItem', storeViewModel.item().name()));
             storeViewModel.items(items);
+            initTooltips();
         });
         requestUpdateItem.fail(function (jqXHR, textStatus) {
             showErrorNotification(Messages('err.general'));
@@ -160,6 +164,7 @@ function StoreViewModel() {
         requestImportItem.done(function (items) {
             showSuccessNotification(Messages('f.importItem', storeViewModel.item().name(), formerAmount, newAmount));
             storeViewModel.items(items);
+            initTooltips();
         });
         requestImportItem.fail(function (jqXHR, textStatus) {
             showErrorNotification(Messages('err.general'));
@@ -176,6 +181,7 @@ function StoreViewModel() {
         requestExportItem.done(function (items) {
             showSuccessNotification(Messages('f.exportItem', storeViewModel.item().name(), formerAmount, Math.round(newAmount * 100) / 100));
             storeViewModel.items(items);
+            initTooltips();
         });
         requestExportItem.fail(function (jqXHR, textStatus) {
             showErrorNotification(Messages('err.general'));
@@ -188,6 +194,7 @@ function StoreViewModel() {
         requestDeleteItem.done(function (items) {
             showSuccessNotification(Messages('f.deleteItem', storeViewModel.item().name()));
             storeViewModel.items(items);
+            initTooltips();
         });
         requestDeleteItem.fail(function (jqXHR, textStatus) {
             showErrorNotification(Messages('err.general'));
@@ -199,8 +206,4 @@ var storeViewModel = new StoreViewModel();
 ko.validation.init({insertMessages: false}, true);
 ko.validation.locale('sk-SK');
 ko.applyBindings(storeViewModel);
-var requestListItems = jsRoutes.controllers.Items.list().ajax();
-requestListItems.done(function (items) {
-    storeViewModel.items(items);
-    initTooltips();
-});
+
