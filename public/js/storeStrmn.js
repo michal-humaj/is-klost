@@ -197,7 +197,7 @@ function StoreViewModel() {
             initTooltips();
         });
         requestDeleteItem.fail(function (jqXHR, textStatus) {
-            showErrorNotification(Messages('err.general'));
+            showErrorNotification(jqXHR.responseText);
         });
     }
 }

@@ -1,21 +1,23 @@
+@(tentId : Long)
+
 @views.html.master.main(Messages("nav.tents"))(2) {
 } {
     <div class="page-header">
         <h1>
-        @Messages("h.newTent")
+        @Messages("h.editTent")
         </h1>
     </div>
 
     <div class="row">
         <div class="col-xs-12">
 
-        @helper.form(action = routes.Tents.add(), 'class -> "form-horizontal", 'role -> "form", 'id -> "form") {
+        @helper.form(action = routes.Tents.update(tentId), 'class -> "form-horizontal", 'role -> "form", 'id -> "form") {
 
-            @views.html.tent.form(0l)
+            @views.html.tent.form(tentId)
 
             <div class="clearfix form-actions">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary">@Messages("btn.addTent")</button>
+                    <button type="submit" class="btn btn-primary">@Messages("btn.update")</button>
                         &nbsp;
                     <a class="btn" type="reset" href="@routes.Tents.list">@Messages("btn.back")</a>
                 </div>
@@ -26,5 +28,5 @@
     </div>
 } {
     <script src='@routes.Assets.at("js/tentCommon.js")'></script>
-    <script src='@routes.Assets.at("js/tentNew.js")'></script>
+    <script src='@routes.Assets.at("js/tentEdit.js")'></script>
 }

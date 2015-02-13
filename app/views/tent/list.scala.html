@@ -2,21 +2,33 @@
 
 @views.html.master.main(Messages("nav.tents"))(2) {
 } {
+    @views.html.tent.modalDelete()
+
     <div class="row">
         <div class="col-xs-12">
+            @if(flash.containsKey("success")) {
+                <div class="alert alert-success">
+                @flash.get("success")
+                </div>
+            }
+            @if(flash.containsKey("error")) {
+                <div class="alert alert-danger">
+                @flash.get("error")
+                </div>
+            }
 
             <div class="widget-box light-border widgetTentList">
-                <div class="widget-header widget-header-flat">
-                    <h4 class="widget-title ">
-                    @Messages("h.tents")
-                    </h4>
 
-                    <div class="widget-toolbar no-border">
-                        <a href="@routes.Tents.neu">
-                            <button class="btn btn-white btn-primary btn-xs"><b>@Messages("btn.newTent")</b></button>
-                        </a>
+                <form method="get" action="@routes.Tents.neu">
+                    <div class="widget-header widget-header-flat">
+                        <h4 class="widget-title ">
+                        @Messages("h.tents")
+                        </h4>
+                        <div class="widget-toolbar no-border">
+                            <button type="submit" class="btn btn-white btn-primary btn-xs"><b>@Messages("btn.newTent")</b></button>
+                        </div>
                     </div>
-                </div>
+                </form>
 
                 <div class="widget-body">
                     <div class="widget-main no-padding">
@@ -42,7 +54,9 @@
                                                 @Messages("btn.edit")
                                             </a>
 
-                                            <a class="text-danger" data-toggle="modal" data-target="#modalDeleteTent">
+                                            <a class="text-danger linkDeleteTent" data-toggle="modal" href=""
+                                            data-deleteUrl="@routes.Tents.delete(tent.id)"
+                                            data-tentName="@tent.name" data-target="#modalDeleteTent">
                                                 <i class="ace-icon fa fa-trash-o bigger-130"></i>
                                                 @Messages("btn.delete")
                                             </a>
@@ -63,5 +77,5 @@
         </div>
     </div>
 } {
-
+    <script src='@routes.Assets.at("js/tentList.js")'></script>
 }

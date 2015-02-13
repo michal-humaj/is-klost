@@ -1,10 +1,12 @@
 package controllers;
 
 import dto.Category;
+import models.Accessory;
 import models.StoredItem;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
+import play.i18n.Messages;
 
 import java.util.List;
 
@@ -43,14 +45,13 @@ public class Items extends Controller {
         return list();
     }
 
-    //TODO ked sa deletuje polozka ktora sa nachadza v stane alebo v evente
     public static Result delete(long id) {
         StoredItem item = StoredItem.find.byId(id);
-        if (item == null) {
-            return notFound();
-        } else {
-            item.delete();
-            return list();
-        }
+        if (item == null) return notFound(Messages.get("err.general"));
+        final List<Accessory> accessoryList = Accessory.find.select("id").where().eq("item.id", id).findList();
+        if (accessoryList.size() != 0) return badRequest(Messages.get("err.deleteItem", item.name));
+        item.delete();
+        return list();
+
     }
 }

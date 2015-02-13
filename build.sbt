@@ -2,7 +2,7 @@ name := "is-klost"
 
 version := "1.0"
 
-javacOptions in Compile ++= Seq("-autocompleteSource", "1.7", "-target", "1.7")
+javacOptions in Compile ++= Seq("-source", "1.7", "-target", "1.7")
 
 lazy val `is-klost` = (project in file(".")).enablePlugins(PlayJava)
 

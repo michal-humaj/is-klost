@@ -80,6 +80,32 @@ function showErrorNotification(msg){
     });
 }
 
+var normalize = function (term) {
+    var ret = "";
+    for (var i = 0; i < term.length; i++) {
+        ret += accentMap[term.charAt(i)] || term.charAt(i);
+    }
+    return ret;
+};
+
+var accentMap = {
+    "á": "a",
+    "ä": "a",
+    "č": "c",
+    "ď": "d",
+    "é": "e",
+    "í": "i",
+    "ľ": "l",
+    "ň": "n",
+    "ó": "o",
+    "ô": "o",
+    "ŕ": "r",
+    "š": "s",
+    "ť": "t",
+    "ú": "u",
+    "ý": "y",
+    "ž": "z"
+};
 
 function initFullcalendar(){
 

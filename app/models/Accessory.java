@@ -1,5 +1,6 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
 
@@ -17,6 +18,7 @@ public class Accessory extends Model {
     public Long id;
 
     @ManyToOne
+    @JsonIgnore
     public Tent tent;
 
     @Required
@@ -26,4 +28,6 @@ public class Accessory extends Model {
     @Required
     @Column(precision = 9, scale = 2)
     public BigDecimal amount;
+
+    public static Finder<Long, Accessory> find = new Finder<>(Long.class, Accessory.class);
 }

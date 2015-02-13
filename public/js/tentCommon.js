@@ -1,27 +1,7 @@
-function initKlostIS() {
-
-    jsRoutes.controllers.Items.listTentItems().ajax().done(function (items) {
-
-        tentViewModel.items = items.map(function (item) {
-            return item.name;
-        });
-        tentViewModel.itemIdMap(new ItemIdMap(items));
-
-        $(".autocomplete").autocomplete({
-            source: autocompleteSource
-        });
-    });
-
-    $("#form").on('submit', function () {
-        var errors = ko.validation.group(tentViewModel.accessories(), {deep: true});
-        if (errors().length === 0) return true;
-        return false;
-    });
-}
-
 function Accessory(index) {
     this.fieldItem = ko.observable('accessories[' + index + '].item.id');
     this.fieldAmount = ko.observable('accessories[' + index + '].amount');
+    this.amount = ko.observable();
     this.itemName = ko.observable().extend({
         validation: {
             validator: function (val) {
@@ -44,6 +24,7 @@ function ItemIdMap(items) {
 }
 
 function TentViewModel() {
+    this.name = ko.observable();
     this.accessories = ko.observableArray([]);
     this.items = [];
     this.itemIdMap = ko.observable(new ItemIdMap());
@@ -68,37 +49,14 @@ function TentViewModel() {
     }
 }
 
-var tentViewModel = new TentViewModel();
-tentViewModel.accessories([new Accessory(0)]);
-ko.applyBindings(tentViewModel);
-
-
-var normalize = function (term) {
-    var ret = "";
-    for (var i = 0; i < term.length; i++) {
-        ret += accentMap[term.charAt(i)] || term.charAt(i);
-    }
-    return ret;
-};
-
-var accentMap = {
-    "á": "a",
-    "ä": "a",
-    "č": "c",
-    "ď": "d",
-    "é": "e",
-    "í": "i",
-    "ľ": "l",
-    "ň": "n",
-    "ó": "o",
-    "ô": "o",
-    "ŕ": "r",
-    "š": "s",
-    "ť": "t",
-    "ú": "u",
-    "ý": "y",
-    "ž": "z"
-};
+function checkErrorsOnFormSubmit(){
+    $("#form").on('submit', function () {
+        var errors = ko.validation.group(tentViewModel.accessories(), {deep: true});
+        console.log(errors());
+        if (errors().length === 0) return true;
+        return false;
+    });
+}
 
 function autocompleteSource(request, response) {
     var matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
@@ -107,6 +65,7 @@ function autocompleteSource(request, response) {
         return matcher.test(value) || matcher.test(normalize(value));
     }));
 }
+
 
 
 

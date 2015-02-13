@@ -157,6 +157,7 @@ err.500.h=Nastala chyba
 err.500.p=Pracujeme však na jej odstránení
 err.unauthorized=Prepáčte, nie ste však oprávnení pracovať s týmto systémom
 err.itemFromList=Vyberte položku zo zoznamu
+err.tentNotFound=Stan s identifikačným číslom {0} neexistuje
 
 
 

@@ -35,8 +35,9 @@ GET           /tents                                      controllers.Tents.list
 GET           /tent                                       controllers.Tents.neu()
 POST          /tent                                       controllers.Tents.add()
 GET           /tent/:id                                   controllers.Tents.edit(id:Long)
-PUT           /tent/:id                                   controllers.Tents.update(id:Long)
-DELETE        /tent/:id                                   controllers.Tents.delete(id:Long)
+POST          /tent/:id                                   controllers.Tents.update(id:Long)
+POST          /tent/:id/delete                            controllers.Tents.delete(id:Long)
+GET           /ajax/tent/:id                              controllers.Tents.getTent(id:Long)
 
 #------------- DOCUMENTS
 #-----------------------

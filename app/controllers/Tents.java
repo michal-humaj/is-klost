@@ -1,17 +1,19 @@
 package controllers;
 
 import models.Tent;
-import play.data.DynamicForm;
-import play.data.Form;
+import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
+import views.html.tent.edit;
 import views.html.tent.list;
 import views.html.tent.neu;
 
 import java.util.List;
 
 import static play.data.Form.form;
+import static play.libs.Json.toJson;
+import static play.mvc.Http.Context.current;
 
 
 /**
@@ -30,21 +32,43 @@ public class Tents extends Controller {
     }
 
     public static Result add() {
-        final Tent tent = form(Tent.class).bindFromRequest().get();
+        Tent tent = form(Tent.class).bindFromRequest().get();
         tent.save();
+        current().flash().put("success", Messages.get("f.addTent", tent.name));
         return redirect(routes.Tents.list());
     }
 
     public static Result edit(long id) {
-        return play.mvc.Results.TODO;
+        return ok(edit.render(id));
     }
 
     public static Result update(long id) {
-        return play.mvc.Results.TODO;
+        Tent tent = Tent.find.byId(id);
+        if (tent == null) {
+            current().flash().put("error", Messages.get("err.tentNotFound", id));
+        } else {
+            tent = form(Tent.class).bindFromRequest().get();
+            tent.update(id);
+            current().flash().put("success", Messages.get("f.updateTent", tent.name));
+        }
+        return redirect(routes.Tents.list());
     }
 
     public static Result delete(long id) {
-        return play.mvc.Results.TODO;
+        Tent tent = Tent.find.byId(id);
+        if (tent == null) {
+            current().flash().put("error", Messages.get("err.tentNotFound", id));
+        } else {
+            String name = tent.name;
+            tent.delete();
+            current().flash().put("success", Messages.get("f.deleteTent", name));
+        }
+        return redirect(routes.Tents.list());
+    }
 
+    public static Result getTent(long id) {
+        Tent tent = Tent.find.byId(id);
+        if (tent == null) return notFound();
+        return ok(toJson(tent));
     }
 }
