@@ -1,3 +1,4 @@
+//runs when page is loaded -> bound to jQuery document ready function
 function initKlostIS() {
 
     var tentId = $("#tentId").attr('data-tentId');

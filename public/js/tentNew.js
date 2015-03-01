@@ -1,3 +1,4 @@
+//runs when page is loaded -> bound to jQuery document ready function
 function initKlostIS() {
 
     var requestItemList = jsRoutes.controllers.Items.listTentItems().ajax();

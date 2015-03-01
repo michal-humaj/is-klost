@@ -43,6 +43,7 @@ btn.newItem=Pridať položku
 btn.addTent=Vytvoriť
 btn.addEvent=Vytvoriť 
 btn.addItem=Vytvoriť
+btn.addEventAndEdit=Vytvoriť a priradiť položky
 
 btn.import=Naskladniť
 btn.export=Vyskladniť
@@ -67,8 +68,8 @@ lbl.length=Dĺžka
 lbl.start=Začiatok
 lbl.end=Koniec
 lbl.allDay=Celý deň
-lbl.eventType=Typ udalosti
-lbl.assignedAction=Priradená akcia
+lbl.eventType=Typ
+lbl.assignedAction=Priradiť
 lbl.calcAvail=Výpočet dostupnosti
 
 lbl.kg=kg
@@ -133,6 +134,7 @@ p.accept=Musíte povoliť prístup ku kalendáru aby ste sa mohli úspešne prih
 # Flashes
 f.addItem=Položka {0} úspešne vytvorená.
 f.addTent=Stan {0} úspešne vytvorený.
+f.addEvent=Udalosť {0} úspešne vytvorená.
 
 f.updateItem=Zmeny v položke {0} boli uložené.
 f.updateEvent=Zmeny v udalosti {0} boli uložené.

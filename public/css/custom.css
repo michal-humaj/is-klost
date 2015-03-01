@@ -123,3 +123,12 @@ table.tableScrollable .tdItemControls{
     width: 113px;
     float: left;
 }
+
+.popover{
+    max-width: 360px;
+    width: 360px;
+}
+
+.btnPopover{
+    width: 100%;
+}

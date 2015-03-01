@@ -43,6 +43,7 @@ btn.newItem=Add new item
 btn.addTent=Create
 btn.addEvent=Create 
 btn.addItem=Create
+btn.addEventAndEdit=Create and assign items
 
 btn.import=Import
 btn.export=Export
@@ -67,8 +68,8 @@ lbl.length=Length
 lbl.start=Start
 lbl.end=End
 lbl.allDay=All day
-lbl.eventType=Event type
-lbl.assignedAction=Assigned action
+lbl.eventType=Type
+lbl.assignedAction=Assign
 lbl.calcAvail=Calculate availability
 
 lbl.kg=kg
@@ -133,6 +134,7 @@ p.accept=You have to grant access to your calendar in order to login to the syst
 # Flashes
 f.addItem=Item {0} successfully created.
 f.addTent=Tent {0} successfully created.
+f.addEvent=Event {0} successfully created.
 
 f.updateItem=Changes to item {0} were saved.
 f.updateEvent=Changes to event {0} were saved.
