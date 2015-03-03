@@ -5,6 +5,7 @@ GET           /store/:date                                controllers.App.store(
 #------------- EEVENTS
 #---------------------
 POST          /ajax/event                                 controllers.Events.add()
+POST          /event/addAndEdit                           controllers.Events.addAndEdit()
 GET           /event/:eventType/:id                       controllers.Events.edit(eventType, id)
 PUT           /event/:eventType/:id                       controllers.Events.update(eventType, id)
 #skladnik edit a update

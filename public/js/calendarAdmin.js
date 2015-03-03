@@ -1,3 +1,15 @@
+var calIds = {};
+calIds['ACTION'] = "o776rmha219v92fvejs0hahsso@group.calendar.google.com";
+calIds['RESERVATION'] = "3jg1lna270kjsjb0jjrhhqo5m8@group.calendar.google.com";
+calIds['INSTALLATION'] = "gehqh0ptgh0i2hkh3f1l4tlerg@group.calendar.google.com";
+calIds['SELFTRANSPORT'] = "hq8a7ru1eh0qoj7bpn05amtsg8@group.calendar.google.com";
+
+var calTypes = {};
+calTypes[calIds['ACTION']] = 'ACTION';
+calTypes[calIds['RESERVATION']] = 'RESERVATION';
+calTypes[calIds['INSTALLATION']] = 'INSTALLATION';
+calTypes[calIds['SELFTRANSPORT']] = 'SELFTRANSPORT';
+
 function initKlostIS() {
 
     $('html').on('click', function () {
@@ -21,25 +33,25 @@ function initKlostIS() {
         googleCalendarApiKey: 'AIzaSyDNriXYLhSFMcUEMU00O5RwUdA0M-QLpr4',  //TODO moze tu byt api kluc?
         eventSources: [
             {
-                googleCalendarId: 'o776rmha219v92fvejs0hahsso@group.calendar.google.com',
+                googleCalendarId: calIds['ACTION'],
                 color: ACTIONS_COLOR,
                 borderColor: ACTIONS_BORDER_COLOR,
                 editable: true
             },
             {
-                googleCalendarId: 'gehqh0ptgh0i2hkh3f1l4tlerg@group.calendar.google.com',
+                googleCalendarId: calIds['INSTALLATION'],
                 color: INSTALLATIONS_COLOR,
-                borderColor: '#FF00FF',
+                borderColor: INSTALLATIONS_BORDER_COLOR,
                 editable: true
             },
             {
-                googleCalendarId: '3jg1lna270kjsjb0jjrhhqo5m8@group.calendar.google.com',
+                googleCalendarId: calIds['RESERVATION'],
                 color: RESERVATIONS_COLOR,
                 borderColor: RESERVATIONS_BORDER_COLOR,
                 editable: true
             },
             {
-                googleCalendarId: 'hq8a7ru1eh0qoj7bpn05amtsg8@group.calendar.google.com',
+                googleCalendarId: calIds['SELFTRANSPORT'],
                 color: SELFTRANSPORTS_COLOR,
                 eventBorderColor: SELFTRANSPORTS_BORDER_COLOR,
                 editable: true
@@ -67,6 +79,7 @@ function initKlostIS() {
 
     setFullcalendarHeight();
     addEvent(window, "resize", setFullcalendarHeight);
+    ko.applyBindings(eventViewModel, $('#modalDeleteEvent')[0]);
 
     datepicker.datepicker('option', 'onSelect', function (date) {
         fullcalendar.fullCalendar('gotoDate', date);
@@ -78,7 +91,10 @@ function initKlostIS() {
 }
 
 function eventClick(event, jsEvent, view) {
+    console.log("EVENT CLICK");
     removePopovers();
+    var eventType = calTypes[event.source.googleCalendarId];
+    eventViewModel.event(new Event(event.id, eventType, event.title));
     $(jsEvent.target).popover({
         animation: false,
         container: '#fullcalendar',
@@ -90,11 +106,14 @@ function eventClick(event, jsEvent, view) {
     });
     $(jsEvent.target).popover('show');
     doNotDismissOnPopoverClick();
+    ko.applyBindings(eventViewModel, $('.popover')[0]);
+    console.log("som az na konci");
     return false;
 }
 
 function onTimeRangeSelect(start, end, jsEvent, view) {
     removePopovers();
+    eventViewModel.event(new Event());
     $(jsEvent.target).popover({
         animation: false,
         container: '#fullcalendar',
@@ -121,9 +140,8 @@ function onTimeRangeSelect(start, end, jsEvent, view) {
         var fullcalendar = $('#fullcalendar');
         removePopovers();
         fullcalendar.fullCalendar('unselect');
-        requestAddEvent.done(function (eventName) {
-            eventViewModel.event().name('');
-            showSuccessNotification(Messages('f.addEvent', eventName));
+        requestAddEvent.done(function () {
+            showSuccessNotification(Messages('f.addEvent', eventViewModel.event().name()));
             fullcalendar.fullCalendar('refetchEvents');
         });
         requestAddEvent.fail(function (jqXHR, textStatus) {
@@ -149,9 +167,10 @@ function removePopovers() {
     popover.remove();
 }
 
-function Event() {
-    this.eventType = ko.observable();
-    this.name = ko.observable();
+function Event(id, eventType, name) {
+    this.id = ko.observable(id);
+    this.eventType = ko.observable(eventType);
+    this.name = ko.observable(name);
     this.start = ko.observable();
     this.end = ko.observable();
     this.allDay = ko.observable();
@@ -165,6 +184,23 @@ function Action(id, name) {
 function EventViewModel() {
 
     this.event = ko.validatedObservable(new Event());
+
+    this.modalDelete = function () {
+        removePopovers();
+        $('#modalDeleteEvent').modal('show');
+    }
+
+    this.delet = function () {
+        $('#modalDeleteEvent').modal('hide');
+        var requestDeleteEvent = jsRoutes.controllers.Events.delete(this.event().eventType(), this.event().id()).ajax();
+        requestDeleteEvent.done(function () {
+            showSuccessNotification(Messages('f.deleteEvent', eventViewModel.event().name()));
+            $('#fullcalendar').fullCalendar('refetchEvents');
+        });
+        requestDeleteEvent.fail(function (jqXHR, textStatus) {
+            showErrorNotification(Messages('err.googleCal'));
+        });
+    }
 
 }
 

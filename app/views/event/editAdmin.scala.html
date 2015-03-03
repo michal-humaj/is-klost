@@ -1,0 +1,31 @@
+
+
+@views.html.master.main(Messages("nav.tents"))(0) {
+} {
+    <div class="page-header">
+        <h1>
+        @Messages("h.editTent")
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+
+        @helper.form(action = routes.Tents.update(3), 'class -> "form-horizontal", 'role -> "form", 'id -> "form") {
+
+            @views.html.tent.form(3l)
+
+            <div class="clearfix form-actions">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">@Messages("btn.update")</button>
+                        &nbsp;
+                    <a class="btn" type="reset" href="@routes.Tents.list">@Messages("btn.back")</a>
+                </div>
+            </div>
+        }
+
+        </div>
+    </div>
+} {
+
+}

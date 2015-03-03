@@ -37,10 +37,39 @@ public class GoogleAPI {
                 .execute();
     }
 
+    public static Event findEvent(EventType eventType, String id) throws IOException {
+        return calendar()
+                .events()
+                .get(calIds.get(eventType), id)
+                .setOauthToken(session("accessToken"))
+                .execute();
+    }
+
+    public static void updateEvent(Event event, EventType eventType) throws IOException {
+        event.setSequence(calendar()
+                .events()
+                .get(calIds.get(eventType), event.getId())
+                .setOauthToken(session("accessToken"))
+                .execute()
+                .getSequence());
+        calendar()
+                .events()
+                .update(calIds.get(eventType), event.getId(), event)
+                .setOauthToken(session("accessToken"))
+                .execute();
+    }
+
+    public static void deleteEvent(EventType eventType, String id) throws IOException {
+        calendar()
+                .events()
+                .delete(calIds.get(eventType), id)
+                .setOauthToken(session("accessToken"))
+                .execute();
+    }
+
     private static Calendar calendar() {
         Calendar.Builder builder = new Calendar.Builder(HTTP_TRANSPORT, JSON_FACTORY, null);
         return builder.build();
     }
-
 }
 

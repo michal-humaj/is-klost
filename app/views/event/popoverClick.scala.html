@@ -16,14 +16,14 @@
 
         <div class="form-group">
             <div class="col-sm-6">
-                <a class="btn btn-sm btn-danger btnPopover" type="submit"><i class="ace-icon fa fa-trash-o bigger-110"></i>
+                <a class="btn btn-sm btn-danger btnPopover" data-bind="click: modalDelete">
+                    <i class="ace-icon fa fa-trash-o bigger-110"></i>
                     @Messages("btn.delete")
                 </a>
             </div>
-
-
             <div class="col-sm-6">
-                <a class="btn btn-sm btn-info btnPopover" type="submit"><i class="ace-icon fa fa-pencil bigger-110"></i>
+                <a class="btn btn-sm btn-info btnPopover" href data-bind="attr: { href: '/event/' + event().eventType() + '/' + event().id() }">
+                    <i class="ace-icon fa fa-pencil bigger-110"></i>
                     @Messages("btn.edit")
                 </a>
             </div>
