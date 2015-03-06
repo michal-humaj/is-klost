@@ -13,6 +13,7 @@ import play.mvc.Http;
 import controllers.routes;
 
 import java.util.List;
+import java.util.TimeZone;
 
 /**
  * Created by MiHu on 21.1.2015.
@@ -21,6 +22,9 @@ public class Global extends GlobalSettings {
 
 
     public void onStart(final Application app) {
+
+        System.setProperty("user.timezone", "Europe/Warsaw");
+        TimeZone.setDefault(TimeZone.getTimeZone("Europe/Warsaw"));
 
         if(Ebean.find(StoredItem.class).findRowCount() == 0) {
             Ebean.save((List) Yaml.load("initial-data.yml"));

@@ -139,6 +139,7 @@ f.addEvent=Udalosť {0} úspešne vytvorená.
 f.updateItem=Zmeny v položke {0} boli uložené.
 f.updateEvent=Zmeny v udalosti {0} boli uložené.
 f.updateTent=Zmeny v stane {0} boli uložené.
+f.dragEvent=Udalosť {0} bola presunutá.
 
 f.deleteItem=Položka {0} bola vymazaná.
 f.deleteEvent=Udalosť {0} bola vymazaná.
@@ -151,7 +152,7 @@ f.exportItem=Množstvo položky {0} ste z znížili z {1} na {2}.
 err.general=Požadovanú operáciu sa nepodarilo vykonať. Skontrolujte svoje pripojenie a skúste reštartovať prehliadač, odhlásiť sa a prihlásiť sa znova.
 err.deleteItem=Nemôžete vymazať položku {0} pretože je súčasťou stanu, alebo je priradená k udalosti.
 err.deleteTent=Nemôžete vymazať stan {0} pretože je priradený k udalosti.
-err.eventStartEnd=Udalosť musí končiť neskôr ako začína.
+err.eventStartEnd=Udalosť musí končiť neskôr ako začína. Zmeny neboli uložené.
 err.googleCal=Požadovanú operáciu sme nemohli vykonať. Buď sú servery Google nedostupné alebo nemáte dostatočné oprávnenia.
 err.404.h=Táto stránka neexistuje
 err.404.p=Hľadali sme všade, ale požadovanú stránku sme nenašli

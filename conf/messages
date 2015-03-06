@@ -139,6 +139,7 @@ f.addEvent=Event {0} successfully created.
 f.updateItem=Changes to item {0} were saved.
 f.updateEvent=Changes to event {0} were saved.
 f.updateTent=Changes to tent {0} were saved.
+f.dragEvent=Event {0} was moved.
 
 f.deleteItem=Item {0} was deleted.
 f.deleteEvent=Event {0} was deleted.
@@ -151,7 +152,7 @@ f.exportItem=Amount of item {0} decreased from {1} to {2}
 err.general=Operation could not be comlpeted. Check your connection and try to restart web browser, logout and login again.
 err.deleteItem=You cannot delete item {0} because it is either part of a tent or it is assigned to an event.
 err.deleteTent=You cannot delete tent {0} because it is assigned to an event.
-err.eventStartEnd=End must be later than start.
+err.eventStartEnd=Event must end later than it starts. Changes have not been saved.
 err.googleCal=We couldn't perform the operation. Either connection to Google servers is lost or you are not authorized.
 err.404.h=Page not found
 err.404.p=We looked everywhere but we could not find this page

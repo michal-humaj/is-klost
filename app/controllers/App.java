@@ -54,8 +54,8 @@ public class App extends Controller {
                         routes.javascript.Items.delete(),
                         routes.javascript.Tents.getTent(),
                         routes.javascript.Events.add(),
-                        routes.javascript.Events.delete()
-
+                        routes.javascript.Events.delete(),
+                        routes.javascript.Events.drag()
                 )
         );
     }

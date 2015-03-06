@@ -19,6 +19,7 @@ libraryDependencies ++= Seq(
   "org.apache.poi" % "poi" % "3.11",
   "org.json" % "json" % "20090211",
   "org.julienrf" %% "play-jsmessages" % "1.6.2",
+  "joda-time" % "joda-time" % "2.7",
   javaJdbc,
   javaEbean,
   cache,

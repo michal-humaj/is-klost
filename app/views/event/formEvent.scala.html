@@ -1,0 +1,45 @@
+@(eventType: String, eventId: String, allDay: Boolean, eventForm: Form[dto.EventTO])
+
+<div class="form-group" id="eventId" data-EventId="@eventId" data-EventType="@eventType" data-AllDay="@allDay">
+    <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.name")</label>
+
+    <div class="col-sm-7">
+        <input name="name" class="form-control" autocomplete="off" required value='@eventForm.field("name").value'>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="checkbox">
+        <label class="col-sm-offset-2">
+            <input name="allDay" type="checkbox" class="ace"
+            data-bind="checked: event().allDay" @if(eventForm.field("allDay").value.equals("true")) {checked} >
+            <span class="lbl"> @Messages("lbl.allDay")</span>
+        </label>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.start")</label>
+
+    <div class="col-sm-3">
+        <input type="date" required class="form-control" name="startDate" value='@eventForm.field("startDate").value'>
+    </div>
+
+    <div class="col-sm-2">
+        <input data-bind="attr: { class: event().allDay() ? 'form-control hide' : 'form-control' }"
+        class="form-control" required type="time" name="startTime" value='@eventForm.field("startTime").value'>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label no-padding-right" data-bind="click: jozo">@Messages("lbl.end")</label>
+
+    <div class="col-sm-3">
+        <input type="date" required class="form-control" name="endDate" value='@eventForm.field("endDate").value'>
+    </div>
+
+    <div class="col-sm-2">
+        <input data-bind="attr: { class: event().allDay() ? 'form-control hide' : 'form-control' }"
+        required type="time" name="endTime" value='@eventForm.field("endTime").value'>
+    </div>
+</div>

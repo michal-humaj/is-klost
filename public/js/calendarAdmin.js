@@ -152,6 +152,21 @@ function onTimeRangeSelect(start, end, jsEvent, view) {
 }
 
 function dragEvent(event, delta, revertFunc, jsEvent, ui, view) {
+    var eventType = calTypes[event.source.googleCalendarId];
+    console.log(event.start);
+    console.log(event.end);
+    var start = event.start.valueOf();
+    var end = event.end === null ? event.start.valueOf() : event.end.valueOf();
+    eventViewModel.event(new Event(event.id, eventType, event.title, start, end, !event.start.hasTime()));
+    var requestUpdateEvent = jsRoutes.controllers.Events.drag(eventType, event.id).ajax({data: eventViewModel.event()});
+
+    requestUpdateEvent.done(function () {
+        showSuccessNotification(Messages('f.dragEvent', eventViewModel.event().name()));
+    });
+    requestUpdateEvent.fail(function (jqXHR, textStatus) {
+        showErrorNotification(Messages('err.googleCal'));
+        revertFunc();
+    });
 }
 
 function doNotDismissOnPopoverClick() {
@@ -167,13 +182,13 @@ function removePopovers() {
     popover.remove();
 }
 
-function Event(id, eventType, name) {
+function Event(id, eventType, name, start, end, allDay) {
     this.id = ko.observable(id);
     this.eventType = ko.observable(eventType);
     this.name = ko.observable(name);
-    this.start = ko.observable();
-    this.end = ko.observable();
-    this.allDay = ko.observable();
+    this.start = ko.observable(start);
+    this.end = ko.observable(end);
+    this.allDay = ko.observable(allDay);
 }
 
 function Action(id, name) {
