@@ -50,12 +50,15 @@ public class App extends Controller {
                         routes.javascript.Items.list(),
                         routes.javascript.Items.listTentItems(),
                         routes.javascript.Items.add(),
+                        routes.javascript.Items.listEventItems(),
                         routes.javascript.Items.update(),
                         routes.javascript.Items.delete(),
                         routes.javascript.Tents.getTent(),
                         routes.javascript.Events.add(),
                         routes.javascript.Events.delete(),
                         routes.javascript.Events.drag()
+
+
                 )
         );
     }

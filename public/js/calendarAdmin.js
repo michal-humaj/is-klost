@@ -10,6 +10,9 @@ calTypes[calIds['RESERVATION']] = 'RESERVATION';
 calTypes[calIds['INSTALLATION']] = 'INSTALLATION';
 calTypes[calIds['SELFTRANSPORT']] = 'SELFTRANSPORT';
 
+var ONE_HOUR = 3600000;
+var ONE_DAY = 86400000;
+
 function initKlostIS() {
 
     $('html').on('click', function () {
@@ -156,7 +159,14 @@ function dragEvent(event, delta, revertFunc, jsEvent, ui, view) {
     console.log(event.start);
     console.log(event.end);
     var start = event.start.valueOf();
-    var end = event.end === null ? event.start.valueOf() : event.end.valueOf();
+    var end;
+    if (event.end !== null) {
+        end = event.end.valueOf();
+    } else if (event.start.hasTime()) {
+        end = event.start.valueOf() + 2 * ONE_HOUR;
+    } else {
+        end = event.start.valueOf() + ONE_DAY;
+    }
     eventViewModel.event(new Event(event.id, eventType, event.title, start, end, !event.start.hasTime()));
     var requestUpdateEvent = jsRoutes.controllers.Events.drag(eventType, event.id).ajax({data: eventViewModel.event()});
 

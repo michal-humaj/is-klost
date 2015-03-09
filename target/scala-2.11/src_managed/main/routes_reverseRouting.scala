@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/MiHu/Documents/projects/is-klost/is-klost/conf/routes
-// @HASH:64d23bc35a91baa9e4fd5de102df9d6d8f861c8a
-// @DATE:Mon Feb 02 12:03:45 CET 2015
+// @HASH:2eae5ec602a360624984baf5bbaaa2ff7726ad07
+// @DATE:Mon Mar 09 21:31:35 CET 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,23 +15,23 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:10
-// @LINE:9
+// @LINE:52
+// @LINE:51
 package com.feth.play.module.pa.controllers {
 
-// @LINE:10
-// @LINE:9
+// @LINE:52
+// @LINE:51
 class ReverseAuthenticate {
 
 
-// @LINE:9
+// @LINE:51
 def logout(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "logout")
 }
                         
 
-// @LINE:10
+// @LINE:52
 def authenticate(provider:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "authenticate/" + implicitly[PathBindable[String]].unbind("provider", dynamicString(provider)))
@@ -43,48 +43,50 @@ def authenticate(provider:String): Call = {
 }
                   
 
-// @LINE:62
 // @LINE:61
-// @LINE:60
-// @LINE:56
-// @LINE:55
-// @LINE:51
+// @LINE:59
+// @LINE:58
+// @LINE:57
+// @LINE:53
 // @LINE:50
-// @LINE:49
-// @LINE:48
 // @LINE:47
 // @LINE:46
 // @LINE:42
+// @LINE:41
+// @LINE:40
+// @LINE:39
 // @LINE:38
 // @LINE:37
 // @LINE:36
-// @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:32
 // @LINE:28
+// @LINE:27
 // @LINE:26
 // @LINE:25
 // @LINE:24
 // @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
+// @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
 // @LINE:11
+// @LINE:10
+// @LINE:9
 // @LINE:8
-// @LINE:5
+// @LINE:7
 // @LINE:3
 // @LINE:2
 // @LINE:1
 package controllers {
 
-// @LINE:61
+// @LINE:58
 class ReverseAssets {
 
 
-// @LINE:61
+// @LINE:58
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -94,18 +96,18 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:62
-// @LINE:60
-// @LINE:11
-// @LINE:8
-// @LINE:5
+// @LINE:61
+// @LINE:59
+// @LINE:57
+// @LINE:53
+// @LINE:50
 // @LINE:3
 // @LINE:2
 // @LINE:1
 class ReverseApp {
 
 
-// @LINE:62
+// @LINE:61
 // @LINE:1
 def calendar(date:String): Call = {
    (date: @unchecked) match {
@@ -114,7 +116,7 @@ case (date) if date == "TODAY" =>
   implicit val _rrc = new ReverseRouteContext(Map(("date", "TODAY")))
   Call("GET", _prefix)
                                          
-// @LINE:62
+// @LINE:61
 case (date)  =>
   import ReverseRouteContext.empty
   Call("GET", _prefix + { _defaultPrefix } + implicitly[PathBindable[String]].unbind("date", dynamicString(date)))
@@ -123,24 +125,24 @@ case (date)  =>
 }
                                                 
 
-// @LINE:5
-def storeStrmn(): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "store/storeman")
-}
-                        
-
-// @LINE:11
+// @LINE:53
 def oAuthDenied(provider:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "authenticate/" + implicitly[PathBindable[String]].unbind("provider", dynamicString(provider)) + "/denied")
 }
                         
 
-// @LINE:60
+// @LINE:57
 def jsRoutes(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "assets/javascripts/routes")
+}
+                        
+
+// @LINE:59
+def jsMessages(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "jsmessages")
 }
                         
 
@@ -162,7 +164,7 @@ case (date)  =>
 }
                                                 
 
-// @LINE:8
+// @LINE:50
 def login(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "login")
@@ -172,11 +174,11 @@ def login(): Call = {
 }
                           
 
-// @LINE:42
+// @LINE:32
 class ReverseAvail {
 
 
-// @LINE:42
+// @LINE:32
 def availability(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "ajax/avail")
@@ -186,113 +188,121 @@ def availability(): Call = {
 }
                           
 
-// @LINE:28
-// @LINE:26
-// @LINE:25
-// @LINE:24
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
+// @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:11
+// @LINE:10
+// @LINE:9
+// @LINE:8
+// @LINE:7
 class ReverseEvents {
 
 
-// @LINE:24
+// @LINE:11
 def drag(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "ajax/event/drag" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("eventType", eventType)), Some(implicitly[QueryStringBindable[String]].unbind("id", id)))))
+   Call("PUT", _prefix + { _defaultPrefix } + "ajax/event/" + implicitly[PathBindable[String]].unbind("eventType", dynamicString(eventType)) + "/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
 }
                         
 
-// @LINE:25
+// @LINE:17
 def changeCal(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "ajax/event/" + implicitly[PathBindable[String]].unbind("eventType", dynamicString(eventType)) + "/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)) + "/changeCal")
 }
                         
 
-// @LINE:22
+// @LINE:15
 def editInstl(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "event/INSTALLATION/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)) + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("eventType", eventType)))))
 }
                         
 
-// @LINE:20
+// @LINE:13
 def editStrmn(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "event/" + implicitly[PathBindable[String]].unbind("eventType", dynamicString(eventType)) + "/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)) + "/storeman")
 }
                         
 
-// @LINE:18
+// @LINE:10
 def update(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "event/" + implicitly[PathBindable[String]].unbind("eventType", dynamicString(eventType)) + "/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
+   Call("POST", _prefix + { _defaultPrefix } + "event/" + implicitly[PathBindable[String]].unbind("eventType", dynamicString(eventType)) + "/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
 }
                         
 
-// @LINE:23
+// @LINE:16
 def updateInstl(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "event/INSTALLATION/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)) + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("eventType", eventType)))))
 }
                         
 
-// @LINE:21
+// @LINE:14
 def updateStrmn(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "event/" + implicitly[PathBindable[String]].unbind("eventType", dynamicString(eventType)) + "/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)) + "/storeman")
 }
                         
 
-// @LINE:26
+// @LINE:18
 def delete(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "event/" + implicitly[PathBindable[String]].unbind("eventType", dynamicString(eventType)) + "/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
 }
                         
 
-// @LINE:16
+// @LINE:7
 def add(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "ajax/event")
 }
                         
 
-// @LINE:17
+// @LINE:9
 def edit(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "event/" + implicitly[PathBindable[String]].unbind("eventType", dynamicString(eventType)) + "/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
 }
                         
 
-// @LINE:28
+// @LINE:19
 def upcomingActions(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "ajax/actions/upcoming")
 }
                         
 
+// @LINE:8
+def addAndEdit(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "event/addAndEdit")
+}
+                        
+
 }
                           
 
-// @LINE:56
-// @LINE:55
+// @LINE:47
+// @LINE:46
 class ReverseDocuments {
 
 
-// @LINE:55
+// @LINE:46
 def priceOffer(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "priceOffer/" + implicitly[PathBindable[String]].unbind("eventType", dynamicString(eventType)) + "/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
 }
                         
 
-// @LINE:56
+// @LINE:47
 def contract(eventType:String, id:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "contract/" + implicitly[PathBindable[String]].unbind("eventType", dynamicString(eventType)) + "/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
@@ -302,105 +312,113 @@ def contract(eventType:String, id:String): Call = {
 }
                           
 
-// @LINE:51
-// @LINE:50
-// @LINE:49
-// @LINE:48
-// @LINE:47
-// @LINE:46
+// @LINE:42
+// @LINE:41
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
 class ReverseTents {
 
 
-// @LINE:51
+// @LINE:41
 def delete(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("DELETE", _prefix + { _defaultPrefix } + "tent/" + implicitly[PathBindable[Long]].unbind("id", id))
+   Call("POST", _prefix + { _defaultPrefix } + "tent/" + implicitly[PathBindable[Long]].unbind("id", id) + "/delete")
 }
                         
 
-// @LINE:49
+// @LINE:39
 def edit(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "tent/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:50
+// @LINE:40
 def update(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "tent/" + implicitly[PathBindable[Long]].unbind("id", id))
+   Call("POST", _prefix + { _defaultPrefix } + "tent/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:48
+// @LINE:38
 def add(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "tent")
 }
                         
 
-// @LINE:46
+// @LINE:36
 def list(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "tents")
 }
                         
 
-// @LINE:47
+// @LINE:37
 def neu(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "tent")
 }
                         
 
+// @LINE:42
+def getTent(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "ajax/tent/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
 }
                           
 
-// @LINE:38
-// @LINE:37
-// @LINE:36
-// @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:28
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
+// @LINE:23
 class ReverseItems {
 
 
-// @LINE:36
+// @LINE:28
 def delete(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "ajax/item/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:38
-def export(id:Long): Call = {
+// @LINE:25
+def listEventItems(): Call = {
    import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "ajax/item/" + implicitly[PathBindable[Long]].unbind("id", id) + "/export")
+   Call("GET", _prefix + { _defaultPrefix } + "ajax/listEventItems")
 }
                         
 
-// @LINE:37
-def imprt(id:Long): Call = {
-   import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "ajax/item/" + implicitly[PathBindable[Long]].unbind("id", id) + "/import")
-}
-                        
-
-// @LINE:35
+// @LINE:27
 def update(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "ajax/item/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:34
+// @LINE:24
+def listTentItems(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "ajax/listTentItems")
+}
+                        
+
+// @LINE:26
 def add(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "ajax/item")
 }
                         
 
-// @LINE:33
+// @LINE:23
 def list(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "ajax/items")
@@ -413,17 +431,17 @@ def list(): Call = {
                   
 
 
-// @LINE:10
-// @LINE:9
+// @LINE:52
+// @LINE:51
 package com.feth.play.module.pa.controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:10
-// @LINE:9
+// @LINE:52
+// @LINE:51
 class ReverseAuthenticate {
 
 
-// @LINE:9
+// @LINE:51
 def logout : JavascriptReverseRoute = JavascriptReverseRoute(
    "com.feth.play.module.pa.controllers.Authenticate.logout",
    """
@@ -434,7 +452,7 @@ def logout : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:10
+// @LINE:52
 def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
    "com.feth.play.module.pa.controllers.Authenticate.authenticate",
    """
@@ -450,49 +468,51 @@ def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
-// @LINE:62
 // @LINE:61
-// @LINE:60
-// @LINE:56
-// @LINE:55
-// @LINE:51
+// @LINE:59
+// @LINE:58
+// @LINE:57
+// @LINE:53
 // @LINE:50
-// @LINE:49
-// @LINE:48
 // @LINE:47
 // @LINE:46
 // @LINE:42
+// @LINE:41
+// @LINE:40
+// @LINE:39
 // @LINE:38
 // @LINE:37
 // @LINE:36
-// @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:32
 // @LINE:28
+// @LINE:27
 // @LINE:26
 // @LINE:25
 // @LINE:24
 // @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
+// @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
 // @LINE:11
+// @LINE:10
+// @LINE:9
 // @LINE:8
-// @LINE:5
+// @LINE:7
 // @LINE:3
 // @LINE:2
 // @LINE:1
 package controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:61
+// @LINE:58
 class ReverseAssets {
 
 
-// @LINE:61
+// @LINE:58
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -506,18 +526,18 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:62
-// @LINE:60
-// @LINE:11
-// @LINE:8
-// @LINE:5
+// @LINE:61
+// @LINE:59
+// @LINE:57
+// @LINE:53
+// @LINE:50
 // @LINE:3
 // @LINE:2
 // @LINE:1
 class ReverseApp {
 
 
-// @LINE:62
+// @LINE:61
 // @LINE:1
 def calendar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.App.calendar",
@@ -534,18 +554,7 @@ def calendar : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:5
-def storeStrmn : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.App.storeStrmn",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "store/storeman"})
-      }
-   """
-)
-                        
-
-// @LINE:11
+// @LINE:53
 def oAuthDenied : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.App.oAuthDenied",
    """
@@ -556,12 +565,23 @@ def oAuthDenied : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:60
+// @LINE:57
 def jsRoutes : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.App.jsRoutes",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/javascripts/routes"})
+      }
+   """
+)
+                        
+
+// @LINE:59
+def jsMessages : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.App.jsMessages",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jsmessages"})
       }
    """
 )
@@ -584,7 +604,7 @@ def store : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:8
+// @LINE:50
 def login : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.App.login",
    """
@@ -598,11 +618,11 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:42
+// @LINE:32
 class ReverseAvail {
 
 
-// @LINE:42
+// @LINE:32
 def availability : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Avail.availability",
    """
@@ -616,32 +636,33 @@ def availability : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:28
-// @LINE:26
-// @LINE:25
-// @LINE:24
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
+// @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:11
+// @LINE:10
+// @LINE:9
+// @LINE:8
+// @LINE:7
 class ReverseEvents {
 
 
-// @LINE:24
+// @LINE:11
 def drag : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.drag",
    """
       function(eventType,id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "ajax/event/drag" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("eventType", eventType), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("id", id)])})
+      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "ajax/event/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("eventType", encodeURIComponent(eventType)) + "/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id))})
       }
    """
 )
                         
 
-// @LINE:25
+// @LINE:17
 def changeCal : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.changeCal",
    """
@@ -652,7 +673,7 @@ def changeCal : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:22
+// @LINE:15
 def editInstl : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.editInstl",
    """
@@ -663,7 +684,7 @@ def editInstl : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:20
+// @LINE:13
 def editStrmn : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.editStrmn",
    """
@@ -674,18 +695,18 @@ def editStrmn : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:18
+// @LINE:10
 def update : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.update",
    """
       function(eventType,id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "event/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("eventType", encodeURIComponent(eventType)) + "/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id))})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "event/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("eventType", encodeURIComponent(eventType)) + "/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id))})
       }
    """
 )
                         
 
-// @LINE:23
+// @LINE:16
 def updateInstl : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.updateInstl",
    """
@@ -696,7 +717,7 @@ def updateInstl : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:21
+// @LINE:14
 def updateStrmn : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.updateStrmn",
    """
@@ -707,7 +728,7 @@ def updateStrmn : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:26
+// @LINE:18
 def delete : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.delete",
    """
@@ -718,7 +739,7 @@ def delete : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:16
+// @LINE:7
 def add : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.add",
    """
@@ -729,7 +750,7 @@ def add : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:17
+// @LINE:9
 def edit : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.edit",
    """
@@ -740,7 +761,7 @@ def edit : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:28
+// @LINE:19
 def upcomingActions : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Events.upcomingActions",
    """
@@ -751,15 +772,26 @@ def upcomingActions : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:8
+def addAndEdit : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Events.addAndEdit",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "event/addAndEdit"})
+      }
+   """
+)
+                        
+
 }
               
 
-// @LINE:56
-// @LINE:55
+// @LINE:47
+// @LINE:46
 class ReverseDocuments {
 
 
-// @LINE:55
+// @LINE:46
 def priceOffer : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Documents.priceOffer",
    """
@@ -770,7 +802,7 @@ def priceOffer : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:56
+// @LINE:47
 def contract : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Documents.contract",
    """
@@ -784,27 +816,28 @@ def contract : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:51
-// @LINE:50
-// @LINE:49
-// @LINE:48
-// @LINE:47
-// @LINE:46
+// @LINE:42
+// @LINE:41
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
 class ReverseTents {
 
 
-// @LINE:51
+// @LINE:41
 def delete : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tents.delete",
    """
       function(id) {
-      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "tent/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "tent/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id) + "/delete"})
       }
    """
 )
                         
 
-// @LINE:49
+// @LINE:39
 def edit : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tents.edit",
    """
@@ -815,18 +848,18 @@ def edit : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:50
+// @LINE:40
 def update : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tents.update",
    """
       function(id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "tent/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "tent/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
                         
 
-// @LINE:48
+// @LINE:38
 def add : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tents.add",
    """
@@ -837,7 +870,7 @@ def add : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:46
+// @LINE:36
 def list : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tents.list",
    """
@@ -848,7 +881,7 @@ def list : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:47
+// @LINE:37
 def neu : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tents.neu",
    """
@@ -859,19 +892,30 @@ def neu : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:42
+def getTent : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Tents.getTent",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ajax/tent/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
 }
               
 
-// @LINE:38
-// @LINE:37
-// @LINE:36
-// @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:28
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
+// @LINE:23
 class ReverseItems {
 
 
-// @LINE:36
+// @LINE:28
 def delete : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Items.delete",
    """
@@ -882,29 +926,18 @@ def delete : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:38
-def export : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Items.export",
+// @LINE:25
+def listEventItems : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Items.listEventItems",
    """
-      function(id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "ajax/item/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id) + "/export"})
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ajax/listEventItems"})
       }
    """
 )
                         
 
-// @LINE:37
-def imprt : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Items.imprt",
-   """
-      function(id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "ajax/item/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id) + "/import"})
-      }
-   """
-)
-                        
-
-// @LINE:35
+// @LINE:27
 def update : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Items.update",
    """
@@ -915,7 +948,18 @@ def update : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:34
+// @LINE:24
+def listTentItems : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Items.listTentItems",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ajax/listTentItems"})
+      }
+   """
+)
+                        
+
+// @LINE:26
 def add : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Items.add",
    """
@@ -926,7 +970,7 @@ def add : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:33
+// @LINE:23
 def list : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Items.list",
    """
@@ -943,23 +987,23 @@ def list : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:10
-// @LINE:9
+// @LINE:52
+// @LINE:51
 package com.feth.play.module.pa.controllers.ref {
 
 
-// @LINE:10
-// @LINE:9
+// @LINE:52
+// @LINE:51
 class ReverseAuthenticate {
 
 
-// @LINE:9
+// @LINE:51
 def logout(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    com.feth.play.module.pa.controllers.Authenticate.logout(), HandlerDef(this.getClass.getClassLoader, "", "com.feth.play.module.pa.controllers.Authenticate", "logout", Seq(), "GET", """""", _prefix + """logout""")
 )
                       
 
-// @LINE:10
+// @LINE:52
 def authenticate(provider:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    com.feth.play.module.pa.controllers.Authenticate.authenticate(provider), HandlerDef(this.getClass.getClassLoader, "", "com.feth.play.module.pa.controllers.Authenticate", "authenticate", Seq(classOf[String]), "GET", """""", _prefix + """authenticate/$provider<[^/]+>""")
 )
@@ -970,49 +1014,51 @@ def authenticate(provider:String): play.api.mvc.HandlerRef[_] = new play.api.mvc
 }
         
 
-// @LINE:62
 // @LINE:61
-// @LINE:60
-// @LINE:56
-// @LINE:55
-// @LINE:51
+// @LINE:59
+// @LINE:58
+// @LINE:57
+// @LINE:53
 // @LINE:50
-// @LINE:49
-// @LINE:48
 // @LINE:47
 // @LINE:46
 // @LINE:42
+// @LINE:41
+// @LINE:40
+// @LINE:39
 // @LINE:38
 // @LINE:37
 // @LINE:36
-// @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:32
 // @LINE:28
+// @LINE:27
 // @LINE:26
 // @LINE:25
 // @LINE:24
 // @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
+// @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
 // @LINE:11
+// @LINE:10
+// @LINE:9
 // @LINE:8
-// @LINE:5
+// @LINE:7
 // @LINE:3
 // @LINE:2
 // @LINE:1
 package controllers.ref {
 
 
-// @LINE:61
+// @LINE:58
 class ReverseAssets {
 
 
-// @LINE:61
+// @LINE:58
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """assets/$file<.+>""")
 )
@@ -1021,11 +1067,11 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:62
-// @LINE:60
-// @LINE:11
-// @LINE:8
-// @LINE:5
+// @LINE:61
+// @LINE:59
+// @LINE:57
+// @LINE:53
+// @LINE:50
 // @LINE:3
 // @LINE:2
 // @LINE:1
@@ -1038,22 +1084,22 @@ def calendar(date:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handler
 )
                       
 
-// @LINE:5
-def storeStrmn(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.App.storeStrmn(), HandlerDef(this.getClass.getClassLoader, "", "controllers.App", "storeStrmn", Seq(), "GET", """  pre skladnika zobrazit sklad""", _prefix + """store/storeman""")
-)
-                      
-
-// @LINE:11
+// @LINE:53
 def oAuthDenied(provider:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.App.oAuthDenied(provider), HandlerDef(this.getClass.getClassLoader, "", "controllers.App", "oAuthDenied", Seq(classOf[String]), "GET", """""", _prefix + """authenticate/$provider<[^/]+>/denied""")
 )
                       
 
-// @LINE:60
+// @LINE:57
 def jsRoutes(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.App.jsRoutes(), HandlerDef(this.getClass.getClassLoader, "", "controllers.App", "jsRoutes", Seq(), "GET", """------------- Public files and JS routes serving
 ------------------------------------------------""", _prefix + """assets/javascripts/routes""")
+)
+                      
+
+// @LINE:59
+def jsMessages(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.App.jsMessages(), HandlerDef(this.getClass.getClassLoader, "", "controllers.App", "jsMessages", Seq(), "GET", """""", _prefix + """jsmessages""")
 )
                       
 
@@ -1063,7 +1109,7 @@ def store(date:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef
 )
                       
 
-// @LINE:8
+// @LINE:50
 def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.App.login(), HandlerDef(this.getClass.getClassLoader, "", "controllers.App", "login", Seq(), "GET", """ Play-authenticate routes""", _prefix + """login""")
 )
@@ -1072,11 +1118,11 @@ def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:42
+// @LINE:32
 class ReverseAvail {
 
 
-// @LINE:42
+// @LINE:32
 def availability(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Avail.availability(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Avail", "availability", Seq(), "GET", """------------- AVAILABILITY
 --------------------------""", _prefix + """ajax/avail""")
@@ -1086,103 +1132,110 @@ def availability(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:28
-// @LINE:26
-// @LINE:25
-// @LINE:24
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
+// @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:11
+// @LINE:10
+// @LINE:9
+// @LINE:8
+// @LINE:7
 class ReverseEvents {
 
 
-// @LINE:24
+// @LINE:11
 def drag(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Events.drag(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "drag", Seq(classOf[String], classOf[String]), "PUT", """""", _prefix + """ajax/event/drag""")
+   controllers.Events.drag(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "drag", Seq(classOf[String], classOf[String]), "PUT", """""", _prefix + """ajax/event/$eventType<[^/]+>/$id<[^/]+>""")
 )
                       
 
-// @LINE:25
+// @LINE:17
 def changeCal(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Events.changeCal(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "changeCal", Seq(classOf[String], classOf[String]), "PUT", """""", _prefix + """ajax/event/$eventType<[^/]+>/$id<[^/]+>/changeCal""")
 )
                       
 
-// @LINE:22
+// @LINE:15
 def editInstl(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Events.editInstl(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "editInstl", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """event/INSTALLATION/$id<[^/]+>""")
 )
                       
 
-// @LINE:20
+// @LINE:13
 def editStrmn(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Events.editStrmn(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "editStrmn", Seq(classOf[String], classOf[String]), "GET", """skladnik edit a update""", _prefix + """event/$eventType<[^/]+>/$id<[^/]+>/storeman""")
 )
                       
 
-// @LINE:18
+// @LINE:10
 def update(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Events.update(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "update", Seq(classOf[String], classOf[String]), "PUT", """""", _prefix + """event/$eventType<[^/]+>/$id<[^/]+>""")
+   controllers.Events.update(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "update", Seq(classOf[String], classOf[String]), "POST", """""", _prefix + """event/$eventType<[^/]+>/$id<[^/]+>""")
 )
                       
 
-// @LINE:23
+// @LINE:16
 def updateInstl(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Events.updateInstl(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "updateInstl", Seq(classOf[String], classOf[String]), "PUT", """""", _prefix + """event/INSTALLATION/$id<[^/]+>""")
 )
                       
 
-// @LINE:21
+// @LINE:14
 def updateStrmn(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Events.updateStrmn(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "updateStrmn", Seq(classOf[String], classOf[String]), "PUT", """""", _prefix + """event/$eventType<[^/]+>/$id<[^/]+>/storeman""")
 )
                       
 
-// @LINE:26
+// @LINE:18
 def delete(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Events.delete(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "delete", Seq(classOf[String], classOf[String]), "DELETE", """""", _prefix + """event/$eventType<[^/]+>/$id<[^/]+>""")
 )
                       
 
-// @LINE:16
+// @LINE:7
 def add(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Events.add(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "add", Seq(), "POST", """------------- EEVENTS
 ---------------------""", _prefix + """ajax/event""")
 )
                       
 
-// @LINE:17
+// @LINE:9
 def edit(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Events.edit(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "edit", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """event/$eventType<[^/]+>/$id<[^/]+>""")
 )
                       
 
-// @LINE:28
+// @LINE:19
 def upcomingActions(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Events.upcomingActions(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "upcomingActions", Seq(), "GET", """""", _prefix + """ajax/actions/upcoming""")
+)
+                      
+
+// @LINE:8
+def addAndEdit(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Events.addAndEdit(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Events", "addAndEdit", Seq(), "POST", """""", _prefix + """event/addAndEdit""")
 )
                       
 
 }
                           
 
-// @LINE:56
-// @LINE:55
+// @LINE:47
+// @LINE:46
 class ReverseDocuments {
 
 
-// @LINE:55
+// @LINE:46
 def priceOffer(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Documents.priceOffer(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Documents", "priceOffer", Seq(classOf[String], classOf[String]), "GET", """------------- DOCUMENTS
 -----------------------""", _prefix + """priceOffer/$eventType<[^/]+>/$id<[^/]+>""")
 )
                       
 
-// @LINE:56
+// @LINE:47
 def contract(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Documents.contract(eventType, id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Documents", "contract", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """contract/$eventType<[^/]+>/$id<[^/]+>""")
 )
@@ -1191,95 +1244,102 @@ def contract(eventType:String, id:String): play.api.mvc.HandlerRef[_] = new play
 }
                           
 
-// @LINE:51
-// @LINE:50
-// @LINE:49
-// @LINE:48
-// @LINE:47
-// @LINE:46
+// @LINE:42
+// @LINE:41
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
 class ReverseTents {
 
 
-// @LINE:51
+// @LINE:41
 def delete(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Tents.delete(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "delete", Seq(classOf[Long]), "DELETE", """""", _prefix + """tent/$id<[^/]+>""")
+   controllers.Tents.delete(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "delete", Seq(classOf[Long]), "POST", """""", _prefix + """tent/$id<[^/]+>/delete""")
 )
                       
 
-// @LINE:49
+// @LINE:39
 def edit(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tents.edit(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "edit", Seq(classOf[Long]), "GET", """""", _prefix + """tent/$id<[^/]+>""")
 )
                       
 
-// @LINE:50
+// @LINE:40
 def update(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Tents.update(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "update", Seq(classOf[Long]), "PUT", """""", _prefix + """tent/$id<[^/]+>""")
+   controllers.Tents.update(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "update", Seq(classOf[Long]), "POST", """""", _prefix + """tent/$id<[^/]+>""")
 )
                       
 
-// @LINE:48
+// @LINE:38
 def add(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tents.add(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "add", Seq(), "POST", """""", _prefix + """tent""")
 )
                       
 
-// @LINE:46
+// @LINE:36
 def list(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tents.list(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "list", Seq(), "GET", """------------- TENTS
 -------------------""", _prefix + """tents""")
 )
                       
 
-// @LINE:47
+// @LINE:37
 def neu(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tents.neu(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "neu", Seq(), "GET", """""", _prefix + """tent""")
+)
+                      
+
+// @LINE:42
+def getTent(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Tents.getTent(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "getTent", Seq(classOf[Long]), "GET", """""", _prefix + """ajax/tent/$id<[^/]+>""")
 )
                       
 
 }
                           
 
-// @LINE:38
-// @LINE:37
-// @LINE:36
-// @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:28
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
+// @LINE:23
 class ReverseItems {
 
 
-// @LINE:36
+// @LINE:28
 def delete(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Items.delete(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Items", "delete", Seq(classOf[Long]), "DELETE", """""", _prefix + """ajax/item/$id<[^/]+>""")
 )
                       
 
-// @LINE:38
-def export(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Items.export(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Items", "export", Seq(classOf[Long]), "PUT", """""", _prefix + """ajax/item/$id<[^/]+>/export""")
+// @LINE:25
+def listEventItems(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Items.listEventItems(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Items", "listEventItems", Seq(), "GET", """""", _prefix + """ajax/listEventItems""")
 )
                       
 
-// @LINE:37
-def imprt(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Items.imprt(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Items", "imprt", Seq(classOf[Long]), "PUT", """""", _prefix + """ajax/item/$id<[^/]+>/import""")
-)
-                      
-
-// @LINE:35
+// @LINE:27
 def update(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Items.update(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Items", "update", Seq(classOf[Long]), "PUT", """""", _prefix + """ajax/item/$id<[^/]+>""")
 )
                       
 
-// @LINE:34
+// @LINE:24
+def listTentItems(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Items.listTentItems(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Items", "listTentItems", Seq(), "GET", """""", _prefix + """ajax/listTentItems""")
+)
+                      
+
+// @LINE:26
 def add(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Items.add(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Items", "add", Seq(), "POST", """""", _prefix + """ajax/item""")
 )
                       
 
-// @LINE:33
+// @LINE:23
 def list(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Items.list(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Items", "list", Seq(), "GET", """------------- ITEMS
 -------------------""", _prefix + """ajax/items""")

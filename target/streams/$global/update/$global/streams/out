@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for is-klost#is-klost_2.11;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.scala-lang#scala-library;2.11.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5458e076[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4b766fc4[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.1 in sbt-chain[0m
@@ -546,7 +546,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@3b47e444[0m
 [0m[[0minfo[0m] [0mResolving javax.validation#validation-api;1.1.0.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: javax.validation#validation-api;1.1.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: javax.validation#validation-api;1.1.0.Final[0m
@@ -559,7 +559,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@32984c6[0m
 [0m[[0minfo[0m] [0mResolving org.jboss.logging#jboss-logging;3.1.1.GA ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.jboss.logging#jboss-logging;3.1.1.GA[0m
@@ -577,7 +577,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@355cae4b[0m
 [0m[[0minfo[0m] [0mResolving com.fasterxml#classmate;1.0.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.fasterxml#classmate;1.0.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.fasterxml#classmate;1.0.0[0m
@@ -748,14 +748,14 @@
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.2] org.scala-lang#scala-library;2.11.2[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->org.scala-lang#scala-library;2.11.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->com.typesafe.play#twirl-api_2.11;1.0.2 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.feth#play-authenticate_2.11;0.6.8->com.typesafe.play#play_2.11;2.3.6 [compile->master(*)][0m
@@ -1002,17 +1002,17 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.http-client#google-http-client-jackson2;1.19.0->com.fasterxml.jackson.core#jackson-core;2.3.2 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.http-client#google-http-client-jackson2;1.19.0->com.fasterxml.jackson.core#jackson-core;2.1.3 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.http-client#google-http-client-jackson2;1.19.0->com.fasterxml.jackson.core#jackson-core;2.3.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.http-client#google-http-client-jackson2;1.19.0 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.http-client#google-http-client-jackson2;1.19.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.http-client#google-http-client-jackson2;1.19.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.http-client#google-http-client-jackson2;1.19.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.http-client#google-http-client-jackson2;1.19.0->com.google.http-client#google-http-client;1.19.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.http-client#google-http-client-jackson2;1.19.0->com.google.http-client#google-http-client;1.19.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.http-client#google-http-client-jackson2;1.19.0->com.fasterxml.jackson.core#jackson-core;2.1.3 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.http-client#google-http-client-jackson2;1.19.0->com.fasterxml.jackson.core#jackson-core;2.3.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.http-client#google-http-client-jackson2;1.19.0->com.fasterxml.jackson.core#jackson-core;2.3.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.http-client#google-http-client-jackson2;1.19.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.http-client#google-http-client-jackson2;1.19.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.http-client#google-http-client-jackson2;1.19.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.http-client#google-http-client-jackson2;1.19.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.http-client#google-http-client-jackson2;1.19.0 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.http-client#google-http-client-jackson2;1.19.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.api-client#google-api-client;1.19.1->com.google.guava#guava-jdk5;13.0 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving com.google.guava#guava-jdk5;13.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.google.guava#guava-jdk5;13.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -1059,7 +1059,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->mysql#mysql-connector-java;5.1.34 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->joda-time#joda-time;2.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving joda-time#joda-time;2.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5c1649cf[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: joda-time#joda-time;2.7[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: joda-time#joda-time;2.7[0m
 [0m[[0mdebug[0m] [0m	found joda-time#joda-time;2.7 in sbt-chain[0m
@@ -1067,9 +1067,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->joda-time#joda-time;2.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->joda-time#joda-time;2.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->joda-time#joda-time;2.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->joda-time#joda-time;2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->joda-time#joda-time;2.7 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->joda-time#joda-time;2.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->joda-time#joda-time;2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.apache.poi#poi-ooxml;3.11 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.poi#poi-ooxml;3.11 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.poi#poi-ooxml;3.11 {compile=[default(compile)]}[0m
@@ -1087,14 +1087,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi-ooxml;3.11->org.apache.poi#poi;3.11 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi;3.11->commons-codec#commons-codec;1.9 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi;3.11->commons-codec#commons-codec;1.9 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi-ooxml;3.11->org.apache.poi#poi;3.11 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi-ooxml;3.11->org.apache.poi#poi;3.11 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi;3.11->commons-codec#commons-codec;1.9 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi;3.11->commons-codec#commons-codec;1.9 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi-ooxml;3.11->org.apache.poi#poi;3.11 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi-ooxml;3.11->org.apache.poi#poi;3.11 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi-ooxml;3.11->org.apache.poi#poi;3.11 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi;3.11->commons-codec#commons-codec;1.9 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi;3.11->commons-codec#commons-codec;1.9 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi-ooxml;3.11->org.apache.poi#poi;3.11 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi-ooxml;3.11->org.apache.poi#poi;3.11 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi-ooxml;3.11->org.apache.poi#poi;3.11 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.poi#poi-ooxml;3.11->org.apache.poi#poi-ooxml-schemas;3.11 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.poi#poi-ooxml-schemas;3.11 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.poi#poi-ooxml-schemas;3.11 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -1140,6 +1140,124 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.julienrf#play-jsmessages_2.11;1.6.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.julienrf#play-jsmessages_2.11;1.6.2 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.julienrf#play-jsmessages_2.11;1.6.2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.julienrf#play-jsmessages_2.11;1.6.2[0m
+[0m[[0mdebug[0m] [0m	found org.julienrf#play-jsmessages_2.11;1.6.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.play#play-ws_2.11;2.3.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-ws_2.11;2.3.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-ws_2.11;2.3.0[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: com.typesafe.play#play-ws_2.11;2.3.0[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.play#play-ws_2.11;2.3.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->org.scala-lang#scala-library;2.11.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.typesafe.play#play_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.typesafe.play#play_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.typesafe.play#play_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.typesafe.play#play_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.google.guava#guava;16.0.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.google.guava#guava;16.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.ning#async-http-client;1.8.8 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving com.ning#async-http-client;1.8.8 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.ning#async-http-client;1.8.8 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.ning#async-http-client;1.8.8[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: com.ning#async-http-client;1.8.8[0m
+[0m[[0mdebug[0m] [0m	found com.ning#async-http-client;1.8.8 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.ning#async-http-client;1.8.8 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->io.netty#netty;3.9.0.Final [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->io.netty#netty;3.9.3.Final [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->io.netty#netty;3.9.0.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->io.netty#netty;3.9.3.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->org.slf4j#slf4j-api;1.7.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->org.slf4j#slf4j-api;1.7.6 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->org.slf4j#slf4j-api;1.7.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->org.slf4j#slf4j-api;1.7.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->oauth.signpost#signpost-core;1.2.1.2 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving oauth.signpost#signpost-core;1.2.1.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: oauth.signpost#signpost-core;1.2.1.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: oauth.signpost#signpost-core;1.2.1.2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: oauth.signpost#signpost-core;1.2.1.2[0m
+[0m[[0mdebug[0m] [0m	found oauth.signpost#signpost-core;1.2.1.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->oauth.signpost#signpost-core;1.2.1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.3 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.9 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.9 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->oauth.signpost#signpost-commonshttp4;1.2.1.2 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving oauth.signpost#signpost-commonshttp4;1.2.1.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: oauth.signpost#signpost-commonshttp4;1.2.1.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: oauth.signpost#signpost-commonshttp4;1.2.1.2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: oauth.signpost#signpost-commonshttp4;1.2.1.2[0m
+[0m[[0mdebug[0m] [0m	found oauth.signpost#signpost-commonshttp4;1.2.1.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->oauth.signpost#signpost-commonshttp4;1.2.1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->oauth.signpost#signpost-core;1.2.1.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->oauth.signpost#signpost-core;1.2.1.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.0.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.3.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.3.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.0.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.3.5 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.3.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->org.scala-lang#scala-library;2.11.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.typesafe.play#play_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.typesafe.play#play_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.typesafe.play#play_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.google.guava#guava;16.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.google.guava#guava;16.0.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.ning#async-http-client;1.8.8 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->com.ning#async-http-client;1.8.8 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->io.netty#netty;3.9.0.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->io.netty#netty;3.9.3.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->io.netty#netty;3.9.3.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->org.slf4j#slf4j-api;1.7.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->org.slf4j#slf4j-api;1.7.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.8->org.slf4j#slf4j-api;1.7.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->oauth.signpost#signpost-core;1.2.1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->oauth.signpost#signpost-core;1.2.1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.9 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.9 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.0->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->oauth.signpost#signpost-core;1.2.1.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->oauth.signpost#signpost-core;1.2.1.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.3.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.3.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.3.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.3.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java-jdbc_2.11;2.3.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-java-jdbc_2.11;2.3.7 {compile=[default(compile)]}[0m
@@ -1319,9 +1437,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.3.7->net.sf.ehcache#ehcache-core;2.6.8 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-cache_2.11;2.3.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-cache_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-cache_2.11;2.3.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-cache_2.11;2.3.7 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-cache_2.11;2.3.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-cache_2.11;2.3.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-ws_2.11;2.3.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java-ws_2.11;2.3.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-java-ws_2.11;2.3.7 {compile=[default(compile)]}[0m
@@ -1375,48 +1493,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.14->org.slf4j#slf4j-api;1.7.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.14->org.slf4j#slf4j-api;1.7.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.7->oauth.signpost#signpost-core;1.2.1.2 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving oauth.signpost#signpost-core;1.2.1.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: oauth.signpost#signpost-core;1.2.1.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: oauth.signpost#signpost-core;1.2.1.2[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: oauth.signpost#signpost-core;1.2.1.2[0m
-[0m[[0mdebug[0m] [0m	found oauth.signpost#signpost-core;1.2.1.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.7->oauth.signpost#signpost-core;1.2.1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.9 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.9 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.7->oauth.signpost#signpost-core;1.2.1.2 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.7->oauth.signpost#signpost-core;1.2.1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.9 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-core;1.2.1.2->commons-codec#commons-codec;1.9 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.7->oauth.signpost#signpost-commonshttp4;1.2.1.2 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving oauth.signpost#signpost-commonshttp4;1.2.1.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: oauth.signpost#signpost-commonshttp4;1.2.1.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: oauth.signpost#signpost-commonshttp4;1.2.1.2[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: oauth.signpost#signpost-commonshttp4;1.2.1.2[0m
-[0m[[0mdebug[0m] [0m	found oauth.signpost#signpost-commonshttp4;1.2.1.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.7->oauth.signpost#signpost-commonshttp4;1.2.1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->oauth.signpost#signpost-core;1.2.1.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->oauth.signpost#signpost-core;1.2.1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.0.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.3.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.3.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.0.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.3.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.3.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.7->oauth.signpost#signpost-commonshttp4;1.2.1.2 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.7->oauth.signpost#signpost-commonshttp4;1.2.1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->oauth.signpost#signpost-core;1.2.1.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->oauth.signpost#signpost-core;1.2.1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.0.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.3.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpcore;4.3.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.0.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.3.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies oauth.signpost#signpost-commonshttp4;1.2.1.2->org.apache.httpcomponents#httpclient;4.3.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.7->com.typesafe.play#play-ws_2.11;2.3.7 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.7->com.typesafe.play#play-ws_2.11;2.3.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ws_2.11;2.3.7->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
@@ -1461,9 +1540,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ws_2.11;2.3.7->oauth.signpost#signpost-commonshttp4;1.2.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-ws_2.11;2.3.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-ws_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-ws_2.11;2.3.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-ws_2.11;2.3.7 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-ws_2.11;2.3.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-ws_2.11;2.3.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for is-klost#is-klost_2.11;1.0 [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for is-klost#is-klost_2.11;1.0 [compile][0m
@@ -1776,8 +1855,8 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@703ab6da[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@1ebadbc6[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -1785,8 +1864,8 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@5f428b6c[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@9cf9050[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
@@ -1796,8 +1875,8 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@674358e3[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@7680d40b[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->com.fasterxml#classmate;1.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -2256,6 +2335,31 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->compile][0m
@@ -2662,9 +2766,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@46c4f6d5[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@2d293e3f[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@6eb5b142[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -2672,9 +2776,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@3ef0d409[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@34f0bb27[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@288f1898[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
@@ -2684,9 +2788,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@2eae5c15[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@391f7ea4[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@42b35e48[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->com.fasterxml#classmate;1.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -3146,6 +3250,31 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->compile][0m
@@ -4852,10 +4981,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@671d21aa[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@298d54c9[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@7db96d6e[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@18bf913e[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -4863,10 +4992,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@552532[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@55fcf5c9[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@526c8b39[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@54287575[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
@@ -4876,10 +5005,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@6f92fe38[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@1b7047c2[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@68771fa0[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@64bd76f4[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->com.fasterxml#classmate;1.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -5340,6 +5469,31 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->compile][0m
@@ -5748,10 +5902,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@4b51bf66[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@63ece82b[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@567e924d[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@fb72998[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -5759,10 +5913,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@11fbcac1[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@29bc4e20[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@9ad2c48[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@48362fee[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
@@ -5772,10 +5926,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@3c52ace4[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@57d4cbac[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@5387b640[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@72ce4e97[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->com.fasterxml#classmate;1.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -6236,6 +6390,31 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->compile][0m
@@ -6644,12 +6823,12 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@75e17490[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@24abd666[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@d88d559[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@126ecd00[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@2854c474[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@552db05b[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -6657,12 +6836,12 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@313de952[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@57a11fbf[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@132b618b[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@510f682[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@1ca7d367[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@4e281de3[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
@@ -6672,12 +6851,12 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.7 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@6093637e[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@6c6916ba[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@675344f0[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@bd31d8f[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@51399d59[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5c1649cf => sbt.ivyint.MergedDescriptors@1d8967b8[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->com.fasterxml#classmate;1.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -7140,6 +7319,31 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.json#json;20090211 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->org.scala-lang#scala-library;2.11.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play-ws_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.julienrf#play-jsmessages_2.11;1.6.2->com.typesafe.play#play_2.11;2.3.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.julienrf#play-jsmessages_2.11;1.6.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->com.typesafe.play#play-java-jdbc_2.11;2.3.7 [compile->compile][0m
@@ -8833,6 +9037,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.poi#poi-ooxml;3.11!poi-ooxml.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.poi#poi;3.11!poi.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.json#json;20090211!json.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.julienrf#play-jsmessages_2.11;1.6.2!play-jsmessages_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-jdbc_2.11;2.3.7!play-java-jdbc_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-ebean_2.11;2.3.7!play-java-ebean_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-cache_2.11;2.3.7!play-cache_2.11.jar[0m
@@ -8899,6 +9104,8 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.poi#poi-ooxml-schemas;3.11!poi-ooxml-schemas.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.xmlbeans#xmlbeans;2.6.0!xmlbeans.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] stax#stax-api;1.0.1!stax-api.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] oauth.signpost#signpost-core;1.2.1.2!signpost-core.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] oauth.signpost#signpost-commonshttp4;1.2.1.2!signpost-commonshttp4.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc_2.11;2.3.7!play-jdbc_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.jolbox#bonecp;0.8.0.RELEASE!bonecp.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.h2database#h2;1.3.175!h2.jar[0m
@@ -8909,8 +9116,6 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] net.sf.ehcache#ehcache-core;2.6.8!ehcache-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-ws_2.11;2.3.7!play-ws_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.ning#async-http-client;1.8.14!async-http-client.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] oauth.signpost#signpost-core;1.2.1.2!signpost-core.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] oauth.signpost#signpost-commonshttp4;1.2.1.2!signpost-commonshttp4.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-test_2.11;2.3.7!play-test_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] junit#junit;4.11!junit.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.specs2#specs2-core_2.11;2.3.12!specs2-core_2.11.jar[0m
@@ -8977,7 +9182,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.1!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.11!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4822ms :: artifacts dl 171ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 17324ms :: artifacts dl 194ms[0m
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 compile produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 runtime produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 test produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-test.xml[0m
@@ -8991,5 +9196,5 @@
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 docs produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 pom produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 scala-tool produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (4822ms resolve - 171ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (17324ms resolve - 194ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

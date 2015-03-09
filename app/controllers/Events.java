@@ -1,8 +1,10 @@
 package controllers;
 
 import com.google.api.services.calendar.model.Event;
+import dto.EntriesContainer;
 import dto.EventTO;
 import dto.EventType;
+import models.Entry;
 import play.data.Form;
 import play.i18n.Messages;
 import play.mvc.Controller;
@@ -46,21 +48,29 @@ public class Events extends Controller {
         return ok(editAdmin.render(eventType, id, eventTO.allDay, eventForm, eventTO.startDate));
     }
 
-    public static Result update(String eventType, String id) {
-        Event e;
+    public static Result update(String sEventType, String id) {
         try {
-            e = GoogleAPI.findEvent(EventType.valueOf(eventType), id);
+            EventType eventType = EventType.valueOf(sEventType);
+            Event e = GoogleAPI.findEvent(eventType, id);
             EventTO eventTO = form(EventTO.class).bindFromRequest().get();
             e = eventTO.toGoogleEvent(e.getId());
-            GoogleAPI.updateEvent(e, EventType.valueOf(eventType));
+            GoogleAPI.updateEvent(e, eventType);
+
+            EntriesContainer container = form(EntriesContainer.class).bindFromRequest().get();
+            for (Entry entry :container.entries){
+                entry.eventType = eventType;
+                entry.eventId = e.getId();
+                entry.save();
+                System.out.println(entry.item.name);
+            }
             return redirect(routes.App.calendar(eventTO.startDate));
 
         } catch (IOException | IllegalArgumentException e1) {
             e1.printStackTrace();
             return notFound(error404.render());
-        } catch (IllegalStateException e1){
+        } catch (IllegalStateException e1) {
             current().flash().put("error", Messages.get("err.eventStartEnd", id));
-            return redirect(routes.Events.edit(eventType, id));
+            return redirect(routes.Events.edit(sEventType, id));
         }
     }
 

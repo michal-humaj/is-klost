@@ -2,6 +2,7 @@ package controllers;
 
 import dto.Category;
 import models.Accessory;
+import models.Item;
 import models.StoredItem;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -28,6 +29,11 @@ public class Items extends Controller {
 
     public static Result listTentItems() {
         List<StoredItem> items = StoredItem.find.where().not((or(eq("category", Category.PB), eq("category", Category.CARPET)))).orderBy("category").findList();
+        return ok(toJson(items));
+    }
+
+    public static Result listEventItems() {
+        List<Item> items = Item.find.orderBy("category").findList();
         return ok(toJson(items));
     }
 

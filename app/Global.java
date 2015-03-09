@@ -26,9 +26,9 @@ public class Global extends GlobalSettings {
         System.setProperty("user.timezone", "Europe/Warsaw");
         TimeZone.setDefault(TimeZone.getTimeZone("Europe/Warsaw"));
 
-        if(Ebean.find(StoredItem.class).findRowCount() == 0) {
+        /*if(Ebean.find(StoredItem.class).findRowCount() == 0) {
             Ebean.save((List) Yaml.load("initial-data.yml"));
-        }
+        }*/
 
         PlayAuthenticate.setResolver(new Resolver() {
             @Override
