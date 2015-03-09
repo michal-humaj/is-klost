@@ -1,0 +1,41 @@
+<div class="modal fade" id="modalExportItem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <form class="form-horizontal" role="form">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" data-bind="text: item().name()"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group" data-bind="attr: { class: importAmount.isValid() ? 'form-group' : 'form-group has-info' }">
+                        <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.export")</label>
+                        <div class="col-sm-3 controls">
+                            <div class="input-group">
+                                <input id="inputExportAmount" class="form-control" placeholder="4" data-bind="value: importAmount().value">
+                                <span class="input-group-addon"
+                                    data-bind="text: item().category() === 'CARPET' ? Messages('lbl.m') : Messages('lbl.pcs') ">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="help-block col-sm-reset inline" data-bind="validationMessage: importAmount().value"></div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="pull-left">
+                        <button type="button" class="btn btn-primary" data-bind="click: exprt">@Messages("btn.export")</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">@Messages("btn.back")</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>

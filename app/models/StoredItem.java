@@ -24,13 +24,6 @@ public class StoredItem extends Item {
     @Column(precision = 9, scale = 2)
     public BigDecimal weight;
 
-    public StoredItem(String name, Category category, BigDecimal amount, BigDecimal weight) {
-        this.name = name;
-        this.category = category;
-        this.amount = amount;
-        this.weight = weight;
-    }
-
     public static Finder<Long, StoredItem> find = new Finder<>(Long.class, StoredItem.class);
 
     @Override

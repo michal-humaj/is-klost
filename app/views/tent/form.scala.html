@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
+@(tentId: Long)
 
-</body>
-</html>
+<div class="form-group" id="tentId" data-tentId="@tentId">
+    <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.name")</label>
+
+    <div class="col-sm-7">
+        <input name="name" placeholder="Stan pagoda" class="form-control" autocomplete="off"
+        required data-bind="value: name">
+    </div>
+</div>
+
+<h4 class="col-sm-offset-2 header blue lighter smaller">@Messages("h.tentItems")</h4>
+
+<div data-bind="foreach: accessories">
+    <div class="form-group" data-bind="attr: { class: itemName.isValid() ? 'form-group' : 'form-group has-info' }">
+        <div class="col-sm-offset-2 col-sm-7">
+            <input class="form-control autocomplete" placeholder="Stolička plastová"
+            data-bind="value: itemName, valueUpdate: 'blur' ">
+        </div>
+
+        <input type="hidden" data-bind="attr: { name: fieldItem }, value: $root.itemIdMap()[itemName()] " >
+
+        <div class="col-sm-2">
+            <input class="form-control" placeholder="18" autocomplete="off" required type="number" min="1" step="1"
+            data-bind="attr: { name: fieldAmount }, value: amount ">
+        </div>
+
+        <div class="col-sm-1">
+            <a type="button" class="btn btn-white btn-danger" data-bind="click: $parent.removeAccessory">
+                <span class="fa fa-times"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-11 col-sm-1">
+        <a type="button" class="btn btn-primary btn-sm" data-bind="click: addAccessory">
+            <span class="fa fa-plus "></span>
+        </a>
+    </div>
+</div>

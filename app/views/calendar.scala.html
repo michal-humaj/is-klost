@@ -1,8 +1,22 @@
+@(date: String)
+
 @views.html.master.main(Messages("nav.cal"))(0) {
 
     @views.html.master.datepicker()
 } {
-    Calendar
+    @views.html.event.popoverNew()
+
+    @views.html.event.popoverClick()
+
+    @views.html.event.modalDelete()
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="fullcalendar" data-date="@date"></div>
+        </div>
+    </div>
 } {
+
+    <script src='@routes.Assets.at("js/calendarCommon.js")'></script>
     <script src='@routes.Assets.at("js/calendarAdmin.js")'></script>
 }

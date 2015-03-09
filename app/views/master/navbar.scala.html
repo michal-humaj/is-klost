@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 @currentAuth() { auth =>
-                    @if(LoggedAdmin.isAdmin(auth.getId())){
+                    @if(LoggedAdmin.isAdminId(auth.getId())){
                         <li class='@if(tabNumber.equals(2)) {} else {transparent}'>
                             <a href='@routes.Tents.list()'>
                                 <img src='@routes.Assets.at("img/tent.png")' width="24" height="24">
@@ -53,11 +53,11 @@
             <ul class="nav ace-nav">
                 <li class="transparent">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        <img class="nav-user-photo" src='@session.get("picture")' alt="Jason's Photo" />
+                        <img class="nav-user-photo" src='@session.get("picture")' alt="Users's profile picture" />
                         <span class="user-info">
                             <small>
                             @currentAuth() { auth =>
-                                @if(LoggedAdmin.isAdmin(auth.getId())){
+                                @if(LoggedAdmin.isAdminId(auth.getId())){
                                     @Messages("nav.admin")
                                 }else{
                                     @Messages("nav.storeman")

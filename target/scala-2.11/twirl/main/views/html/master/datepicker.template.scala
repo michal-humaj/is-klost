@@ -43,7 +43,7 @@ Seq[Any](format.raw/*1.1*/("""<div class="sidebar-shortcuts" id="sidebar-shortcu
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Feb 02 12:51:47 CET 2015
+                  DATE: Mon Mar 09 21:53:22 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/master/datepicker.scala.html
                   HASH: 4cf3904f8587691205c1280b02fa32b1a8fda8d6
                   MATRIX: 810->0

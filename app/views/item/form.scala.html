@@ -1,0 +1,51 @@
+@(selectId : String)
+
+<div class="form-group" data-bind="attr: { class: item().category.isValid() ? 'form-group' : 'form-group has-info'  }">
+    <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.cat")</label>
+    <div class="col-sm-6">
+        <select name="category" id="@selectId" class="form-control itemCategorySelect" data-bind="value: item().category">
+        @for(cat <- dto.Category.values()) {
+            @if(!cat.equals(dto.Category.TENT)) {
+                <option value="@cat">@Messages(cat.toString())</option>
+            }
+        }
+        </select>
+    </div>
+    <div class="help-block col-sm-reset inline" data-bind="validationMessage: item().category"></div>
+</div>
+
+<div class="form-group" data-bind="attr: { class: item().name.isValid() ? 'form-group' : 'form-group has-info' }">
+    <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.name")</label>
+    <div class="col-sm-6">
+        <input name="name" class="form-control" placeholder="Stolička plastová" data-bind="value: item().name">
+    </div>
+    <div class="help-block col-sm-reset inline" data-bind="validationMessage: item().name"></div>
+</div>
+
+<div class="form-group" data-bind="attr: { class: item().amount.isValid() ? 'form-group' : 'form-group has-info' }">
+    <label class="col-sm-2 control-label no-padding-right"
+        data-bind="text: item().category() === 'CARPET' ? Messages('lbl.length') : Messages('lbl.amount') ">
+    </label>
+    <div class="col-sm-3 controls">
+        <div class="input-group">
+            <input name="amount" class="form-control" placeholder="340" data-bind="value: item().amount">
+            <span class="input-group-addon"
+                data-bind="text: item().category() === 'CARPET' ? Messages('lbl.m') : Messages('lbl.pcs') ">
+            </span>
+        </div>
+    </div>
+    <div class="help-block col-sm-reset inline" data-bind="validationMessage: item().amount"></div>
+</div>
+
+<div class="form-group" data-bind="attr: { class: item().weight.isValid() ? 'form-group' : 'form-group has-info'  }">
+    <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.weight")</label>
+    <div class="col-sm-3 controls">
+        <div class="input-group">
+            <input name="weight" class="form-control" placeholder="2.85" data-bind="value: item().weight">
+            <span class="input-group-addon"
+                data-bind="text: item().category() === 'CARPET' ? Messages('lbl.kgpm') : Messages('lbl.kg') ">
+            </span>
+        </div>
+    </div>
+    <div class="help-block col-sm-reset inline" data-bind="validationMessage: item().weight"></div>
+</div>

@@ -1,0 +1,38 @@
+@(eventType: String, eventId: String, allDay: Boolean, eventForm: Form[dto.EventTO], returnDate: String)
+
+@views.html.master.main(Messages("h.editEvent"))(0) {
+} {
+    <div class="page-header">
+        <h1>
+        @Messages("h.editEvent")
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+
+            @if(flash.containsKey("error")) {
+                <div class="alert alert-danger">
+                @flash.get("error")
+                </div>
+            }
+
+            @helper.form(action = routes.Events.update(eventType, eventId), 'class -> "form-horizontal", 'role -> "form", 'id -> "form") {
+
+                @views.html.event.formEvent(eventType, eventId, allDay, eventForm)
+                @views.html.event.formEntries()
+
+                <div class="clearfix form-actions">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">@Messages("btn.update")</button>
+                            &nbsp;
+                        <a class="btn" type="reset" href='@routes.App.calendar(returnDate)'>@Messages("btn.back")</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+} {
+    <script src='@routes.Assets.at("js/eventEdit.js")'></script>
+}

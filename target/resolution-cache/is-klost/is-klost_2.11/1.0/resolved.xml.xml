@@ -4,7 +4,7 @@
 		module="is-klost_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150202125228"
+		publication="20150309215320"
 	>
 		<description>
 		is-klost
@@ -46,6 +46,7 @@
 		<dependency org="org.apache.poi" name="poi-ooxml" rev="3.11" conf="compile->default(compile)"/>
 		<dependency org="org.apache.poi" name="poi" rev="3.11" conf="compile->default(compile)"/>
 		<dependency org="org.json" name="json" rev="20090211" conf="compile->default(compile)"/>
+		<dependency org="org.julienrf" name="play-jsmessages_2.11" rev="1.6.2" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-jdbc_2.11" rev="2.3.7" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-ebean_2.11" rev="2.3.7" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-cache_2.11" rev="2.3.7" conf="compile->default(compile)"/>

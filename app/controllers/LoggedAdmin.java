@@ -29,7 +29,7 @@ public class LoggedAdmin extends Security.Authenticator {
     public String getUsername(final Http.Context ctx) {
         final AuthUser u = PlayAuthenticate.getUser(session());
         if (u == null) return null;
-        if (isAdmin(u.getId())) {
+        if (isAdminId(u.getId())) {
             revokeAccessTokenIfExpired(u);
             return u.getId();
         }
@@ -41,12 +41,21 @@ public class LoggedAdmin extends Security.Authenticator {
         return redirect(routes.App.login());
     }
 
-    public static boolean isAdmin(String id) {
+    public static boolean isAdminId(String id) {
         if (id == null) return false;
         return adminIds.contains(id);
     }
 
-    public void revokeAccessTokenIfExpired(AuthUser authUser) {
+    public static boolean isUserAdmin(){
+        final AuthUser u = PlayAuthenticate.getUser(session());
+        if (u == null) return false;
+        if (isAdminId(u.getId())) {
+            return true;
+        }
+        return false;
+    }
+
+    protected void revokeAccessTokenIfExpired(AuthUser authUser) {
         try {
             if (session().get("lastUpdate") == null) return;
             final Long lastUpdate = Long.parseLong(session().get("lastUpdate"));

@@ -1,5 +1,9 @@
 [0m[[0minfo[0m] [0mPackaging C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\is-klost-1.0-assets.jar ...[0m
 [0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	public/js\storeStrmn.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\storeStrmn.js[0m
+[0m[[0mdebug[0m] [0m	public/js\tentEdit.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\tentEdit.js[0m
 [0m[[0mdebug[0m] [0m	public/css\bootstrap.min.css[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\css\bootstrap.min.css[0m
 [0m[[0mdebug[0m] [0m	public/js\lib\jquery-ui.min.js[0m
@@ -8,8 +12,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\common.js[0m
 [0m[[0mdebug[0m] [0m	public/fonts\fontawesome-webfont.ttf[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\fontawesome-webfont.ttf[0m
-[0m[[0mdebug[0m] [0m	public/js\storeStoreman.js[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\storeStoreman.js[0m
+[0m[[0mdebug[0m] [0m	public/js\lib\knockout-3.2.0.min.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\knockout-3.2.0.min.js[0m
 [0m[[0mdebug[0m] [0m	public/fonts\glyphicons-halflings-regular.ttf[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\glyphicons-halflings-regular.ttf[0m
 [0m[[0mdebug[0m] [0m	public/fonts[0m
@@ -22,14 +26,18 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\css\custom.css[0m
 [0m[[0mdebug[0m] [0m	public/fonts\FontAwesome.otf[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\FontAwesome.otf[0m
-[0m[[0mdebug[0m] [0m	public/js\calendarStoreman.js[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\calendarStoreman.js[0m
+[0m[[0mdebug[0m] [0m	public/js\tentNew.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\tentNew.js[0m
 [0m[[0mdebug[0m] [0m	public/fonts\fontawesome-webfont.svg[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\fontawesome-webfont.svg[0m
 [0m[[0mdebug[0m] [0m	public/fonts\readme[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\readme[0m
 [0m[[0mdebug[0m] [0m	public/js\lib\jquery.gritter.min.js[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\jquery.gritter.min.js[0m
+[0m[[0mdebug[0m] [0m	public/js\eventEdit.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\eventEdit.js[0m
+[0m[[0mdebug[0m] [0m	public/js\lib\knockout.validation.min.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\knockout.validation.min.js[0m
 [0m[[0mdebug[0m] [0m	public/img\favicon.png[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\img\favicon.png[0m
 [0m[[0mdebug[0m] [0m	public/css\jquery.gritter.min.css[0m
@@ -44,6 +52,10 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\css\ace.min.css[0m
 [0m[[0mdebug[0m] [0m	public/css\font-awesome.min.css[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\css\font-awesome.min.css[0m
+[0m[[0mdebug[0m] [0m	public/js\lib\gcal.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\gcal.js[0m
+[0m[[0mdebug[0m] [0m	public/js\lib\sk-SK.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\sk-SK.js[0m
 [0m[[0mdebug[0m] [0m	public/img[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\img[0m
 [0m[[0mdebug[0m] [0m	public/fonts\glyphicons-halflings-regular.svg[0m
@@ -52,8 +64,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\jquery.min.js[0m
 [0m[[0mdebug[0m] [0m	public/css\fullcalendar.min.css[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\css\fullcalendar.min.css[0m
-[0m[[0mdebug[0m] [0m	public/js\storeAdmin.js[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\storeAdmin.js[0m
 [0m[[0mdebug[0m] [0m	public/js\lib\moment.min.js[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\moment.min.js[0m
 [0m[[0mdebug[0m] [0m	public/css[0m
@@ -76,14 +86,22 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\OpenSans-400.woff[0m
 [0m[[0mdebug[0m] [0m	public/fonts\fontawesome-webfont.eot[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\fontawesome-webfont.eot[0m
+[0m[[0mdebug[0m] [0m	public/js\tentCommon.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\tentCommon.js[0m
 [0m[[0mdebug[0m] [0m	public/fonts\fontawesome-webfont.woff[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\fontawesome-webfont.woff[0m
 [0m[[0mdebug[0m] [0m	public/img\tent.png[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\img\tent.png[0m
 [0m[[0mdebug[0m] [0m	public/js\lib\ace-elements.min.js[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\ace-elements.min.js[0m
+[0m[[0mdebug[0m] [0m	public/js\tentList.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\tentList.js[0m
+[0m[[0mdebug[0m] [0m	public/js\lib\sk.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\sk.js[0m
 [0m[[0mdebug[0m] [0m	public/fonts\glyphicons-halflings-regular.eot[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\glyphicons-halflings-regular.eot[0m
 [0m[[0mdebug[0m] [0m	public/js\calendarAdmin.js[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\calendarAdmin.js[0m
+[0m[[0mdebug[0m] [0m	public/js\calendarCommon.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\calendarCommon.js[0m
 [0m[[0minfo[0m] [0mDone packaging.[0m

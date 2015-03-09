@@ -1,15 +1,19 @@
+import com.avaje.ebean.Ebean;
 import com.feth.play.module.pa.PlayAuthenticate;
 import com.feth.play.module.pa.PlayAuthenticate.Resolver;
 import com.feth.play.module.pa.exceptions.AccessDeniedException;
 import com.feth.play.module.pa.exceptions.AuthException;
+import models.StoredItem;
 import play.Application;
 import play.GlobalSettings;
 import play.i18n.Messages;
+import play.libs.Yaml;
 import play.mvc.Call;
 import play.mvc.Http;
 import controllers.routes;
 
-;
+import java.util.List;
+import java.util.TimeZone;
 
 /**
  * Created by MiHu on 21.1.2015.
@@ -19,8 +23,14 @@ public class Global extends GlobalSettings {
 
     public void onStart(final Application app) {
 
-        PlayAuthenticate.setResolver(new Resolver() {
+        System.setProperty("user.timezone", "Europe/Warsaw");
+        TimeZone.setDefault(TimeZone.getTimeZone("Europe/Warsaw"));
 
+        /*if(Ebean.find(StoredItem.class).findRowCount() == 0) {
+            Ebean.save((List) Yaml.load("initial-data.yml"));
+        }*/
+
+        PlayAuthenticate.setResolver(new Resolver() {
             @Override
             public Call login() {
                 return routes.App.login();
