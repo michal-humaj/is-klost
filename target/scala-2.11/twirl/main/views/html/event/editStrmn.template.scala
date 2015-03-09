@@ -47,7 +47,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 09 21:31:39 CET 2015
+                  DATE: Mon Mar 09 21:53:21 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/event/editStrmn.scala.html
                   HASH: 94de33994f62452ed8f9d2de8d94a1725df60faf
                   MATRIX: 808->0

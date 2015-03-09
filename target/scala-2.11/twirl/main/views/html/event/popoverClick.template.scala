@@ -70,7 +70,7 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverClick" class="hide">
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 09 21:31:39 CET 2015
+                  DATE: Mon Mar 09 21:53:21 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/event/popoverClick.scala.html
                   HASH: 0498c5ce718ba21c9ffb3c22efbd8c3c9766d3a9
                   MATRIX: 811->0|1143->306|1189->332|1234->350|1476->565|1521->589|1567->607|1893->906|1936->928|1982->946|2152->1088|2181->1089|2210->1090|2298->1149|2328->1150|2450->1245|2491->1265|2537->1283
