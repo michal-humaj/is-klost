@@ -22,7 +22,6 @@ public class GoogleAPI {
     private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
     private static final JsonFactory JSON_FACTORY = new JacksonFactory();
     public static final Map<EventType, String> calIds = ImmutableMap.of(
-
             EventType.ACTION, "o776rmha219v92fvejs0hahsso@group.calendar.google.com",
             EventType.RESERVATION, "3jg1lna270kjsjb0jjrhhqo5m8@group.calendar.google.com",
             EventType.INSTALLATION, "gehqh0ptgh0i2hkh3f1l4tlerg@group.calendar.google.com",
@@ -63,6 +62,22 @@ public class GoogleAPI {
         calendar()
                 .events()
                 .delete(calIds.get(eventType), id)
+                .setOauthToken(session("accessToken"))
+                .execute();
+    }
+
+    public static void moveEvent(EventType eventType, String id) throws IOException {
+        EventType moveTo;
+        if (eventType == EventType.ACTION) {
+            moveTo = EventType.RESERVATION;
+        } else if (eventType == EventType.RESERVATION) {
+            moveTo = EventType.ACTION;
+        } else {
+            throw new IllegalArgumentException("Events of type: " + eventType + " cannot be moved to different calendar.");
+        }
+        calendar()
+                .events()
+                .move(calIds.get(eventType), id, calIds.get(moveTo))
                 .setOauthToken(session("accessToken"))
                 .execute();
     }

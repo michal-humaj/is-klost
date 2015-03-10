@@ -57,7 +57,8 @@ public class App extends Controller {
                         routes.javascript.Events.add(),
                         routes.javascript.Events.delete(),
                         routes.javascript.Events.drag(),
-                        routes.javascript.Events.getEntries()
+                        routes.javascript.Events.getEntries(),
+                        routes.javascript.Events.changeCal()
 
 
                 )

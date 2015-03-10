@@ -112,7 +112,6 @@ function EventViewModel(allDay) {
 function checkErrorsOnFormSubmit() {
     $("#form").on('submit', function () {
         var errors = ko.validation.group(eventViewModel.entries(), {deep: true});
-        console.log(errors());
         if (errors().length === 0) return true;
         return false;
     });

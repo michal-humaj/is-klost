@@ -15,7 +15,7 @@ GET           /event/:eventType/:id/storeman              controllers.Events.edi
 PUT           /event/:eventType/:id/storeman              controllers.Events.updateStrmn(eventType, id)
 GET           /event/INSTALLATION/:id                     controllers.Events.editInstl(eventType, id)
 PUT           /event/INSTALLATION/:id                     controllers.Events.updateInstl(eventType, id)
-PUT           /ajax/event/:eventType/:id/changeCal        controllers.Events.changeCal(eventType, id)
+PUT           /ajax/event/changeCal/:eventType/:id        controllers.Events.changeCal(eventType, id)
 DELETE        /event/:eventType/:id                       controllers.Events.delete(eventType, id)
 GET           /ajax/actions/upcoming                      controllers.Events.upcomingActions()
 

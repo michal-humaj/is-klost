@@ -90,8 +90,24 @@ public class Events extends Controller {
         return ok();
     }
 
-    public static Result changeCal(String eventType, String id) {
-        return play.mvc.Results.TODO;
+    public static Result changeCal(String sEventType, String id)  {
+        EventType eventType = EventType.valueOf(sEventType);
+        try {
+            GoogleAPI.moveEvent(eventType, id);
+        } catch (IOException e) {
+            if (e.getMessage().contains("cannotChangeOrganizerOfInstance")){
+                return badRequest();
+            }else{
+                return notFound();
+            }
+        }
+        final List<Entry> entries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
+        for(Entry entry: entries){
+            entry.eventType = eventType == EventType.ACTION ? EventType.RESERVATION : EventType.ACTION;
+            entry.update(entry.id);
+        }
+        //TODO kod na zmazanie instalacii
+        return ok();
     }
 
     public static Result editInstl(String eventType, String id) {

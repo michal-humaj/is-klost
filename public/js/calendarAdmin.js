@@ -191,14 +191,25 @@ function removePopovers() {
 function Event(id, eventType, name, start, end, allDay) {
     this.id = ko.observable(id);
     this.eventType = ko.observable(eventType);
-    if (name === undefined){
+    if (name === undefined) {
         this.name = ko.observable();
-    }else{
+    } else {
         this.name = ko.observable(name.split(' →')[0]);
     }
     this.start = ko.observable(start);
     this.end = ko.observable(end);
     this.allDay = ko.observable(allDay);
+
+    this.changeCalText = ko.computed(function () {
+        return this.eventType() === 'RESERVATION' ? Messages('btn.toAction') : Messages('btn.toReservation');
+    }, this);
+
+    this.isChangeCalBtnVisible = ko.computed(function () {
+        if (this.eventType() === 'RESERVATION' || this.eventType() === 'ACTION') {
+            return true;
+        }
+        return false;
+    }, this);
 }
 
 function Action(id, name) {
@@ -224,6 +235,26 @@ function EventViewModel() {
         });
         requestDeleteEvent.fail(function (jqXHR, textStatus) {
             showErrorNotification(Messages('err.googleCal'));
+        });
+    }
+
+    this.changeCal = function () {
+        removePopovers();
+        var requestChangeCal = jsRoutes.controllers.Events.changeCal(this.event().eventType(), this.event().id()).ajax();
+        requestChangeCal.done(function () {
+            if (eventViewModel.event().eventType() === 'RESERVATION') {
+                showSuccessNotification(Messages('f.changeToAction', eventViewModel.event().name()));
+            } else {
+                showSuccessNotification(Messages('f.changeToReservation', eventViewModel.event().name()));
+            }
+            $('#fullcalendar').fullCalendar('refetchEvents');
+        });
+        requestChangeCal.fail(function (jqXHR, textStatus) {
+            if (jqXHR.status === 400) {
+                showErrorNotification(Messages('err.changeCal'));
+            } else {
+                showErrorNotification(Messages('err.googleCal'));
+            }
         });
     }
 

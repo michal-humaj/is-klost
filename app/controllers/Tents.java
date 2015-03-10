@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Entry;
 import models.Tent;
 import play.i18n.Messages;
 import play.mvc.Controller;
@@ -56,8 +57,11 @@ public class Tents extends Controller {
 
     public static Result delete(long id) {
         Tent tent = Tent.find.byId(id);
+        final List<Entry> entries = Entry.find.select("id").where().eq("item.id", id).findList();
         if (tent == null) {
             current().flash().put("error", Messages.get("err.tentNotFound", id));
+        } else if (entries.size() != 0) {
+            current().flash().put("error", Messages.get("err.deleteTent", tent.name));
         } else {
             String name = tent.name;
             tent.delete();
