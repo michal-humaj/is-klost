@@ -9,6 +9,7 @@ POST          /event/addAndEdit                           controllers.Events.add
 GET           /event/:eventType/:id                       controllers.Events.edit(eventType, id)
 POST          /event/:eventType/:id                       controllers.Events.update(eventType, id)
 PUT           /ajax/event/:eventType/:id                  controllers.Events.drag(eventType, id)
+GET           /ajax/entries/:eventType/:id                controllers.Events.getEntries(eventType, id)
 #skladnik edit a update
 GET           /event/:eventType/:id/storeman              controllers.Events.editStrmn(eventType, id)
 PUT           /event/:eventType/:id/storeman              controllers.Events.updateStrmn(eventType, id)

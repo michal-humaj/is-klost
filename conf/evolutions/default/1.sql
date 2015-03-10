@@ -21,6 +21,12 @@ create table entry (
   constraint pk_entry primary key (id))
 ;
 
+create table installation (
+  installation_id           varchar(255) not null,
+  action_id                 varchar(255),
+  constraint pk_installation primary key (installation_id))
+;
+
 create table item (
   ITEM_TYPE                 varchar(31) not null,
   id                        bigint auto_increment not null,
@@ -54,6 +60,8 @@ SET FOREIGN_KEY_CHECKS=0;
 drop table accessory;
 
 drop table entry;
+
+drop table installation;
 
 drop table item;
 

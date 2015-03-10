@@ -161,3 +161,4 @@ err.500.p=But we are working on it!
 err.unauthorized=Sorry, but you are not authorized to work with this system
 err.itemFromList=Choose only items from the list
 err.tentNotFound=Tent with ID {0} does not exist
+err.noEventEntries=Could not load items assigned to the event.

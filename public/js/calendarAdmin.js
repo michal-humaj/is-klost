@@ -94,14 +94,13 @@ function initKlostIS() {
 }
 
 function eventClick(event, jsEvent, view) {
-    console.log("EVENT CLICK");
     removePopovers();
     var eventType = calTypes[event.source.googleCalendarId];
     eventViewModel.event(new Event(event.id, eventType, event.title));
     $(jsEvent.target).popover({
         animation: false,
         container: '#fullcalendar',
-        title: event.title,
+        title: event.title.split(' →')[0],
         trigger: 'manual',
         placement: 'auto',
         html: true,
@@ -110,7 +109,6 @@ function eventClick(event, jsEvent, view) {
     $(jsEvent.target).popover('show');
     doNotDismissOnPopoverClick();
     ko.applyBindings(eventViewModel, $('.popover')[0]);
-    console.log("som az na konci");
     return false;
 }
 
@@ -156,8 +154,6 @@ function onTimeRangeSelect(start, end, jsEvent, view) {
 
 function dragEvent(event, delta, revertFunc, jsEvent, ui, view) {
     var eventType = calTypes[event.source.googleCalendarId];
-    console.log(event.start);
-    console.log(event.end);
     var start = event.start.valueOf();
     var end;
     if (event.end !== null) {
@@ -195,7 +191,11 @@ function removePopovers() {
 function Event(id, eventType, name, start, end, allDay) {
     this.id = ko.observable(id);
     this.eventType = ko.observable(eventType);
-    this.name = ko.observable(name);
+    if (name === undefined){
+        this.name = ko.observable();
+    }else{
+        this.name = ko.observable(name.split(' →')[0]);
+    }
     this.start = ko.observable(start);
     this.end = ko.observable(end);
     this.allDay = ko.observable(allDay);

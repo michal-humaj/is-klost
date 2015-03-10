@@ -10,8 +10,8 @@
         <input type="hidden" data-bind="attr: { name: fieldItem }, value: $root.itemIdMap()[itemName()] " >
 
         <div class="col-sm-2">
-            <input class="form-control" placeholder="18" autocomplete="off" required type="number" min="1" step="1"
-                   data-bind="attr: { name: fieldAmount }, value: amount ">
+            <input class="form-control" placeholder="18" autocomplete="off" required type="number"
+                   data-bind="attr: { name: fieldAmount, min: amountMinAndStep, step: amountMinAndStep}, value: amount ">
         </div>
 
         <div class="col-sm-1">
