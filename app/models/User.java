@@ -20,6 +20,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import static play.mvc.Http.Context.Implicit.session;
+
 /**
  * Created by MiHu on 18.8.2014.
  */

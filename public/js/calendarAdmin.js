@@ -15,6 +15,8 @@ var ONE_DAY = 86400000;
 
 function initKlostIS() {
 
+    eventViewModel = new EventViewModel();
+
     $('html').on('click', function () {
         removePopovers();
     });
@@ -91,6 +93,15 @@ function initKlostIS() {
     var urlDate = fullcalendar.attr('data-date');
     datepicker.datepicker('setDate', urlDate);
     fullcalendar.fullCalendar('gotoDate', urlDate);
+
+    var requestUpcomingActions = jsRoutes.controllers.Events.upcomingActions().ajax();
+    requestUpcomingActions.done(function (actions) {
+        eventViewModel.upcomingActions(actions);
+    });
+    requestUpcomingActions.fail(function (jqXHR, textStatus) {
+        showErrorNotification(Messages('err.googleCal'));
+    });
+
 }
 
 function eventClick(event, jsEvent, view) {
@@ -199,6 +210,7 @@ function Event(id, eventType, name, start, end, allDay) {
     this.start = ko.observable(start);
     this.end = ko.observable(end);
     this.allDay = ko.observable(allDay);
+    this.actionId = ko.observable();
 
     this.changeCalText = ko.computed(function () {
         return this.eventType() === 'RESERVATION' ? Messages('btn.toAction') : Messages('btn.toReservation');
@@ -212,14 +224,10 @@ function Event(id, eventType, name, start, end, allDay) {
     }, this);
 }
 
-function Action(id, name) {
-    this.id = ko.observable(id);
-    this.name = ko.observable(name);
-}
-
 function EventViewModel() {
 
     this.event = ko.validatedObservable(new Event());
+    this.upcomingActions = ko.observableArray([]);
 
     this.modalDelete = function () {
         removePopovers();
@@ -227,8 +235,13 @@ function EventViewModel() {
     }
 
     this.delet = function () {
+        var requestDeleteEvent;
         $('#modalDeleteEvent').modal('hide');
-        var requestDeleteEvent = jsRoutes.controllers.Events.delete(this.event().eventType(), this.event().id()).ajax();
+        if ('INSTALLATION' === this.event().eventType()){
+            requestDeleteEvent = jsRoutes.controllers.Events.deleteInstl(this.event().id()).ajax();
+        }else {
+            requestDeleteEvent = jsRoutes.controllers.Events.delete(this.event().eventType(), this.event().id()).ajax();
+        }
         requestDeleteEvent.done(function () {
             showSuccessNotification(Messages('f.deleteEvent', eventViewModel.event().name()));
             $('#fullcalendar').fullCalendar('refetchEvents');
@@ -260,4 +273,4 @@ function EventViewModel() {
 
 }
 
-var eventViewModel = new EventViewModel();
+

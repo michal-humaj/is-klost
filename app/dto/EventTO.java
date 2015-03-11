@@ -3,22 +3,21 @@ package dto;
 import com.google.api.client.util.DateTime;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.EventDateTime;
-import models.Entry;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
-
-import java.util.List;
 
 /**
  * Created by MiHu on 20.2.2015.
  */
 public class EventTO {
 
+    public String id;
     public String name;
     public EventType eventType;
     public long start;
     public long end;
     public boolean allDay;
+    public String actionId;
 
     public String startDate;
     public String startTime = "00:00";
@@ -29,9 +28,10 @@ public class EventTO {
     }
 
     public EventTO(Event e) {
-        name = e.getSummary().split(" →")[0];
+        name = e.getSummary() == null ? "" : e.getSummary().split(" →")[0];
         DateTime startDateTime;
         DateTime endDateTime;
+        id = e.getId();
         allDay = null == e.getStart().getDateTime();
         if (allDay) {
             startDateTime = e.getStart().getDate();
@@ -55,9 +55,9 @@ public class EventTO {
     public Event toGoogleEvent(String id, String entriesInfo) {
         Event e = new Event();
         name = name.split(" →")[0];
-        if (entriesInfo == null){
+        if (entriesInfo == null) {
             e.setSummary(name);
-        }else{
+        } else {
             e.setSummary(name + " → " + entriesInfo);
         }
         if (id != null) {

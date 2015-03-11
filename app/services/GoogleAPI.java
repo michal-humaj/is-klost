@@ -4,8 +4,10 @@ import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.client.util.DateTime;
 import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.model.Event;
+import com.google.api.services.calendar.model.Events;
 import com.google.common.collect.ImmutableMap;
 import dto.EventType;
 
@@ -78,6 +80,19 @@ public class GoogleAPI {
         calendar()
                 .events()
                 .move(calIds.get(eventType), id, calIds.get(moveTo))
+                .setOauthToken(session("accessToken"))
+                .execute();
+    }
+
+    public static Events findEvents(EventType type, Long millisMin, Long millisMax) throws IOException {
+        DateTime dateTimeMin = millisMin == null ? null : new DateTime(millisMin);
+        DateTime dateTimeMax = millisMax == null ? null : new DateTime(millisMax);
+
+        return calendar()
+                .events()
+                .list(calIds.get(type))
+                .setTimeMin(dateTimeMin)
+                .setTimeMax(dateTimeMax)
                 .setOauthToken(session("accessToken"))
                 .execute();
     }

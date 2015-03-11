@@ -18,6 +18,7 @@ public class LoggedStoremanOrAdmin extends LoggedAdmin {
 
     @Override
     public String getUsername(final Http.Context ctx) {
+        System.out.println("Storeman or admin LAST UPDATE: " + session().get("lastUpdate"));
         final AuthUser u = PlayAuthenticate.getUser(session());
         if (u == null || u.getId() == null) return null;
         if (storemanIds.contains(u.getId())) {
