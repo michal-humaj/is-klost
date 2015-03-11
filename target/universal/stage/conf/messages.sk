@@ -52,7 +52,7 @@ btn.back=Späť
 btn.delete=Vymazať
 
 btn.toAction=Zmeniť na akciu
-btn.toReservation=Zmeniť na rezerváciu
+btn.toReservation=Na rezerváciu
 
 btn.priceOffer=Cenová ponuka
 btn.contract=Zmluva
@@ -141,6 +141,9 @@ f.updateEvent=Zmeny v udalosti {0} boli uložené.
 f.updateTent=Zmeny v stane {0} boli uložené.
 f.dragEvent=Udalosť {0} bola presunutá.
 
+f.changeToAction=Rezervácia {0} bola zmenená na akciu.
+f.changeToReservation=Akcia {0} bola zmenená na rezerváciu.
+
 f.deleteItem=Položka {0} bola vymazaná.
 f.deleteEvent=Udalosť {0} bola vymazaná.
 f.deleteTent=Stan {0} bol vymazaný.
@@ -161,8 +164,5 @@ err.500.p=Pracujeme však na jej odstránení
 err.unauthorized=Prepáčte, nie ste však oprávnení pracovať s týmto systémom
 err.itemFromList=Vyberte položku zo zoznamu
 err.tentNotFound=Stan s identifikačným číslom {0} neexistuje
-
-
-
-
-
+err.noEventEntries=Nepodarilo sa načítať položky priradené k udalosti.
+err.changeCal=Nemôžete presunúť opakujúcu sa udalosť do iného kalendára.

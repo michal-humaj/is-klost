@@ -20,16 +20,19 @@
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\controllers\LoggedAdmin.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\controllers\LoggedStoremanOrAdmin.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\controllers\Tents.java[0m
+[0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\dto\ActionsContainer.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\dto\Category.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\dto\EntriesContainer.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\dto\EventTO.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\dto\EventType.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\models\Accessory.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\models\Entry.java[0m
+[0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\models\Installation.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\models\Item.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\models\StoredItem.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\models\Tent.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\models\User.java[0m
+[0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\services\Cron.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\services\GoogleAPI.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\services\MyUserServicePlugin.java[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\app\services\Util.java[0m
@@ -41,6 +44,7 @@
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\twirl\main\views\html\error404.template.scala[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\twirl\main\views\html\error500.template.scala[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\twirl\main\views\html\event\editAdmin.template.scala[0m
+[0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\twirl\main\views\html\event\editInstallation.template.scala[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\twirl\main\views\html\event\editStrmn.template.scala[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\twirl\main\views\html\event\formEntries.template.scala[0m
 [0m[[0mdebug[0m] [0m	C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\twirl\main\views\html\event\formEvent.template.scala[0m

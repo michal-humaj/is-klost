@@ -38,8 +38,8 @@ Seq[Any](format.raw/*1.1*/("""<h4 class="col-sm-offset-2 header blue lighter sma
         <input type="hidden" data-bind="attr: """),format.raw/*10.47*/("""{"""),format.raw/*10.48*/(""" """),format.raw/*10.49*/("""name: fieldItem """),format.raw/*10.65*/("""}"""),format.raw/*10.66*/(""", value: $root.itemIdMap()[itemName()] " >
 
         <div class="col-sm-2">
-            <input class="form-control" placeholder="18" autocomplete="off" required type="number" min="1" step="1"
-                   data-bind="attr: """),format.raw/*14.37*/("""{"""),format.raw/*14.38*/(""" """),format.raw/*14.39*/("""name: fieldAmount """),format.raw/*14.57*/("""}"""),format.raw/*14.58*/(""", value: amount ">
+            <input class="form-control" placeholder="18" autocomplete="off" required type="number"
+                   data-bind="attr: """),format.raw/*14.37*/("""{"""),format.raw/*14.38*/(""" """),format.raw/*14.39*/("""name: fieldAmount, min: amountMinAndStep, step: amountMinAndStep"""),format.raw/*14.103*/("""}"""),format.raw/*14.104*/(""", value: amount ">
         </div>
 
         <div class="col-sm-1">
@@ -68,10 +68,10 @@ Seq[Any](format.raw/*1.1*/("""<h4 class="col-sm-offset-2 header blue lighter sma
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 09 21:53:21 CET 2015
+                  DATE: Wed Mar 11 23:40:20 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/event/formEntries.scala.html
-                  HASH: 72a6f0f20b7a1d82aa6131b8367ba25ae5aebb54
-                  MATRIX: 810->0|893->57|937->81|1054->171|1082->172|1110->173|1203->238|1232->239|1533->512|1562->513|1591->514|1635->530|1664->531|1923->762|1952->763|1981->764|2027->782|2056->783
+                  HASH: d4ace93e09f71957f4b9a96e1681ae53bce9e54b
+                  MATRIX: 810->0|893->57|937->81|1054->171|1082->172|1110->173|1203->238|1232->239|1533->512|1562->513|1591->514|1635->530|1664->531|1906->745|1935->746|1964->747|2057->811|2087->812
                   LINES: 29->1|29->1|29->1|32->4|32->4|32->4|32->4|32->4|38->10|38->10|38->10|38->10|38->10|42->14|42->14|42->14|42->14|42->14
                   -- GENERATED --
               */

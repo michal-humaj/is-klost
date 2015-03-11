@@ -420,8 +420,8 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="play.GlobalSettings#onBadRequest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onBadRequest(x$1:play.mvc.Http.RequestHeader,x$2:String):play.libs.F.Promise[play.mvc.Result]"></a>
+    </li><li name="Global#onBadRequest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onBadRequest(request:play.mvc.Http.RequestHeader,error:String):play.libs.F.Promise[play.mvc.Result]"></a>
       <a id="onBadRequest(RequestHeader,String):Promise[Result]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -429,16 +429,16 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">onBadRequest</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="play.mvc.Http.RequestHeader">RequestHeader</span></span>, <span name="arg1">arg1: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="play.libs.F.Promise">Promise</span>[<span class="extype" name="play.mvc.Result">Result</span>]</span>
+        <span class="name">onBadRequest</span><span class="params">(<span name="request">request: <span class="extype" name="play.mvc.Http.RequestHeader">RequestHeader</span></span>, <span name="error">error: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="play.libs.F.Promise">Promise</span>[<span class="extype" name="play.mvc.Result">Result</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="index.html#Global@onBadRequest(x$1:play.mvc.Http.RequestHeader,x$2:String):play.libs.F.Promise[play.mvc.Result]" title="Permalink" target="_top">
+      <a href="index.html#Global@onBadRequest(request:play.mvc.Http.RequestHeader,error:String):play.libs.F.Promise[play.mvc.Result]" title="Permalink" target="_top">
         <img src="lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GlobalSettings</dd></dl></div>
-    </li><li name="play.GlobalSettings#onError" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onError(x$1:play.mvc.Http.RequestHeader,x$2:Throwable):play.libs.F.Promise[play.mvc.Result]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="Global">Global</a> → GlobalSettings</dd></dl></div>
+    </li><li name="Global#onError" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onError(request:play.mvc.Http.RequestHeader,t:Throwable):play.libs.F.Promise[play.mvc.Result]"></a>
       <a id="onError(RequestHeader,Throwable):Promise[Result]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -446,16 +446,16 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">onError</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="play.mvc.Http.RequestHeader">RequestHeader</span></span>, <span name="arg1">arg1: <span class="extype" name="java.lang.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="play.libs.F.Promise">Promise</span>[<span class="extype" name="play.mvc.Result">Result</span>]</span>
+        <span class="name">onError</span><span class="params">(<span name="request">request: <span class="extype" name="play.mvc.Http.RequestHeader">RequestHeader</span></span>, <span name="t">t: <span class="extype" name="java.lang.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="play.libs.F.Promise">Promise</span>[<span class="extype" name="play.mvc.Result">Result</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="index.html#Global@onError(x$1:play.mvc.Http.RequestHeader,x$2:Throwable):play.libs.F.Promise[play.mvc.Result]" title="Permalink" target="_top">
+      <a href="index.html#Global@onError(request:play.mvc.Http.RequestHeader,t:Throwable):play.libs.F.Promise[play.mvc.Result]" title="Permalink" target="_top">
         <img src="lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GlobalSettings</dd></dl></div>
-    </li><li name="play.GlobalSettings#onHandlerNotFound" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onHandlerNotFound(x$1:play.mvc.Http.RequestHeader):play.libs.F.Promise[play.mvc.Result]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="Global">Global</a> → GlobalSettings</dd></dl></div>
+    </li><li name="Global#onHandlerNotFound" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onHandlerNotFound(request:play.mvc.Http.RequestHeader):play.libs.F.Promise[play.mvc.Result]"></a>
       <a id="onHandlerNotFound(RequestHeader):Promise[Result]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -463,14 +463,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">onHandlerNotFound</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="play.mvc.Http.RequestHeader">RequestHeader</span></span>)</span><span class="result">: <span class="extype" name="play.libs.F.Promise">Promise</span>[<span class="extype" name="play.mvc.Result">Result</span>]</span>
+        <span class="name">onHandlerNotFound</span><span class="params">(<span name="request">request: <span class="extype" name="play.mvc.Http.RequestHeader">RequestHeader</span></span>)</span><span class="result">: <span class="extype" name="play.libs.F.Promise">Promise</span>[<span class="extype" name="play.mvc.Result">Result</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="index.html#Global@onHandlerNotFound(x$1:play.mvc.Http.RequestHeader):play.libs.F.Promise[play.mvc.Result]" title="Permalink" target="_top">
+      <a href="index.html#Global@onHandlerNotFound(request:play.mvc.Http.RequestHeader):play.libs.F.Promise[play.mvc.Result]" title="Permalink" target="_top">
         <img src="lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GlobalSettings</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="Global">Global</a> → GlobalSettings</dd></dl></div>
     </li><li name="play.GlobalSettings#onLoadConfig" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="onLoadConfig(x$1:play.Configuration,x$2:java.io.File,x$3:ClassLoader,x$4:play.Mode):play.Configuration"></a>
       <a id="onLoadConfig(Configuration,File,ClassLoader,Mode):Configuration"></a>
