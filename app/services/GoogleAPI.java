@@ -4,8 +4,10 @@ import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.client.util.DateTime;
 import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.model.Event;
+import com.google.api.services.calendar.model.Events;
 import com.google.common.collect.ImmutableMap;
 import dto.EventType;
 
@@ -22,7 +24,6 @@ public class GoogleAPI {
     private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
     private static final JsonFactory JSON_FACTORY = new JacksonFactory();
     public static final Map<EventType, String> calIds = ImmutableMap.of(
-
             EventType.ACTION, "o776rmha219v92fvejs0hahsso@group.calendar.google.com",
             EventType.RESERVATION, "3jg1lna270kjsjb0jjrhhqo5m8@group.calendar.google.com",
             EventType.INSTALLATION, "gehqh0ptgh0i2hkh3f1l4tlerg@group.calendar.google.com",
@@ -66,6 +67,40 @@ public class GoogleAPI {
                 .setOauthToken(session("accessToken"))
                 .execute();
     }
+
+    public static void moveEvent(EventType eventType, String id) throws IOException {
+        EventType moveTo;
+        if (eventType == EventType.ACTION) {
+            moveTo = EventType.RESERVATION;
+        } else if (eventType == EventType.RESERVATION) {
+            moveTo = EventType.ACTION;
+        } else {
+            throw new IllegalArgumentException("Events of type: " + eventType + " cannot be moved to different calendar.");
+        }
+        calendar()
+                .events()
+                .move(calIds.get(eventType), id, calIds.get(moveTo))
+                .setOauthToken(session("accessToken"))
+                .execute();
+    }
+
+    public static Events findEvents(EventType type, Long millisMin, Long millisMax) throws IOException {
+        return findEvents(type, millisMin, millisMax, session("accessToken"));
+    }
+
+    public static Events findEvents(EventType type, Long millisMin, Long millisMax, String accessToken) throws IOException {
+        DateTime dateTimeMin = millisMin == null ? null : new DateTime(millisMin);
+        DateTime dateTimeMax = millisMax == null ? null : new DateTime(millisMax);
+
+        return calendar()
+                .events()
+                .list(calIds.get(type))
+                .setTimeMin(dateTimeMin)
+                .setTimeMax(dateTimeMax)
+                .setOauthToken(accessToken)
+                .execute();
+    }
+
 
     private static Calendar calendar() {
         Calendar.Builder builder = new Calendar.Builder(HTTP_TRANSPORT, JSON_FACTORY, null);

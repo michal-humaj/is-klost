@@ -1,25 +1,45 @@
 function initKlostIS() {
 
-    var allDay = 'true' === $('#eventId').attr('data-allDay') ? true : false;
+    var event = $('#eventId');
+    var allDay = 'true' === event.attr('data-allDay') ? true : false;
+    var eventType = event.attr('data-eventType');
+    var eventId = event.attr('data-eventId');
     eventViewModel = new EventViewModel(allDay);
     ko.applyBindings(eventViewModel);
     checkErrorsOnFormSubmit();
 
     var requestItemList = jsRoutes.controllers.Items.listEventItems().ajax();
-
     requestItemList.done(function (items) {
         eventViewModel.items = items.map(function (item) {
             return item.name;
         });
         eventViewModel.itemIdMap(new ItemIdMap(items));
 
+        var requestEventEntries = jsRoutes.controllers.Events.getEntries(eventType, eventId).ajax();
+        requestEventEntries.done(function (entries) {            
+            var i = 0;
+            var entries = entries.map(function(ent){
+                var entry = new Entry(i);
+                i++;
+                entry.itemName(ent.item.name);
+                entry.amount(ent.amount);
+                return entry;
+            });
+            if (entries.length === 0){
+                entries = [new Entry(0)];
+            }
+            eventViewModel.entries(entries);
 
-        $(".autocomplete").each(function () {
-            $(this).autocomplete({
-                source: autocompleteSource
+            $(".autocomplete").each(function () {
+                $(this).autocomplete({
+                    source: autocompleteSource
+                });
             });
         });
-      
+
+        requestEventEntries.fail(function (jqXHR, textStatus) {
+            showErrorNotification(Messages('err.noEventEntries'));
+        });
     });
 
     requestItemList.fail(function (jqXHR, textStatus) {
@@ -45,14 +65,21 @@ function Entry(index) {
         },
         required: true
     });
+
+    this.amountMinAndStep = ko.computed(function() {
+        var cat = eventViewModel.itemIdMap().categories[this.itemName()];
+        return cat === 'CARPET' ? '0.01' : '1';
+    }, this);
 }
 
 function ItemIdMap(items) {
     if (items === undefined) return;
+    this.categories = {};
     var key;
     for (var i = 0; i < items.length; i++) {
         key = items[i].name;
         this[key] = items[i].id;
+        this.categories[key] = items[i].category;
     }
 }
 
@@ -85,7 +112,6 @@ function EventViewModel(allDay) {
 function checkErrorsOnFormSubmit() {
     $("#form").on('submit', function () {
         var errors = ko.validation.group(eventViewModel.entries(), {deep: true});
-        console.log(errors());
         if (errors().length === 0) return true;
         return false;
     });

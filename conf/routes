@@ -6,16 +6,21 @@ GET           /store/:date                                controllers.App.store(
 #---------------------
 POST          /ajax/event                                 controllers.Events.add()
 POST          /event/addAndEdit                           controllers.Events.addAndEdit()
+GET           /event/INSTALLATION/:id                     controllers.Events.editInstl(id)
+POST          /event/INSTALLATION/:id                     controllers.Events.updateInstl(id)
+DELETE        /event/INSTALLATION/:id                     controllers.Events.deleteInstl(id)
 GET           /event/:eventType/:id                       controllers.Events.edit(eventType, id)
 POST          /event/:eventType/:id                       controllers.Events.update(eventType, id)
+DELETE        /event/:eventType/:id                       controllers.Events.delete(eventType, id)
 PUT           /ajax/event/:eventType/:id                  controllers.Events.drag(eventType, id)
+GET           /ajax/entries/:eventType/:id                controllers.Events.getEntries(eventType, id)
 #skladnik edit a update
 GET           /event/:eventType/:id/storeman              controllers.Events.editStrmn(eventType, id)
 PUT           /event/:eventType/:id/storeman              controllers.Events.updateStrmn(eventType, id)
-GET           /event/INSTALLATION/:id                     controllers.Events.editInstl(eventType, id)
-PUT           /event/INSTALLATION/:id                     controllers.Events.updateInstl(eventType, id)
-PUT           /ajax/event/:eventType/:id/changeCal        controllers.Events.changeCal(eventType, id)
-DELETE        /event/:eventType/:id                       controllers.Events.delete(eventType, id)
+
+
+PUT           /ajax/event/changeCal/:eventType/:id        controllers.Events.changeCal(eventType, id)
+
 GET           /ajax/actions/upcoming                      controllers.Events.upcomingActions()
 
 #------------- ITEMS

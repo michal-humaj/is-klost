@@ -40,7 +40,7 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverNew" class="hide">
         <div class="form-group" >
             <label class="col-sm-2 control-label no-padding-right">"""),_display_(/*13.69*/Messages("lbl.eventType")),format.raw/*13.94*/("""</label>
             <div class="col-sm-10">
-                <select name="eventType" class="form-control"  data-bind="value: event().eventType" required>
+                <select name="eventType" class="form-control" data-bind="value: event().eventType" required>
                 """),_display_(/*16.18*/for(eType <- dto.EventType.values()) yield /*16.54*/ {_display_(Seq[Any](format.raw/*16.56*/("""
                     """),format.raw/*17.21*/("""<option value=""""),_display_(/*17.37*/eType),format.raw/*17.42*/("""">"""),_display_(/*17.45*/Messages(eType.toString())),format.raw/*17.71*/("""</option>
                 """)))}),format.raw/*18.18*/("""
@@ -51,11 +51,9 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverNew" class="hide">
         <div class="form-group" data-bind="attr: """),format.raw/*23.50*/("""{"""),format.raw/*23.51*/(""" """),format.raw/*23.52*/("""class: event().eventType() === 'INSTALLATION' ? 'form-group' : 'form-group hide' """),format.raw/*23.133*/("""}"""),format.raw/*23.134*/("""" >
             <label class="col-sm-2 control-label no-padding-right">"""),_display_(/*24.69*/Messages("lbl.assignedAction")),format.raw/*24.99*/("""</label>
             <div class="col-sm-10">
-                <select name="assignedAction" class="form-control" required>
-                """),_display_(/*27.18*/for(eType <- dto.EventType.values()) yield /*27.54*/ {_display_(Seq[Any](format.raw/*27.56*/("""
-                    """),format.raw/*28.21*/("""<option value=""""),_display_(/*28.37*/eType),format.raw/*28.42*/("""">"""),_display_(/*28.45*/Messages(eType.toString())),format.raw/*28.71*/("""</option>
-                """)))}),format.raw/*29.18*/("""
-                """),format.raw/*30.17*/("""</select>
+                <select name="actionId" class="form-control" required data-bind="foreach: upcomingActions, value: event().actionId">
+                    <option data-bind="text: name, attr: """),format.raw/*27.58*/("""{"""),format.raw/*27.59*/("""value: id"""),format.raw/*27.68*/("""}"""),format.raw/*27.69*/(""""></option>
+                </select>
             </div>
         </div>
 
@@ -65,9 +63,10 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverNew" class="hide">
 
         <div class="form-group" >
             <div class="col-sm-10 col-sm-offset-2">
-                <input class="btn btn-sm btn-primary" onclick="submitClicked=this.name" name="addEvent" type="submit" value='"""),_display_(/*40.127*/Messages("btn.addEvent")),format.raw/*40.151*/("""'>
+                <input class="btn btn-sm btn-primary" onclick="submitClicked = this.name" name="addEvent" type="submit" value='"""),_display_(/*38.129*/Messages("btn.addEvent")),format.raw/*38.153*/("""'>
                     &nbsp;
-                <input class="btn btn-sm btn-link" onclick="submitClicked=this.name" name="addEventAndEdit" type="submit" value='"""),_display_(/*42.131*/Messages("btn.addEventAndEdit")),format.raw/*42.162*/("""' >
+                <input data-bind="attr: """),format.raw/*40.41*/("""{"""),format.raw/*40.42*/(""" """),format.raw/*40.43*/("""class: event().eventType() === 'INSTALLATION' ? 'btn btn-sm btn-link hide' : 'btn btn-sm btn-link' """),format.raw/*40.142*/("""}"""),format.raw/*40.143*/(""""
+                class="btn btn-sm btn-link" onclick="submitClicked = this.name" name="addEventAndEdit" type="submit" value='"""),_display_(/*41.126*/Messages("btn.addEventAndEdit")),format.raw/*41.157*/("""' >
             </div>
         </div>
     </form>
@@ -83,11 +82,11 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverNew" class="hide">
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 09 21:53:21 CET 2015
+                  DATE: Wed Mar 11 23:40:20 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/event/popoverNew.scala.html
-                  HASH: ec8bd144dcdd5e6838c18e3cd7fc5fdb2e005ffe
-                  MATRIX: 809->0|948->113|962->119|1003->139|1136->246|1176->266|1573->636|1619->661|1821->836|1873->872|1913->874|1963->896|2006->912|2032->917|2062->920|2109->946|2168->974|2214->992|2340->1090|2369->1091|2398->1092|2508->1173|2538->1174|2638->1247|2689->1277|2858->1419|2910->1455|2950->1457|3000->1479|3043->1495|3069->1500|3099->1503|3146->1529|3205->1557|3251->1575|3773->2069|3819->2093|4009->2255|4062->2286
-                  LINES: 29->1|30->2|30->2|30->2|32->4|32->4|41->13|41->13|44->16|44->16|44->16|45->17|45->17|45->17|45->17|45->17|46->18|47->19|51->23|51->23|51->23|51->23|51->23|52->24|52->24|55->27|55->27|55->27|56->28|56->28|56->28|56->28|56->28|57->29|58->30|68->40|68->40|70->42|70->42
+                  HASH: bfbe833355b04d213dd830b2f451c3a5ecf2308b
+                  MATRIX: 809->0|948->113|962->119|1003->139|1136->246|1176->266|1573->636|1619->661|1820->835|1872->871|1912->873|1962->895|2005->911|2031->916|2061->919|2108->945|2167->973|2213->991|2339->1089|2368->1090|2397->1091|2507->1172|2537->1173|2637->1246|2688->1276|2954->1514|2983->1515|3020->1524|3049->1525|3602->2050|3648->2074|3748->2146|3777->2147|3806->2148|3934->2247|3964->2248|4120->2376|4173->2407
+                  LINES: 29->1|30->2|30->2|30->2|32->4|32->4|41->13|41->13|44->16|44->16|44->16|45->17|45->17|45->17|45->17|45->17|46->18|47->19|51->23|51->23|51->23|51->23|51->23|52->24|52->24|55->27|55->27|55->27|55->27|66->38|66->38|68->40|68->40|68->40|68->40|68->40|69->41|69->41
                   -- GENERATED --
               */
           

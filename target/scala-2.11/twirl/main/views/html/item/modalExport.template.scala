@@ -79,7 +79,7 @@ Seq[Any](format.raw/*1.1*/("""<div class="modal fade" id="modalExportItem" tabin
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 09 21:53:22 CET 2015
+                  DATE: Wed Mar 11 23:40:20 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/item/modalExport.scala.html
                   HASH: ac5a032ec42e798231edcaa055eb9b25b4a9398d
                   MATRIX: 809->0|1541->704|1570->705|1599->706|1697->775|1727->776|1838->860|1882->882|2843->1816|2887->1838|3017->1941|3059->1961

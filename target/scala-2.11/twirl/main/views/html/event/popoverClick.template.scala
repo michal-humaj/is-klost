@@ -35,10 +35,11 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverClick" class="hide">
                     """),_display_(/*7.22*/Messages("btn.priceOffer")),format.raw/*7.48*/("""
                 """),format.raw/*8.17*/("""</a>
             </div>
-            <div class="col-sm-6">
-                <a class="btn btn-white btn-inverse btnPopover" type="submit"><i class="ace-icon fa fa-calendar-o bigger-110"></i>
-                    """),_display_(/*12.22*/Messages("btn.toAction")),format.raw/*12.46*/("""
-                """),format.raw/*13.17*/("""</a>
+            <div class="col-sm-6" data-bind="attr: """),format.raw/*10.52*/("""{"""),format.raw/*10.53*/(""" """),format.raw/*10.54*/("""class: event().isChangeCalBtnVisible() ? 'col-sm-6' : 'col-sm-6 hide' """),format.raw/*10.124*/("""}"""),format.raw/*10.125*/("""" >
+                <a class="btn btn-white btn-inverse btnPopover" type="submit" data-bind="click: changeCal">
+                    <i class="ace-icon fa fa-calendar-o bigger-110"></i>
+                    <!--ko text: event().changeCalText--><!--/ko-->
+                </a>
             </div>
         </div>
 
@@ -46,14 +47,14 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverClick" class="hide">
             <div class="col-sm-6">
                 <a class="btn btn-sm btn-danger btnPopover" data-bind="click: modalDelete">
                     <i class="ace-icon fa fa-trash-o bigger-110"></i>
-                    """),_display_(/*21.22*/Messages("btn.delete")),format.raw/*21.44*/("""
-                """),format.raw/*22.17*/("""</a>
+                    """),_display_(/*22.22*/Messages("btn.delete")),format.raw/*22.44*/("""
+                """),format.raw/*23.17*/("""</a>
             </div>
             <div class="col-sm-6">
-                <a class="btn btn-sm btn-info btnPopover" href data-bind="attr: """),format.raw/*25.81*/("""{"""),format.raw/*25.82*/(""" """),format.raw/*25.83*/("""href: '/event/' + event().eventType() + '/' + event().id() """),format.raw/*25.142*/("""}"""),format.raw/*25.143*/("""">
+                <a class="btn btn-sm btn-info btnPopover" href data-bind="attr: """),format.raw/*26.81*/("""{"""),format.raw/*26.82*/(""" """),format.raw/*26.83*/("""href: '/event/' + event().eventType() + '/' + event().id() """),format.raw/*26.142*/("""}"""),format.raw/*26.143*/("""">
                     <i class="ace-icon fa fa-pencil bigger-110"></i>
-                    """),_display_(/*27.22*/Messages("btn.edit")),format.raw/*27.42*/("""
-                """),format.raw/*28.17*/("""</a>
+                    """),_display_(/*28.22*/Messages("btn.edit")),format.raw/*28.42*/("""
+                """),format.raw/*29.17*/("""</a>
             </div>
         </div>
 
@@ -70,11 +71,11 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverClick" class="hide">
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 09 21:53:21 CET 2015
+                  DATE: Wed Mar 11 23:40:20 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/event/popoverClick.scala.html
-                  HASH: 0498c5ce718ba21c9ffb3c22efbd8c3c9766d3a9
-                  MATRIX: 811->0|1143->306|1189->332|1234->350|1476->565|1521->589|1567->607|1893->906|1936->928|1982->946|2152->1088|2181->1089|2210->1090|2298->1149|2328->1150|2450->1245|2491->1265|2537->1283
-                  LINES: 29->1|35->7|35->7|36->8|40->12|40->12|41->13|49->21|49->21|50->22|53->25|53->25|53->25|53->25|53->25|55->27|55->27|56->28
+                  HASH: 01765a419fca6d3b0ec336997d9b79d5f5b091c7
+                  MATRIX: 811->0|1143->306|1189->332|1234->350|1339->427|1368->428|1397->429|1496->499|1526->500|2125->1072|2168->1094|2214->1112|2384->1254|2413->1255|2442->1256|2530->1315|2560->1316|2682->1411|2723->1431|2769->1449
+                  LINES: 29->1|35->7|35->7|36->8|38->10|38->10|38->10|38->10|38->10|50->22|50->22|51->23|54->26|54->26|54->26|54->26|54->26|56->28|56->28|57->29
                   -- GENERATED --
               */
           

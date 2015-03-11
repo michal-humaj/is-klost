@@ -52,7 +52,7 @@ btn.back=Back
 btn.delete=Delete
 
 btn.toAction=Change to Action
-btn.toReservation=Change to Reservation
+btn.toReservation=To Reservation
 
 btn.priceOffer=Price offer
 btn.contract=Contract
@@ -141,6 +141,9 @@ f.updateEvent=Changes to event {0} were saved.
 f.updateTent=Changes to tent {0} were saved.
 f.dragEvent=Event {0} was moved.
 
+f.changeToAction=Reservation {0} was changed to Action.
+f.changeToReservation=Action {0} was changed Reservation.
+
 f.deleteItem=Item {0} was deleted.
 f.deleteEvent=Event {0} was deleted.
 f.deleteTent=Tent {0} was deleted.
@@ -161,3 +164,5 @@ err.500.p=But we are working on it!
 err.unauthorized=Sorry, but you are not authorized to work with this system
 err.itemFromList=Choose only items from the list
 err.tentNotFound=Tent with ID {0} does not exist
+err.noEventEntries=Could not load items assigned to the event.
+err.changeCal=You cannot move reccuring event to different calendar.

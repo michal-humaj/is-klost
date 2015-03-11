@@ -1,0 +1,49 @@
+@(eventId: String, allDay: Boolean, eventForm: Form[dto.EventTO], upcomingActions: dto.ActionsContainer, returnDate: String)
+
+@views.html.master.main(Messages("h.editInstallation"))(0) {
+} {
+    <div class="page-header">
+        <h1>
+        @Messages("h.editInstallation")
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+
+            @if(flash.containsKey("error")) {
+                <div class="alert alert-danger">
+                @flash.get("error")
+                </div>
+            }
+
+            @helper.form(action = routes.Events.updateInstl(eventId), 'class -> "form-horizontal", 'role -> "form", 'id -> "form") {
+
+                @views.html.event.formEvent("INSTALLATION", eventId, allDay, eventForm)
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.assignedAction")</label>
+
+                    <div class="col-sm-7">
+                        <select name="actionId" class="form-control" value='@eventForm.field("actionId").value'>
+                        @for(action <- upcomingActions.actions) {
+                            <option @if(action.id.equals(eventForm.field("actionId").value)){selected} value="@action.id">@action.name</option>
+                        }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="clearfix form-actions">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">@Messages("btn.update")</button>
+                            &nbsp;
+                        <a class="btn" type="reset" href='@routes.App.calendar(returnDate)'>@Messages("btn.back")</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+} {
+    <script src='@routes.Assets.at("js/installationEdit.js")'></script>
+}

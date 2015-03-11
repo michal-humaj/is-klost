@@ -11,11 +11,13 @@ import org.joda.time.LocalTime;
  */
 public class EventTO {
 
+    public String id;
     public String name;
     public EventType eventType;
     public long start;
     public long end;
     public boolean allDay;
+    public String actionId;
 
     public String startDate;
     public String startTime = "00:00";
@@ -26,9 +28,10 @@ public class EventTO {
     }
 
     public EventTO(Event e) {
-        name = e.getSummary();
+        name = e.getSummary() == null ? "" : e.getSummary().split(" →")[0];
         DateTime startDateTime;
         DateTime endDateTime;
+        id = e.getId();
         allDay = null == e.getStart().getDateTime();
         if (allDay) {
             startDateTime = e.getStart().getDate();
@@ -49,9 +52,14 @@ public class EventTO {
         }
     }
 
-    public Event toGoogleEvent(String id) {
+    public Event toGoogleEvent(String id, String entriesInfo) {
         Event e = new Event();
-        e.setSummary(name);
+        name = name.split(" →")[0];
+        if (entriesInfo == null) {
+            e.setSummary(name);
+        } else {
+            e.setSummary(name + " → " + entriesInfo);
+        }
         if (id != null) {
             e.setId(id);
         }

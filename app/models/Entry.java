@@ -1,11 +1,14 @@
 package models;
 
+import dto.Category;
 import dto.EventType;
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
+import services.Util;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 
 /**
  * Created by MiHu on 9.3.2015.
@@ -34,5 +37,16 @@ public class Entry extends Model {
 
     public BigDecimal getWeight() throws Exception {
         return amount.multiply(item.getWeight());
+    }
+
+    public StringBuilder getInfo(){
+        StringBuilder s = new StringBuilder(Util.df.format(amount));
+        if (item.category.equals(Category.CARPET)){
+            s.append("m");
+        }else{
+            s.append("ks");
+        }
+        s.append(" ").append(item.name);
+        return s;
     }
 }

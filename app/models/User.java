@@ -20,6 +20,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import static play.mvc.Http.Context.Implicit.session;
+
 /**
  * Created by MiHu on 18.8.2014.
  */
@@ -38,6 +40,7 @@ public class User extends Model {
     }
 
     public String getFreshAccessToken() throws IOException, JSONException {
+        System.out.println("get fresh access token");
         HttpClient httpclient = HttpClients.createDefault();
         HttpPost httppost = new HttpPost("https://accounts.google.com/o/oauth2/token");
         List<NameValuePair> params = new ArrayList<NameValuePair>(4);

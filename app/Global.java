@@ -7,13 +7,22 @@ import models.StoredItem;
 import play.Application;
 import play.GlobalSettings;
 import play.i18n.Messages;
+import play.libs.Akka;
+import play.libs.F;
 import play.libs.Yaml;
 import play.mvc.Call;
 import play.mvc.Http;
+import play.mvc.Result;
+import scala.concurrent.duration.Duration;
+import services.Cron;
 import controllers.routes;
-
 import java.util.List;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
+
+import static play.mvc.Results.badRequest;
+import static play.mvc.Results.internalServerError;
+import static play.mvc.Results.notFound;
 
 /**
  * Created by MiHu on 21.1.2015.
@@ -23,12 +32,19 @@ public class Global extends GlobalSettings {
 
     public void onStart(final Application app) {
 
+        if (Ebean.find(StoredItem.class).findRowCount() == 0) {
+            Ebean.save((List) Yaml.load("initial-data.yml"));
+        }
+
         System.setProperty("user.timezone", "Europe/Warsaw");
         TimeZone.setDefault(TimeZone.getTimeZone("Europe/Warsaw"));
 
-        /*if(Ebean.find(StoredItem.class).findRowCount() == 0) {
-            Ebean.save((List) Yaml.load("initial-data.yml"));
-        }*/
+        Akka.system().scheduler().schedule(
+                Duration.create(25, TimeUnit.MINUTES),
+                Duration.create(25, TimeUnit.MINUTES),
+                new Cron(),
+                Akka.system().dispatcher()
+        );
 
         PlayAuthenticate.setResolver(new Resolver() {
             @Override
@@ -74,21 +90,21 @@ public class Global extends GlobalSettings {
         });
     }
 
-  /*  public Promise<Result> onError(RequestHeader request, Throwable t) {
-        return Promise.<Result>pure(internalServerError(
+    public F.Promise<Result> onError(Http.RequestHeader request, Throwable t) {
+        return F.Promise.<Result>pure(internalServerError(
                 views.html.error500.render()
         ));
     }
 
-    public Promise<Result> onHandlerNotFound(RequestHeader request) {
-        return Promise.<Result>pure(notFound(
+    public F.Promise<Result> onHandlerNotFound(Http.RequestHeader request) {
+        return F.Promise.<Result>pure(notFound(
                 views.html.error404.render()
         ));
     }
 
-    public Promise<Result> onBadRequest(RequestHeader request, String error) {
-        return Promise.<Result>pure(badRequest(
+    public F.Promise<Result> onBadRequest(Http.RequestHeader request, String error) {
+        return F.Promise.<Result>pure(badRequest(
                 views.html.error404.render()
         ));
-    }*/
+    }
 }

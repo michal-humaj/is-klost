@@ -15,6 +15,8 @@ var ONE_DAY = 86400000;
 
 function initKlostIS() {
 
+    eventViewModel = new EventViewModel();
+
     $('html').on('click', function () {
         removePopovers();
     });
@@ -91,17 +93,25 @@ function initKlostIS() {
     var urlDate = fullcalendar.attr('data-date');
     datepicker.datepicker('setDate', urlDate);
     fullcalendar.fullCalendar('gotoDate', urlDate);
+
+    var requestUpcomingActions = jsRoutes.controllers.Events.upcomingActions().ajax();
+    requestUpcomingActions.done(function (actions) {
+        eventViewModel.upcomingActions(actions);
+    });
+    requestUpcomingActions.fail(function (jqXHR, textStatus) {
+        showErrorNotification(Messages('err.googleCal'));
+    });
+
 }
 
 function eventClick(event, jsEvent, view) {
-    console.log("EVENT CLICK");
     removePopovers();
     var eventType = calTypes[event.source.googleCalendarId];
     eventViewModel.event(new Event(event.id, eventType, event.title));
     $(jsEvent.target).popover({
         animation: false,
         container: '#fullcalendar',
-        title: event.title,
+        title: event.title.split(' →')[0],
         trigger: 'manual',
         placement: 'auto',
         html: true,
@@ -110,7 +120,6 @@ function eventClick(event, jsEvent, view) {
     $(jsEvent.target).popover('show');
     doNotDismissOnPopoverClick();
     ko.applyBindings(eventViewModel, $('.popover')[0]);
-    console.log("som az na konci");
     return false;
 }
 
@@ -156,8 +165,6 @@ function onTimeRangeSelect(start, end, jsEvent, view) {
 
 function dragEvent(event, delta, revertFunc, jsEvent, ui, view) {
     var eventType = calTypes[event.source.googleCalendarId];
-    console.log(event.start);
-    console.log(event.end);
     var start = event.start.valueOf();
     var end;
     if (event.end !== null) {
@@ -195,20 +202,32 @@ function removePopovers() {
 function Event(id, eventType, name, start, end, allDay) {
     this.id = ko.observable(id);
     this.eventType = ko.observable(eventType);
-    this.name = ko.observable(name);
+    if (name === undefined) {
+        this.name = ko.observable();
+    } else {
+        this.name = ko.observable(name.split(' →')[0]);
+    }
     this.start = ko.observable(start);
     this.end = ko.observable(end);
     this.allDay = ko.observable(allDay);
-}
+    this.actionId = ko.observable();
 
-function Action(id, name) {
-    this.id = ko.observable(id);
-    this.name = ko.observable(name);
+    this.changeCalText = ko.computed(function () {
+        return this.eventType() === 'RESERVATION' ? Messages('btn.toAction') : Messages('btn.toReservation');
+    }, this);
+
+    this.isChangeCalBtnVisible = ko.computed(function () {
+        if (this.eventType() === 'RESERVATION' || this.eventType() === 'ACTION') {
+            return true;
+        }
+        return false;
+    }, this);
 }
 
 function EventViewModel() {
 
     this.event = ko.validatedObservable(new Event());
+    this.upcomingActions = ko.observableArray([]);
 
     this.modalDelete = function () {
         removePopovers();
@@ -216,8 +235,13 @@ function EventViewModel() {
     }
 
     this.delet = function () {
+        var requestDeleteEvent;
         $('#modalDeleteEvent').modal('hide');
-        var requestDeleteEvent = jsRoutes.controllers.Events.delete(this.event().eventType(), this.event().id()).ajax();
+        if ('INSTALLATION' === this.event().eventType()){
+            requestDeleteEvent = jsRoutes.controllers.Events.deleteInstl(this.event().id()).ajax();
+        }else {
+            requestDeleteEvent = jsRoutes.controllers.Events.delete(this.event().eventType(), this.event().id()).ajax();
+        }
         requestDeleteEvent.done(function () {
             showSuccessNotification(Messages('f.deleteEvent', eventViewModel.event().name()));
             $('#fullcalendar').fullCalendar('refetchEvents');
@@ -227,6 +251,26 @@ function EventViewModel() {
         });
     }
 
+    this.changeCal = function () {
+        removePopovers();
+        var requestChangeCal = jsRoutes.controllers.Events.changeCal(this.event().eventType(), this.event().id()).ajax();
+        requestChangeCal.done(function () {
+            if (eventViewModel.event().eventType() === 'RESERVATION') {
+                showSuccessNotification(Messages('f.changeToAction', eventViewModel.event().name()));
+            } else {
+                showSuccessNotification(Messages('f.changeToReservation', eventViewModel.event().name()));
+            }
+            $('#fullcalendar').fullCalendar('refetchEvents');
+        });
+        requestChangeCal.fail(function (jqXHR, textStatus) {
+            if (jqXHR.status === 400) {
+                showErrorNotification(Messages('err.changeCal'));
+            } else {
+                showErrorNotification(Messages('err.googleCal'));
+            }
+        });
+    }
+
 }
 
-var eventViewModel = new EventViewModel();
+

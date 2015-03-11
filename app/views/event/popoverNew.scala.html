@@ -12,7 +12,7 @@
         <div class="form-group" >
             <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.eventType")</label>
             <div class="col-sm-10">
-                <select name="eventType" class="form-control"  data-bind="value: event().eventType" required>
+                <select name="eventType" class="form-control" data-bind="value: event().eventType" required>
                 @for(eType <- dto.EventType.values()) {
                     <option value="@eType">@Messages(eType.toString())</option>
                 }
@@ -23,10 +23,8 @@
         <div class="form-group" data-bind="attr: { class: event().eventType() === 'INSTALLATION' ? 'form-group' : 'form-group hide' }" >
             <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.assignedAction")</label>
             <div class="col-sm-10">
-                <select name="assignedAction" class="form-control" required>
-                @for(eType <- dto.EventType.values()) {
-                    <option value="@eType">@Messages(eType.toString())</option>
-                }
+                <select name="actionId" class="form-control" required data-bind="foreach: upcomingActions, value: event().actionId">
+                    <option data-bind="text: name, attr: {value: id}"></option>
                 </select>
             </div>
         </div>
@@ -37,9 +35,10 @@
 
         <div class="form-group" >
             <div class="col-sm-10 col-sm-offset-2">
-                <input class="btn btn-sm btn-primary" onclick="submitClicked=this.name" name="addEvent" type="submit" value='@Messages("btn.addEvent")'>
+                <input class="btn btn-sm btn-primary" onclick="submitClicked = this.name" name="addEvent" type="submit" value='@Messages("btn.addEvent")'>
                     &nbsp;
-                <input class="btn btn-sm btn-link" onclick="submitClicked=this.name" name="addEventAndEdit" type="submit" value='@Messages("btn.addEventAndEdit")' >
+                <input data-bind="attr: { class: event().eventType() === 'INSTALLATION' ? 'btn btn-sm btn-link hide' : 'btn btn-sm btn-link' }"
+                class="btn btn-sm btn-link" onclick="submitClicked = this.name" name="addEventAndEdit" type="submit" value='@Messages("btn.addEventAndEdit")' >
             </div>
         </div>
     </form>
