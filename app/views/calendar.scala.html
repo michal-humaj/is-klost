@@ -1,5 +1,7 @@
 @(date: String)
 
+@import com.feth.play.module.pa.views.html._
+
 @views.html.master.main(Messages("nav.cal"))(0) {
 
     @views.html.master.datepicker()
@@ -7,6 +9,8 @@
     @views.html.event.popoverNew()
 
     @views.html.event.popoverClick()
+
+    @views.html.event.popoverStrmn()
 
     @views.html.event.modalDelete()
 
@@ -16,7 +20,12 @@
         </div>
     </div>
 } {
-
     <script src='@routes.Assets.at("js/calendarCommon.js")'></script>
-    <script src='@routes.Assets.at("js/calendarAdmin.js")'></script>
+    @currentAuth() { auth =>
+        @if(LoggedAdmin.isAdminId(auth.getId())) {
+            <script src='@routes.Assets.at("js/calendarAdmin.js")'></script>
+        } else {
+            <script src='@routes.Assets.at("js/calendarStrmn.js")'></script>
+        }
+    }
 }

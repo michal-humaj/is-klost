@@ -4,10 +4,10 @@ import dto.Category;
 import models.Accessory;
 import models.Item;
 import models.StoredItem;
+import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
-import play.i18n.Messages;
 
 import java.util.List;
 

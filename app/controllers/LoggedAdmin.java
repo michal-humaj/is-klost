@@ -24,7 +24,7 @@ public class LoggedAdmin extends Security.Authenticator {
 
     public static final String adminId = "104577664461666247347";
     private static List<String> adminIds = Arrays.asList("104577664461666247347");
-    public static final Long ACCESS_TOKEN_LIFETIME = 3_000_000L;
+    public static final Long ACCESS_TOKEN_LIFETIME = 1_500_000L;
 
     @Override
     public String getUsername(final Http.Context ctx) {
@@ -64,6 +64,7 @@ public class LoggedAdmin extends Security.Authenticator {
             final User dbUser = User.find.byId(authUser.getId());
             if (dbUser != null) {
                 String accessToken = dbUser.getFreshAccessToken();
+                System.out.println("ACess token: " + accessToken);
                 if (accessToken != null) {
                     session().put("acessToken", accessToken);
                     session().put("lastUpdate", Long.toString(new Date().getTime()));

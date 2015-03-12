@@ -25,7 +25,7 @@ public class App extends Controller {
 
     @Security.Authenticated(LoggedStoremanOrAdmin.class)
     public static Result calendar(String date) { // only valid date format is 2015-05-28
-        if("TODAY".equals(date) || !Util.isDateValid(date)){
+        if ("TODAY".equals(date) || !Util.isDateValid(date)) {
             String todayDate = Util.sdf.format(new Date(1427583600000l)); //TODO bacha na casovu zonu na serveri
             return ok(calendar.render(todayDate));
         }
@@ -61,8 +61,6 @@ public class App extends Controller {
                         routes.javascript.Events.changeCal(),
                         routes.javascript.Events.upcomingActions(),
                         routes.javascript.Events.deleteInstl()
-
-
                 )
         );
     }

@@ -1,10 +1,87 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
+@(eventType: String, eventId: String, allDay: Boolean, eventForm: Form[dto.EventTO], returnDate: String)
 
-</body>
-</html>
+@views.html.master.main(Messages("h.editEvent"))(0) {
+} {
+    <div class="page-header">
+        <h1>
+        @eventForm.field("name").value
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12" id="eventId" data-eventId="@eventId" data-eventType="@eventType" data-allDay="@allDay">
+
+            @if(flash.containsKey("error")) {
+                <div class="alert alert-danger">
+                @flash.get("error")
+                </div>
+            }
+
+            @helper.form(action = routes.Events.updateStrmn(eventType, eventId), 'class -> "form-horizontal", 'role -> "form", 'id -> "form") {
+                <div class="widget-box transparent light-border">
+                    <div class="widget-header widget-header-flat">
+                        <h4 class="widget-title ">@Messages("h.eventItems")</h4>
+                    </div>
+                    <div class="widget-body">
+                        <div class="widget-main no-padding">
+                            <table class="table ">
+                                <tbody data-bind="foreach: nonCarpetEntries">
+                                    <tr>
+                                        <td data-bind="text: itemName"></td>
+                                        <td data-bind="text: amount"></td>
+                                        <input type="hidden" data-bind="attr: { name: fieldItem }, value: $root.itemIdMap()[itemName()] " >
+                                        <input type="hidden" data-bind="attr: { name: fieldAmount }, value: amount " >
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="space"></div>
+
+                <h4 class="header blue lighter smaller">@Messages("h.eventCarpets")</h4>
+                <div data-bind="foreach: carpetEntries">
+                    <div class="form-group" data-bind="attr: { class: itemName.isValid() ? 'form-group' : 'form-group has-info' }">
+                        <div class="col-sm-7">
+                            <input class="form-control autocomplete" placeholder="Ultrasil tmavý"
+                            data-bind="value: itemName, valueUpdate: 'blur' ">
+                        </div>
+
+                        <input type="hidden" data-bind="attr: { name: fieldItem }, value: $root.itemIdMap()[itemName()] " >
+
+                        <div class="col-sm-2">
+                            <input class="form-control" placeholder="12.3" autocomplete="off" required type="number"
+                            data-bind="attr: { name: fieldAmount, min: amountMinAndStep, step: amountMinAndStep}, value: amount ">
+                        </div>
+
+                        <div class="col-sm-1">
+                            <a type="button" class="btn btn-white btn-danger" data-bind="click: $parent.removeEntry">
+                                <span class="fa fa-times"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-9 col-sm-1">
+                        <a type="button" class="btn btn-primary btn-sm" data-bind="click: addEntry">
+                            <span class="fa fa-plus "></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="clearfix form-actions">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">@Messages("btn.update")</button>
+                            &nbsp;
+                        <a class="btn" type="reset" href='@routes.App.calendar(returnDate)'>@Messages("btn.back")</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+} {
+    <script src='@routes.Assets.at("js/eventEditCommon.js")'></script>
+    <script src='@routes.Assets.at("js/eventEditStrmn.js")'></script>
+}

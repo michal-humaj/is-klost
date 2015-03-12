@@ -43,7 +43,7 @@
 
                             <tbody data-bind="foreach: items" data-spy="scroll">
 
-                                <tr data-bind="attr: { id: category }">
+                                <tr data-bind="attr: { id: category, class: $parent.items()[$index()].category !== $parent.items()[$index()+1 < $parent.items().length-1 ? $index()+1 : $parent.items().length-1].category ? 'lastInCategory' : ''}">
                                     <td data-bind="text: name" class="thItemName"></td>
                                     <td data-bind="text: amount" class="thNumberValue"></td>
                                     <td data-bind="text: weight" class="thNumberValue"></td>

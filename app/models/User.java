@@ -56,6 +56,7 @@ public class User extends Model {
             builder.append(line).append("\n");
         }
         JSONTokener tokener = new JSONTokener(builder.toString());
+        System.out.println(builder.toString());
         JSONObject obj = new JSONObject(tokener);
         return obj.get("access_token").toString();
     }

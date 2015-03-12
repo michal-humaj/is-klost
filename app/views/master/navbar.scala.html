@@ -23,14 +23,14 @@
         <div class="navbar-buttons navbar-header" role="navigation">
             <ul class="nav ace-nav">
 
-                <li class='@if(tabNumber.equals(0)) {} else {transparent}'>
+                <li class='@if(tabNumber.equals(0)) {grey} else {transparent}'>
                     <a href='@routes.App.calendar("TODAY")'>
                         <i class="ace-icon fa fa-calendar-o"></i>
                         @Messages("nav.cal")
                     </a>
                 </li>
 
-                <li class='@if(tabNumber.equals(1)) {} else {transparent}'>
+                <li class='@if(tabNumber.equals(1)) {grey} else {transparent}'>
                     <a href='@routes.App.store("TOMORROW")'>
                         <i class="ace-icon fa fa-cubes"></i>
                         @Messages("nav.store")
@@ -38,7 +38,7 @@
                 </li>
                 @currentAuth() { auth =>
                     @if(LoggedAdmin.isAdminId(auth.getId())){
-                        <li class='@if(tabNumber.equals(2)) {} else {transparent}'>
+                        <li class='@if(tabNumber.equals(2)) {grey} else {transparent}'>
                             <a href='@routes.Tents.list()'>
                                 <img src='@routes.Assets.at("img/tent.png")' width="24" height="24">
                                 @Messages("nav.tents")

@@ -14,8 +14,7 @@ import play.mvc.Result;
 import play.mvc.Security;
 import services.GoogleAPI;
 import views.html.error404;
-import views.html.event.editAdmin;
-import views.html.event.editInstallation;
+import views.html.event.*;
 
 import java.io.IOException;
 import java.util.Date;
@@ -52,16 +51,15 @@ public class Events extends Controller {
     }
 
     public static Result edit(String eventType, String id) {
-        Event e;
         try {
-            e = GoogleAPI.findEvent(EventType.valueOf(eventType), id);
+            Event e = GoogleAPI.findEvent(EventType.valueOf(eventType), id);
+            EventTO eventTO = new EventTO(e);
+            Form<EventTO> eventForm = form(EventTO.class).fill(eventTO);
+            return ok(editAdmin.render(eventType, id, eventTO.allDay, eventForm, eventTO.startDate));
         } catch (IOException | IllegalArgumentException e1) {
             e1.printStackTrace();
             return notFound(error404.render());
         }
-        EventTO eventTO = new EventTO(e);
-        Form<EventTO> eventForm = form(EventTO.class).fill(eventTO);
-        return ok(editAdmin.render(eventType, id, eventTO.allDay, eventForm, eventTO.startDate));
     }
 
     public static Result editInstl(String id) {
@@ -104,6 +102,29 @@ public class Events extends Controller {
         } catch (IllegalStateException e1) {
             current().flash().put("error", Messages.get("err.eventStartEnd", id));
             return redirect(routes.Events.edit(sEventType, id));
+        }
+    }
+
+    public static Result updateStrmn(String sEventType, String id) throws Exception {
+        try {
+            EventType eventType = EventType.valueOf(sEventType);
+            Event e = GoogleAPI.findEvent(eventType, id);
+            EntriesContainer container = form(EntriesContainer.class).bindFromRequest().get();
+            List<Entry> oldEntries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
+            for (Entry entry : oldEntries) entry.delete();
+            for (Entry entry : container.entries) {
+                entry.eventType = eventType;
+                entry.eventId = e.getId();
+                entry.save();
+            }
+            container.entries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
+            EventTO eventTO = new EventTO(e);
+            e = eventTO.toGoogleEvent(e.getId(), container.getEntriesInfo());
+            GoogleAPI.updateEvent(e, eventType);
+            return redirect(routes.App.calendar(eventTO.startDate));
+        } catch (IOException | IllegalArgumentException e1) {
+            e1.printStackTrace();
+            return notFound(error404.render());
         }
     }
 
@@ -169,16 +190,20 @@ public class Events extends Controller {
             entry.eventType = eventType == EventType.ACTION ? EventType.RESERVATION : EventType.ACTION;
             entry.update(entry.id);
         }
-        //TODO kod na zmazanie instalacii
+        //TODO mozno treba zmazat instalacie
         return ok();
     }
 
     public static Result editStrmn(String eventType, String id) {
-        return play.mvc.Results.TODO;
-    }
-
-    public static Result updateStrmn(String eventType, String id) {
-        return play.mvc.Results.TODO;
+        try {
+            Event e = GoogleAPI.findEvent(EventType.valueOf(eventType), id);
+            EventTO eventTO = new EventTO(e);
+            Form<EventTO> eventForm = form(EventTO.class).fill(eventTO);
+            return ok(editStrmn.render(eventType, id, eventTO.allDay, eventForm, eventTO.startDate));
+        } catch (IOException | IllegalArgumentException e1) {
+            e1.printStackTrace();
+            return notFound(error404.render());
+        }
     }
 
     public static Result upcomingActions() throws IOException {
@@ -190,6 +215,4 @@ public class Events extends Controller {
         List<Entry> entries = Entry.find.where().eq("eventType", EventType.valueOf(eventType)).eq("eventId", id).findList();
         return ok(toJson(entries));
     }
-
-
 }

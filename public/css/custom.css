@@ -103,6 +103,10 @@ table.tableScrollable tbody {
     border-right-width: 0px;
 }
 
+table.tableNoBorder>tbody>tr.lastInCategory>td{
+    border-bottom-color: #404040;
+}
+
 /* Cell widths*/
 table.tableScrollable .thItemName{
     width: 380px;

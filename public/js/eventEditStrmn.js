@@ -10,13 +10,15 @@ function initKlostIS() {
 
     var requestItemList = jsRoutes.controllers.Items.listEventItems().ajax();
     requestItemList.done(function (items) {
-        eventViewModel.items = items.map(function (item) {
-            return item.name;
+        items.map(function (item) {
+            if(item.category === 'CARPET') {
+                eventViewModel.items.push(item.name);
+            }
         });
         eventViewModel.itemIdMap(new ItemIdMap(items));
 
         var requestEventEntries = jsRoutes.controllers.Events.getEntries(eventType, eventId).ajax();
-        requestEventEntries.done(function (entries) {            
+        requestEventEntries.done(function (entries) {
             var i = 0;
             var entries = entries.map(function(ent){
                 var entry = new Entry(i);
