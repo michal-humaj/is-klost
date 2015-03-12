@@ -36,14 +36,7 @@ function initKlostIS() {
     var urlDate = fullcalendar.attr('data-date');
     datepicker.datepicker('setDate', urlDate);
     fullcalendar.fullCalendar('gotoDate', urlDate);
-
-    var requestUpcomingActions = jsRoutes.controllers.Events.upcomingActions().ajax();
-    requestUpcomingActions.done(function (actions) {
-        eventViewModel.upcomingActions(actions);
-    });
-    requestUpcomingActions.fail(function (jqXHR, textStatus) {
-        showErrorNotification(Messages('err.googleCal'));
-    });
+    loadUpcomingActions();
 }
 
 function eventClick(event, jsEvent, view) {
@@ -66,6 +59,7 @@ function eventClick(event, jsEvent, view) {
 }
 
 function onTimeRangeSelect(start, end, jsEvent, view) {
+    loadUpcomingActions();
     removePopovers();
     eventViewModel.event(new Event());
     $(jsEvent.target).popover({
@@ -125,5 +119,15 @@ function dragEvent(event, delta, revertFunc, jsEvent, ui, view) {
     requestUpdateEvent.fail(function (jqXHR, textStatus) {
         showErrorNotification(Messages('err.googleCal'));
         revertFunc();
+    });
+}
+
+function loadUpcomingActions() {
+    var requestUpcomingActions = jsRoutes.controllers.Events.upcomingActions().ajax();
+    requestUpcomingActions.done(function (actions) {
+        eventViewModel.upcomingActions(actions);
+    });
+    requestUpcomingActions.fail(function (jqXHR, textStatus) {
+        showErrorNotification(Messages('err.googleCal'));
     });
 }

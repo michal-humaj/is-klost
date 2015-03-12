@@ -2,6 +2,7 @@ package controllers;
 
 import dto.Category;
 import models.Accessory;
+import models.Entry;
 import models.Item;
 import models.StoredItem;
 import play.i18n.Messages;
@@ -55,7 +56,8 @@ public class Items extends Controller {
         StoredItem item = StoredItem.find.byId(id);
         if (item == null) return notFound(Messages.get("err.general"));
         final List<Accessory> accessoryList = Accessory.find.select("id").where().eq("item.id", id).findList();
-        if (accessoryList.size() != 0) return badRequest(Messages.get("err.deleteItem", item.name));
+        final List<Entry> entryList = Entry.find.select("id").where().eq("item.id", id).findList();
+        if (accessoryList.size() != 0 || entryList.size() != 0) return badRequest(Messages.get("err.deleteItem", item.name));
         item.delete();
         return list();
 

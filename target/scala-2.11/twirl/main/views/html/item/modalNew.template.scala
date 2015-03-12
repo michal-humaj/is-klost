@@ -70,7 +70,7 @@ Seq[Any](format.raw/*1.1*/("""<div class="modal fade" id="modalNewItem" tabindex
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 11 23:40:20 CET 2015
+                  DATE: Thu Mar 12 14:28:07 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/item/modalNew.scala.html
                   HASH: f265a7b4a3cd177bcc3137cc52d138b6c382f623
                   MATRIX: 806->0|1370->537|1412->558|1537->656|1551->661|1612->701|1660->721|1880->914|1925->937|2055->1040|2097->1060

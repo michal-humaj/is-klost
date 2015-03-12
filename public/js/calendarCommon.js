@@ -98,13 +98,25 @@ function Event(id, eventType, name, start, end, allDay) {
         return this.eventType() === 'RESERVATION' ? Messages('btn.toAction') : Messages('btn.toReservation');
     }, this);
 
+    this.downloadDocText = ko.computed(function () {
+        return this.eventType() === 'SELFTRANSPORT' ? Messages('btn.contract') : Messages('btn.specs');
+    }, this);
+
     this.isChangeCalBtnVisible = ko.computed(function () {
         if (this.eventType() === 'RESERVATION' || this.eventType() === 'ACTION') {
             return true;
         }
         return false;
     }, this);
+
+    this.isDownloadDocBtnVisible = ko.computed(function () {
+        if (this.eventType() === 'INSTALLATION') {
+            return false;
+        }
+        return true;
+    }, this);
 }
+
 
 function EventViewModel() {
 
@@ -151,5 +163,9 @@ function EventViewModel() {
                 showErrorNotification(Messages('err.googleCal'));
             }
         });
+    }
+
+    this.priceOffer = function () {
+        removePopovers();
     }
 }

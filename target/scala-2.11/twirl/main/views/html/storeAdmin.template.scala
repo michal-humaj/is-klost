@@ -46,7 +46,7 @@ Seq[Any](_display_(/*1.2*/views/*1.7*/.html.master.main(Messages("nav.store"))/*
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 11 23:40:19 CET 2015
+                  DATE: Thu Mar 12 14:28:07 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/storeAdmin.scala.html
                   HASH: 1006c728614f2236d91e2e81f7f8db7d747d932b
                   MATRIX: 803->1|815->6|863->46|874->49|913->51|947->60|960->65|1005->90|1037->97|1050->102|1095->127|1115->130|1153->132|1185->138|1210->146|1248->148|1280->154|1320->168|1334->174|1384->204
