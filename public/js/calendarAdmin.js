@@ -110,11 +110,11 @@ function dragEvent(event, delta, revertFunc, jsEvent, ui, view) {
     } else {
         end = event.start.valueOf() + ONE_DAY;
     }
-    eventViewModel.event(new Event(event.id, eventType, event.title, start, end, !event.start.hasTime()));
+    eventViewModel.event(new Event(event.id, eventType, event.title, start, end, !event.start.hasTime(), true));
     var requestUpdateEvent = jsRoutes.controllers.Events.drag(eventType, event.id).ajax({data: eventViewModel.event()});
 
     requestUpdateEvent.done(function () {
-        showSuccessNotification(Messages('f.dragEvent', eventViewModel.event().name()));
+        showSuccessNotification(Messages('f.dragEvent', eventViewModel.event().name().split(' →')[0]));
     });
     requestUpdateEvent.fail(function (jqXHR, textStatus) {
         showErrorNotification(Messages('err.googleCal'));

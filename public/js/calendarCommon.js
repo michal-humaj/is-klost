@@ -81,12 +81,14 @@ function removePopovers() {
     popover.remove();
 }
 
-function Event(id, eventType, name, start, end, allDay) {
+function Event(id, eventType, name, start, end, allDay, dontSplit) {
     this.id = ko.observable(id);
     this.eventType = ko.observable(eventType);
     if (name === undefined) {
         this.name = ko.observable();
-    } else {
+    } else if (dontSplit){
+        this.name = ko.observable(name);
+    }else{
         this.name = ko.observable(name.split(' →')[0]);
     }
     this.start = ko.observable(start);

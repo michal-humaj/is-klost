@@ -52,9 +52,9 @@ public class EventTO {
         }
     }
 
-    public Event toGoogleEvent(String id, String entriesInfo) {
+    public Event toGoogleEvent(String id, String entriesInfo, boolean dontSplit) {
         Event e = new Event();
-        name = name.split(" →")[0];
+        if (!dontSplit) name = name.split(" →")[0];
         if (entriesInfo == null) {
             e.setSummary(name);
         } else {
@@ -98,5 +98,9 @@ public class EventTO {
             endEventDateTime.setDateTime(endDateTime);
         }
         return e.setStart(startEventDateTime).setEnd(endEventDateTime);
+    }
+
+    public Event toGoogleEvent(String id, String entriesInfo) {
+        return toGoogleEvent(id, entriesInfo, false);
     }
 }

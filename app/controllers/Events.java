@@ -170,7 +170,7 @@ public class Events extends Controller {
 
     public static Result drag(String eventType, String id) throws IOException {
         EventTO eventTO = form(EventTO.class).bindFromRequest().get();
-        GoogleAPI.updateEvent(eventTO.toGoogleEvent(id, null), eventTO.eventType);
+        GoogleAPI.updateEvent(eventTO.toGoogleEvent(id, null, true), eventTO.eventType);
         return ok();
     }
 
