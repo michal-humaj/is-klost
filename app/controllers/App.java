@@ -30,7 +30,7 @@ public class App extends Controller {
             validDate = date.substring(0, 10);
         }
         if ("TODAY".equals(date) || !Util.isDateValid(date)) {
-            validDate = Util.sdf.format(new Date(1427583600000l));
+            validDate = Util.sdf.format(new Date(1427583600000l)); //TODO testovacie datumy
         }
         return ok(calendar.render(validDate));
     }

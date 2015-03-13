@@ -15,14 +15,12 @@ import play.mvc.Http;
 import play.mvc.Result;
 import scala.concurrent.duration.Duration;
 import services.Cron;
-import controllers.routes;
+
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
-import static play.mvc.Results.badRequest;
-import static play.mvc.Results.internalServerError;
-import static play.mvc.Results.notFound;
+import static play.mvc.Results.*;
 
 /**
  * Created by MiHu on 21.1.2015.
@@ -39,13 +37,13 @@ public class Global extends GlobalSettings {
         System.setProperty("user.timezone", "Europe/Warsaw");
         TimeZone.setDefault(TimeZone.getTimeZone("Europe/Warsaw"));
 
-        /*Akka.system().scheduler().schedule(
+        Akka.system().scheduler().schedule(
                 Duration.create(25, TimeUnit.MINUTES),
                 Duration.create(25, TimeUnit.MINUTES),
                 new Cron(),
                 Akka.system().dispatcher()
-        );*/
-        //TODO spustit cron
+        );
+
         PlayAuthenticate.setResolver(new Resolver() {
             @Override
             public Call login() {

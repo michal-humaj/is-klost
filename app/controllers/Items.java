@@ -41,7 +41,7 @@ public class Items extends Controller {
     public static Result add() {
         StoredItem item = form(StoredItem.class).bindFromRequest().get();
         item.save();
-        return list();
+        return ok(item.id.toString());
     }
 
     public static Result update(long id) {

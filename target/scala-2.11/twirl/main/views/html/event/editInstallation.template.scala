@@ -20,13 +20,13 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object editInstallation extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template5[String,Boolean,Form[dto.EventTO],dto.ActionsContainer,String,play.twirl.api.HtmlFormat.Appendable] {
+object editInstallation extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template5[String,Boolean,Form[dto.EventTO],dto.EventsContainer,String,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(eventId: String, allDay: Boolean, eventForm: Form[dto.EventTO], upcomingActions: dto.ActionsContainer, returnDate: String):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(eventId: String, allDay: Boolean, eventForm: Form[dto.EventTO], upcomingActions: dto.EventsContainer, returnDate: String):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.125*/("""
+Seq[Any](format.raw/*1.124*/("""
 
 """),_display_(/*3.2*/views/*3.7*/.html.master.main(Messages("h.editInstallation"))/*3.56*/(0)/*3.59*/ {_display_(Seq[Any](format.raw/*3.61*/("""
 """)))}/*4.2*/ {_display_(Seq[Any](format.raw/*4.4*/("""
@@ -77,19 +77,19 @@ Seq[Any](format.raw/*1.125*/("""
 """)))}))}
   }
 
-  def render(eventId:String,allDay:Boolean,eventForm:Form[dto.EventTO],upcomingActions:dto.ActionsContainer,returnDate:String): play.twirl.api.HtmlFormat.Appendable = apply(eventId,allDay,eventForm,upcomingActions,returnDate)
+  def render(eventId:String,allDay:Boolean,eventForm:Form[dto.EventTO],upcomingActions:dto.EventsContainer,returnDate:String): play.twirl.api.HtmlFormat.Appendable = apply(eventId,allDay,eventForm,upcomingActions,returnDate)
 
-  def f:((String,Boolean,Form[dto.EventTO],dto.ActionsContainer,String) => play.twirl.api.HtmlFormat.Appendable) = (eventId,allDay,eventForm,upcomingActions,returnDate) => apply(eventId,allDay,eventForm,upcomingActions,returnDate)
+  def f:((String,Boolean,Form[dto.EventTO],dto.EventsContainer,String) => play.twirl.api.HtmlFormat.Appendable) = (eventId,allDay,eventForm,upcomingActions,returnDate) => apply(eventId,allDay,eventForm,upcomingActions,returnDate)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 12 14:28:07 CET 2015
+                  DATE: Fri Mar 13 08:35:17 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/event/editInstallation.scala.html
-                  HASH: 5f588bc67593f5d45a23f90ed4d08bc183ba9d10
-                  MATRIX: 794->1|1006->124|1036->129|1048->134|1105->183|1116->186|1155->188|1175->191|1213->193|1245->199|1321->249|1371->279|1407->289|1526->381|1565->411|1605->413|1651->431|1729->482|1743->487|1777->500|1823->518|1875->539|1919->556|1934->562|2055->673|2096->675|2144->696|2158->701|2244->766|2292->786|2421->888|2473->918|2633->1051|2651->1060|2697->1084|2753->1113|2807->1151|2847->1153|2905->1183|2941->1192|3005->1247|3044->1248|3085->1257|3115->1258|3151->1266|3167->1272|3192->1275|3223->1278|3239->1284|3266->1289|3333->1325|3387->1351|3648->1585|3691->1607|3824->1713|3839->1719|3885->1744|3915->1747|3957->1767|4059->1838|4098->1850|4137->1871|4176->1873|4209->1879|4250->1893|4265->1899|4322->1935
+                  HASH: 0975a29d4d7cbbca1ea77457be30cf063970f80a
+                  MATRIX: 793->1|1004->123|1034->128|1046->133|1103->182|1114->185|1153->187|1173->190|1211->192|1243->198|1319->248|1369->278|1405->288|1524->380|1563->410|1603->412|1649->430|1727->481|1741->486|1775->499|1821->517|1873->538|1917->555|1932->561|2053->672|2094->674|2142->695|2156->700|2242->765|2290->785|2419->887|2471->917|2631->1050|2649->1059|2695->1083|2751->1112|2805->1150|2845->1152|2903->1182|2939->1191|3003->1246|3042->1247|3083->1256|3113->1257|3149->1265|3165->1271|3190->1274|3221->1277|3237->1283|3264->1288|3331->1324|3385->1350|3646->1584|3689->1606|3822->1712|3837->1718|3883->1743|3913->1746|3955->1766|4057->1837|4096->1849|4135->1870|4174->1872|4207->1878|4248->1892|4263->1898|4320->1934
                   LINES: 26->1|29->1|31->3|31->3|31->3|31->3|31->3|32->4|32->4|33->5|35->7|35->7|36->8|42->14|42->14|42->14|43->15|44->16|44->16|44->16|45->17|46->18|48->20|48->20|48->20|48->20|50->22|50->22|50->22|52->24|53->25|53->25|56->28|56->28|56->28|57->29|57->29|57->29|58->30|58->30|58->30|58->30|58->30|58->30|58->30|58->30|58->30|58->30|58->30|58->30|59->31|60->32|66->38|66->38|68->40|68->40|68->40|68->40|68->40|71->43|73->45|75->47|75->47|76->48|76->48|76->48|76->48
                   -- GENERATED --
               */

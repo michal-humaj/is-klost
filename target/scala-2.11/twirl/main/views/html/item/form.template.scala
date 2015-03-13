@@ -45,7 +45,7 @@ Seq[Any](format.raw/*1.21*/("""
 <div class="form-group" data-bind="attr: """),format.raw/*17.42*/("""{"""),format.raw/*17.43*/(""" """),format.raw/*17.44*/("""class: item().name.isValid() ? 'form-group' : 'form-group has-info' """),format.raw/*17.112*/("""}"""),format.raw/*17.113*/("""">
     <label class="col-sm-2 control-label no-padding-right">"""),_display_(/*18.61*/Messages("lbl.name")),format.raw/*18.81*/("""</label>
     <div class="col-sm-6">
-        <input name="name" class="form-control" placeholder="Stolička plastová" data-bind="value: item().name">
+        <input name="name" class="form-control" placeholder="Stolička plastová" data-bind="value: item().name" autocomplete="off">
     </div>
     <div class="help-block col-sm-reset inline" data-bind="validationMessage: item().name"></div>
 </div>
@@ -56,7 +56,7 @@ Seq[Any](format.raw/*1.21*/("""
     </label>
     <div class="col-sm-3 controls">
         <div class="input-group">
-            <input name="amount" class="form-control" placeholder="340" data-bind="value: item().amount">
+            <input name="amount" class="form-control" placeholder="340" data-bind="value: item().amount" autocomplete="off">
             <span class="input-group-addon"
                 data-bind="text: item().category() === 'CARPET' ? Messages('lbl.m') : Messages('lbl.pcs') ">
             </span>
@@ -69,7 +69,7 @@ Seq[Any](format.raw/*1.21*/("""
     <label class="col-sm-2 control-label no-padding-right">"""),_display_(/*41.61*/Messages("lbl.weight")),format.raw/*41.83*/("""</label>
     <div class="col-sm-3 controls">
         <div class="input-group">
-            <input name="weight" class="form-control" placeholder="2.85" data-bind="value: item().weight">
+            <input name="weight" class="form-control" placeholder="2.85" data-bind="value: item().weight" autocomplete="off">
             <span class="input-group-addon"
                 data-bind="text: item().category() === 'CARPET' ? Messages('lbl.kgpm') : Messages('lbl.kg') ">
             </span>
@@ -88,10 +88,10 @@ Seq[Any](format.raw/*1.21*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 12 14:28:07 CET 2015
+                  DATE: Thu Mar 12 20:17:06 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/item/form.scala.html
-                  HASH: a61d2e8f2df6ee7539d873b98701a6b1bdb2ec1f
-                  MATRIX: 727->1|834->20|864->24|932->65|960->66|988->67|1089->140|1118->141|1208->205|1247->224|1348->299|1376->307|1490->395|1538->428|1577->430|1618->445|1660->479|1699->481|1744->499|1786->515|1809->518|1838->521|1882->545|1937->569|1979->580|2016->590|2221->767|2250->768|2279->769|2376->837|2406->838|2497->902|2538->922|2879->1235|2908->1236|2937->1237|3036->1307|3066->1308|3817->2031|3846->2032|3875->2033|3975->2104|4005->2105|4096->2169|4139->2191
+                  HASH: 55d7d768b87a8a2030b62bd82295e6d3d27ec142
+                  MATRIX: 727->1|834->20|864->24|932->65|960->66|988->67|1089->140|1118->141|1208->205|1247->224|1348->299|1376->307|1490->395|1538->428|1577->430|1618->445|1660->479|1699->481|1744->499|1786->515|1809->518|1838->521|1882->545|1937->569|1979->580|2016->590|2221->767|2250->768|2279->769|2376->837|2406->838|2497->902|2538->922|2898->1254|2927->1255|2956->1256|3055->1326|3085->1327|3855->2069|3884->2070|3913->2071|4013->2142|4043->2143|4134->2207|4177->2229
                   LINES: 26->1|29->1|31->3|31->3|31->3|31->3|31->3|31->3|32->4|32->4|34->6|34->6|35->7|35->7|35->7|36->8|36->8|36->8|37->9|37->9|37->9|37->9|37->9|38->10|39->11|40->12|45->17|45->17|45->17|45->17|45->17|46->18|46->18|53->25|53->25|53->25|53->25|53->25|68->40|68->40|68->40|68->40|68->40|69->41|69->41
                   -- GENERATED --
               */

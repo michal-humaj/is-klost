@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/MiHu/Documents/projects/is-klost/is-klost/conf/routes
-// @HASH:646a0cdba86f9481ac80bf17cc9db10acd88a420
-// @DATE:Thu Mar 12 14:27:59 CET 2015
+// @HASH:8f4d11c44bcc0dd7ec15b2d19ac4da82942428a6
+// @DATE:Fri Mar 13 08:35:17 CET 2015
 
 
 import play.core._
@@ -196,135 +196,142 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Items", "delete", Seq(
         
 
 // @LINE:33
-private[this] lazy val controllers_Avail_availability23_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("ajax/avail"))))
-private[this] lazy val controllers_Avail_availability23_invoker = createInvoker(
-controllers.Avail.availability(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Avail", "availability", Nil,"GET", """------------- AVAILABILITY
---------------------------""", Routes.prefix + """ajax/avail"""))
+private[this] lazy val controllers_Avail_getEventsAt23_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("ajax/events/"),DynamicPart("date", """[^/]+""",true))))
+private[this] lazy val controllers_Avail_getEventsAt23_invoker = createInvoker(
+controllers.Avail.getEventsAt(fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Avail", "getEventsAt", Seq(classOf[String]),"GET", """------------- AVAILABILITY
+--------------------------""", Routes.prefix + """ajax/events/$date<[^/]+>"""))
         
 
-// @LINE:37
-private[this] lazy val controllers_Tents_list24_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tents"))))
-private[this] lazy val controllers_Tents_list24_invoker = createInvoker(
+// @LINE:34
+private[this] lazy val controllers_Avail_availability24_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("ajax/availability"))))
+private[this] lazy val controllers_Avail_availability24_invoker = createInvoker(
+controllers.Avail.availability(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Avail", "availability", Nil,"POST", """""", Routes.prefix + """ajax/availability"""))
+        
+
+// @LINE:38
+private[this] lazy val controllers_Tents_list25_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tents"))))
+private[this] lazy val controllers_Tents_list25_invoker = createInvoker(
 controllers.Tents.list(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "list", Nil,"GET", """------------- TENTS
 -------------------""", Routes.prefix + """tents"""))
         
 
-// @LINE:38
-private[this] lazy val controllers_Tents_neu25_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tent"))))
-private[this] lazy val controllers_Tents_neu25_invoker = createInvoker(
+// @LINE:39
+private[this] lazy val controllers_Tents_neu26_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tent"))))
+private[this] lazy val controllers_Tents_neu26_invoker = createInvoker(
 controllers.Tents.neu(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "neu", Nil,"GET", """""", Routes.prefix + """tent"""))
         
 
-// @LINE:39
-private[this] lazy val controllers_Tents_add26_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tent"))))
-private[this] lazy val controllers_Tents_add26_invoker = createInvoker(
+// @LINE:40
+private[this] lazy val controllers_Tents_add27_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tent"))))
+private[this] lazy val controllers_Tents_add27_invoker = createInvoker(
 controllers.Tents.add(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "add", Nil,"POST", """""", Routes.prefix + """tent"""))
         
 
-// @LINE:40
-private[this] lazy val controllers_Tents_edit27_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tent/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_Tents_edit27_invoker = createInvoker(
+// @LINE:41
+private[this] lazy val controllers_Tents_edit28_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tent/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_Tents_edit28_invoker = createInvoker(
 controllers.Tents.edit(fakeValue[Long]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "edit", Seq(classOf[Long]),"GET", """""", Routes.prefix + """tent/$id<[^/]+>"""))
         
 
-// @LINE:41
-private[this] lazy val controllers_Tents_update28_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tent/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_Tents_update28_invoker = createInvoker(
+// @LINE:42
+private[this] lazy val controllers_Tents_update29_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tent/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_Tents_update29_invoker = createInvoker(
 controllers.Tents.update(fakeValue[Long]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "update", Seq(classOf[Long]),"POST", """""", Routes.prefix + """tent/$id<[^/]+>"""))
         
 
-// @LINE:42
-private[this] lazy val controllers_Tents_delete29_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tent/"),DynamicPart("id", """[^/]+""",true),StaticPart("/delete"))))
-private[this] lazy val controllers_Tents_delete29_invoker = createInvoker(
+// @LINE:43
+private[this] lazy val controllers_Tents_delete30_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tent/"),DynamicPart("id", """[^/]+""",true),StaticPart("/delete"))))
+private[this] lazy val controllers_Tents_delete30_invoker = createInvoker(
 controllers.Tents.delete(fakeValue[Long]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "delete", Seq(classOf[Long]),"POST", """""", Routes.prefix + """tent/$id<[^/]+>/delete"""))
         
 
-// @LINE:43
-private[this] lazy val controllers_Tents_getTent30_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("ajax/tent/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_Tents_getTent30_invoker = createInvoker(
+// @LINE:44
+private[this] lazy val controllers_Tents_getTent31_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("ajax/tent/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_Tents_getTent31_invoker = createInvoker(
 controllers.Tents.getTent(fakeValue[Long]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Tents", "getTent", Seq(classOf[Long]),"GET", """""", Routes.prefix + """ajax/tent/$id<[^/]+>"""))
         
 
-// @LINE:47
-private[this] lazy val controllers_Documents_priceOffer31_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("priceOffer/"),DynamicPart("eventType", """[^/]+""",true),StaticPart("/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_Documents_priceOffer31_invoker = createInvoker(
+// @LINE:48
+private[this] lazy val controllers_Documents_priceOffer32_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("priceOffer/"),DynamicPart("eventType", """[^/]+""",true),StaticPart("/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_Documents_priceOffer32_invoker = createInvoker(
 controllers.Documents.priceOffer(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Documents", "priceOffer", Seq(classOf[String], classOf[String]),"GET", """------------- DOCUMENTS
 -----------------------""", Routes.prefix + """priceOffer/$eventType<[^/]+>/$id<[^/]+>"""))
         
 
-// @LINE:48
-private[this] lazy val controllers_Documents_contract32_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("contract/"),DynamicPart("eventType", """[^/]+""",true),StaticPart("/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_Documents_contract32_invoker = createInvoker(
+// @LINE:49
+private[this] lazy val controllers_Documents_contract33_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("contract/"),DynamicPart("eventType", """[^/]+""",true),StaticPart("/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_Documents_contract33_invoker = createInvoker(
 controllers.Documents.contract(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Documents", "contract", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """contract/$eventType<[^/]+>/$id<[^/]+>"""))
         
 
-// @LINE:51
-private[this] lazy val controllers_App_login33_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
-private[this] lazy val controllers_App_login33_invoker = createInvoker(
+// @LINE:52
+private[this] lazy val controllers_App_login34_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
+private[this] lazy val controllers_App_login34_invoker = createInvoker(
 controllers.App.login(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.App", "login", Nil,"GET", """ Play-authenticate routes""", Routes.prefix + """login"""))
         
 
-// @LINE:52
-private[this] lazy val com_feth_play_module_pa_controllers_Authenticate_logout34_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("logout"))))
-private[this] lazy val com_feth_play_module_pa_controllers_Authenticate_logout34_invoker = createInvoker(
+// @LINE:53
+private[this] lazy val com_feth_play_module_pa_controllers_Authenticate_logout35_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("logout"))))
+private[this] lazy val com_feth_play_module_pa_controllers_Authenticate_logout35_invoker = createInvoker(
 com.feth.play.module.pa.controllers.Authenticate.logout,
 HandlerDef(this.getClass.getClassLoader, "", "com.feth.play.module.pa.controllers.Authenticate", "logout", Nil,"GET", """""", Routes.prefix + """logout"""))
         
 
-// @LINE:53
-private[this] lazy val com_feth_play_module_pa_controllers_Authenticate_authenticate35_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("authenticate/"),DynamicPart("provider", """[^/]+""",true))))
-private[this] lazy val com_feth_play_module_pa_controllers_Authenticate_authenticate35_invoker = createInvoker(
+// @LINE:54
+private[this] lazy val com_feth_play_module_pa_controllers_Authenticate_authenticate36_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("authenticate/"),DynamicPart("provider", """[^/]+""",true))))
+private[this] lazy val com_feth_play_module_pa_controllers_Authenticate_authenticate36_invoker = createInvoker(
 com.feth.play.module.pa.controllers.Authenticate.authenticate(fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "com.feth.play.module.pa.controllers.Authenticate", "authenticate", Seq(classOf[String]),"GET", """""", Routes.prefix + """authenticate/$provider<[^/]+>"""))
         
 
-// @LINE:54
-private[this] lazy val controllers_App_oAuthDenied36_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("authenticate/"),DynamicPart("provider", """[^/]+""",true),StaticPart("/denied"))))
-private[this] lazy val controllers_App_oAuthDenied36_invoker = createInvoker(
+// @LINE:55
+private[this] lazy val controllers_App_oAuthDenied37_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("authenticate/"),DynamicPart("provider", """[^/]+""",true),StaticPart("/denied"))))
+private[this] lazy val controllers_App_oAuthDenied37_invoker = createInvoker(
 controllers.App.oAuthDenied(fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.App", "oAuthDenied", Seq(classOf[String]),"GET", """""", Routes.prefix + """authenticate/$provider<[^/]+>/denied"""))
         
 
-// @LINE:58
-private[this] lazy val controllers_App_jsRoutes37_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/javascripts/routes"))))
-private[this] lazy val controllers_App_jsRoutes37_invoker = createInvoker(
+// @LINE:59
+private[this] lazy val controllers_App_jsRoutes38_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/javascripts/routes"))))
+private[this] lazy val controllers_App_jsRoutes38_invoker = createInvoker(
 controllers.App.jsRoutes(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.App", "jsRoutes", Nil,"GET", """------------- Public files and JS routes serving
 ------------------------------------------------""", Routes.prefix + """assets/javascripts/routes"""))
         
 
-// @LINE:59
-private[this] lazy val controllers_Assets_at38_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
-private[this] lazy val controllers_Assets_at38_invoker = createInvoker(
+// @LINE:60
+private[this] lazy val controllers_Assets_at39_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at39_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """assets/$file<.+>"""))
         
 
-// @LINE:60
-private[this] lazy val controllers_App_jsMessages39_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("jsmessages"))))
-private[this] lazy val controllers_App_jsMessages39_invoker = createInvoker(
+// @LINE:61
+private[this] lazy val controllers_App_jsMessages40_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("jsmessages"))))
+private[this] lazy val controllers_App_jsMessages40_invoker = createInvoker(
 controllers.App.jsMessages(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.App", "jsMessages", Nil,"GET", """""", Routes.prefix + """jsmessages"""))
         
 
-// @LINE:62
-private[this] lazy val controllers_App_calendar40_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),DynamicPart("date", """[^/]+""",true))))
-private[this] lazy val controllers_App_calendar40_invoker = createInvoker(
+// @LINE:63
+private[this] lazy val controllers_App_calendar41_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),DynamicPart("date", """[^/]+""",true))))
+private[this] lazy val controllers_App_calendar41_invoker = createInvoker(
 controllers.App.calendar(fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.App", "calendar", Seq(classOf[String]),"GET", """""", Routes.prefix + """$date<[^/]+>"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.App.calendar(date:String = "TODAY")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """store""","""controllers.App.store(date:String = "TOMMOROW")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """store/$date<[^/]+>""","""controllers.App.store(date:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/event""","""controllers.Events.add()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/addAndEdit""","""controllers.Events.addAndEdit()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/INSTALLATION/$id<[^/]+>""","""controllers.Events.editInstl(id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/INSTALLATION/$id<[^/]+>""","""controllers.Events.updateInstl(id:String)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/INSTALLATION/$id<[^/]+>""","""controllers.Events.deleteInstl(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/storeman/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.editStrmn(eventType:String, id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/storeman/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.updateStrmn(eventType:String, id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.edit(eventType:String, id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.update(eventType:String, id:String)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.delete(eventType:String, id:String)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/event/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.drag(eventType:String, id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/entries/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.getEntries(eventType:String, id:String)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/event/changeCal/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.changeCal(eventType:String, id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/actions/upcoming""","""controllers.Events.upcomingActions()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/items""","""controllers.Items.list()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/listTentItems""","""controllers.Items.listTentItems()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/listEventItems""","""controllers.Items.listEventItems()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/item""","""controllers.Items.add()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/item/$id<[^/]+>""","""controllers.Items.update(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/item/$id<[^/]+>""","""controllers.Items.delete(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/avail""","""controllers.Avail.availability()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tents""","""controllers.Tents.list()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tent""","""controllers.Tents.neu()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tent""","""controllers.Tents.add()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tent/$id<[^/]+>""","""controllers.Tents.edit(id:Long)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tent/$id<[^/]+>""","""controllers.Tents.update(id:Long)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tent/$id<[^/]+>/delete""","""controllers.Tents.delete(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/tent/$id<[^/]+>""","""controllers.Tents.getTent(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """priceOffer/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Documents.priceOffer(eventType:String, id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """contract/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Documents.contract(eventType:String, id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.App.login()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""com.feth.play.module.pa.controllers.Authenticate.logout"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """authenticate/$provider<[^/]+>""","""com.feth.play.module.pa.controllers.Authenticate.authenticate(provider:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """authenticate/$provider<[^/]+>/denied""","""controllers.App.oAuthDenied(provider:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/javascripts/routes""","""controllers.App.jsRoutes()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """jsmessages""","""controllers.App.jsMessages()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """$date<[^/]+>""","""controllers.App.calendar(date:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.App.calendar(date:String = "TODAY")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """store""","""controllers.App.store(date:String = "TOMMOROW")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """store/$date<[^/]+>""","""controllers.App.store(date:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/event""","""controllers.Events.add()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/addAndEdit""","""controllers.Events.addAndEdit()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/INSTALLATION/$id<[^/]+>""","""controllers.Events.editInstl(id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/INSTALLATION/$id<[^/]+>""","""controllers.Events.updateInstl(id:String)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/INSTALLATION/$id<[^/]+>""","""controllers.Events.deleteInstl(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/storeman/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.editStrmn(eventType:String, id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/storeman/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.updateStrmn(eventType:String, id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.edit(eventType:String, id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.update(eventType:String, id:String)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """event/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.delete(eventType:String, id:String)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/event/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.drag(eventType:String, id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/entries/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.getEntries(eventType:String, id:String)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/event/changeCal/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Events.changeCal(eventType:String, id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/actions/upcoming""","""controllers.Events.upcomingActions()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/items""","""controllers.Items.list()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/listTentItems""","""controllers.Items.listTentItems()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/listEventItems""","""controllers.Items.listEventItems()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/item""","""controllers.Items.add()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/item/$id<[^/]+>""","""controllers.Items.update(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/item/$id<[^/]+>""","""controllers.Items.delete(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/events/$date<[^/]+>""","""controllers.Avail.getEventsAt(date:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/availability""","""controllers.Avail.availability()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tents""","""controllers.Tents.list()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tent""","""controllers.Tents.neu()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tent""","""controllers.Tents.add()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tent/$id<[^/]+>""","""controllers.Tents.edit(id:Long)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tent/$id<[^/]+>""","""controllers.Tents.update(id:Long)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tent/$id<[^/]+>/delete""","""controllers.Tents.delete(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ajax/tent/$id<[^/]+>""","""controllers.Tents.getTent(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """priceOffer/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Documents.priceOffer(eventType:String, id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """contract/$eventType<[^/]+>/$id<[^/]+>""","""controllers.Documents.contract(eventType:String, id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.App.login()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""com.feth.play.module.pa.controllers.Authenticate.logout"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """authenticate/$provider<[^/]+>""","""com.feth.play.module.pa.controllers.Authenticate.authenticate(provider:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """authenticate/$provider<[^/]+>/denied""","""controllers.App.oAuthDenied(provider:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/javascripts/routes""","""controllers.App.jsRoutes()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """jsmessages""","""controllers.App.jsMessages()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """$date<[^/]+>""","""controllers.App.calendar(date:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -517,145 +524,153 @@ case controllers_Items_delete22_route(params) => {
         
 
 // @LINE:33
-case controllers_Avail_availability23_route(params) => {
-   call { 
-        controllers_Avail_availability23_invoker.call(controllers.Avail.availability())
+case controllers_Avail_getEventsAt23_route(params) => {
+   call(params.fromPath[String]("date", None)) { (date) =>
+        controllers_Avail_getEventsAt23_invoker.call(controllers.Avail.getEventsAt(date))
    }
 }
         
 
-// @LINE:37
-case controllers_Tents_list24_route(params) => {
+// @LINE:34
+case controllers_Avail_availability24_route(params) => {
    call { 
-        controllers_Tents_list24_invoker.call(controllers.Tents.list())
+        controllers_Avail_availability24_invoker.call(controllers.Avail.availability())
    }
 }
         
 
 // @LINE:38
-case controllers_Tents_neu25_route(params) => {
+case controllers_Tents_list25_route(params) => {
    call { 
-        controllers_Tents_neu25_invoker.call(controllers.Tents.neu())
+        controllers_Tents_list25_invoker.call(controllers.Tents.list())
    }
 }
         
 
 // @LINE:39
-case controllers_Tents_add26_route(params) => {
+case controllers_Tents_neu26_route(params) => {
    call { 
-        controllers_Tents_add26_invoker.call(controllers.Tents.add())
+        controllers_Tents_neu26_invoker.call(controllers.Tents.neu())
    }
 }
         
 
 // @LINE:40
-case controllers_Tents_edit27_route(params) => {
-   call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_Tents_edit27_invoker.call(controllers.Tents.edit(id))
+case controllers_Tents_add27_route(params) => {
+   call { 
+        controllers_Tents_add27_invoker.call(controllers.Tents.add())
    }
 }
         
 
 // @LINE:41
-case controllers_Tents_update28_route(params) => {
+case controllers_Tents_edit28_route(params) => {
    call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_Tents_update28_invoker.call(controllers.Tents.update(id))
+        controllers_Tents_edit28_invoker.call(controllers.Tents.edit(id))
    }
 }
         
 
 // @LINE:42
-case controllers_Tents_delete29_route(params) => {
+case controllers_Tents_update29_route(params) => {
    call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_Tents_delete29_invoker.call(controllers.Tents.delete(id))
+        controllers_Tents_update29_invoker.call(controllers.Tents.update(id))
    }
 }
         
 
 // @LINE:43
-case controllers_Tents_getTent30_route(params) => {
+case controllers_Tents_delete30_route(params) => {
    call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_Tents_getTent30_invoker.call(controllers.Tents.getTent(id))
+        controllers_Tents_delete30_invoker.call(controllers.Tents.delete(id))
    }
 }
         
 
-// @LINE:47
-case controllers_Documents_priceOffer31_route(params) => {
-   call(params.fromPath[String]("eventType", None), params.fromPath[String]("id", None)) { (eventType, id) =>
-        controllers_Documents_priceOffer31_invoker.call(controllers.Documents.priceOffer(eventType, id))
+// @LINE:44
+case controllers_Tents_getTent31_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_Tents_getTent31_invoker.call(controllers.Tents.getTent(id))
    }
 }
         
 
 // @LINE:48
-case controllers_Documents_contract32_route(params) => {
+case controllers_Documents_priceOffer32_route(params) => {
    call(params.fromPath[String]("eventType", None), params.fromPath[String]("id", None)) { (eventType, id) =>
-        controllers_Documents_contract32_invoker.call(controllers.Documents.contract(eventType, id))
+        controllers_Documents_priceOffer32_invoker.call(controllers.Documents.priceOffer(eventType, id))
    }
 }
         
 
-// @LINE:51
-case controllers_App_login33_route(params) => {
-   call { 
-        controllers_App_login33_invoker.call(controllers.App.login())
+// @LINE:49
+case controllers_Documents_contract33_route(params) => {
+   call(params.fromPath[String]("eventType", None), params.fromPath[String]("id", None)) { (eventType, id) =>
+        controllers_Documents_contract33_invoker.call(controllers.Documents.contract(eventType, id))
    }
 }
         
 
 // @LINE:52
-case com_feth_play_module_pa_controllers_Authenticate_logout34_route(params) => {
+case controllers_App_login34_route(params) => {
    call { 
-        com_feth_play_module_pa_controllers_Authenticate_logout34_invoker.call(com.feth.play.module.pa.controllers.Authenticate.logout)
+        controllers_App_login34_invoker.call(controllers.App.login())
    }
 }
         
 
 // @LINE:53
-case com_feth_play_module_pa_controllers_Authenticate_authenticate35_route(params) => {
-   call(params.fromPath[String]("provider", None)) { (provider) =>
-        com_feth_play_module_pa_controllers_Authenticate_authenticate35_invoker.call(com.feth.play.module.pa.controllers.Authenticate.authenticate(provider))
+case com_feth_play_module_pa_controllers_Authenticate_logout35_route(params) => {
+   call { 
+        com_feth_play_module_pa_controllers_Authenticate_logout35_invoker.call(com.feth.play.module.pa.controllers.Authenticate.logout)
    }
 }
         
 
 // @LINE:54
-case controllers_App_oAuthDenied36_route(params) => {
+case com_feth_play_module_pa_controllers_Authenticate_authenticate36_route(params) => {
    call(params.fromPath[String]("provider", None)) { (provider) =>
-        controllers_App_oAuthDenied36_invoker.call(controllers.App.oAuthDenied(provider))
+        com_feth_play_module_pa_controllers_Authenticate_authenticate36_invoker.call(com.feth.play.module.pa.controllers.Authenticate.authenticate(provider))
    }
 }
         
 
-// @LINE:58
-case controllers_App_jsRoutes37_route(params) => {
-   call { 
-        controllers_App_jsRoutes37_invoker.call(controllers.App.jsRoutes())
+// @LINE:55
+case controllers_App_oAuthDenied37_route(params) => {
+   call(params.fromPath[String]("provider", None)) { (provider) =>
+        controllers_App_oAuthDenied37_invoker.call(controllers.App.oAuthDenied(provider))
    }
 }
         
 
 // @LINE:59
-case controllers_Assets_at38_route(params) => {
-   call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at38_invoker.call(controllers.Assets.at(path, file))
+case controllers_App_jsRoutes38_route(params) => {
+   call { 
+        controllers_App_jsRoutes38_invoker.call(controllers.App.jsRoutes())
    }
 }
         
 
 // @LINE:60
-case controllers_App_jsMessages39_route(params) => {
-   call { 
-        controllers_App_jsMessages39_invoker.call(controllers.App.jsMessages())
+case controllers_Assets_at39_route(params) => {
+   call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
+        controllers_Assets_at39_invoker.call(controllers.Assets.at(path, file))
    }
 }
         
 
-// @LINE:62
-case controllers_App_calendar40_route(params) => {
+// @LINE:61
+case controllers_App_jsMessages40_route(params) => {
+   call { 
+        controllers_App_jsMessages40_invoker.call(controllers.App.jsMessages())
+   }
+}
+        
+
+// @LINE:63
+case controllers_App_calendar41_route(params) => {
    call(params.fromPath[String]("date", None)) { (date) =>
-        controllers_App_calendar40_invoker.call(controllers.App.calendar(date))
+        controllers_App_calendar41_invoker.call(controllers.App.calendar(date))
    }
 }
         

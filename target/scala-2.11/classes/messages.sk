@@ -116,6 +116,7 @@ t.reserved=Rezervované
 t.rented=Prenajaté
 t.action=Akcia
 t.tent=Stan
+t.type=Typ
 
 #Tooltips
 tooltip.import=Naskladniť
