@@ -17,7 +17,7 @@
 <div class="form-group" data-bind="attr: { class: item().name.isValid() ? 'form-group' : 'form-group has-info' }">
     <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.name")</label>
     <div class="col-sm-6">
-        <input name="name" class="form-control" placeholder="Stolička plastová" data-bind="value: item().name">
+        <input name="name" class="form-control" placeholder="Stolička plastová" data-bind="value: item().name" autocomplete="off">
     </div>
     <div class="help-block col-sm-reset inline" data-bind="validationMessage: item().name"></div>
 </div>
@@ -28,7 +28,7 @@
     </label>
     <div class="col-sm-3 controls">
         <div class="input-group">
-            <input name="amount" class="form-control" placeholder="340" data-bind="value: item().amount">
+            <input name="amount" class="form-control" placeholder="340" data-bind="value: item().amount" autocomplete="off">
             <span class="input-group-addon"
                 data-bind="text: item().category() === 'CARPET' ? Messages('lbl.m') : Messages('lbl.pcs') ">
             </span>
@@ -41,7 +41,7 @@
     <label class="col-sm-2 control-label no-padding-right">@Messages("lbl.weight")</label>
     <div class="col-sm-3 controls">
         <div class="input-group">
-            <input name="weight" class="form-control" placeholder="2.85" data-bind="value: item().weight">
+            <input name="weight" class="form-control" placeholder="2.85" data-bind="value: item().weight" autocomplete="off">
             <span class="input-group-addon"
                 data-bind="text: item().category() === 'CARPET' ? Messages('lbl.kgpm') : Messages('lbl.kg') ">
             </span>

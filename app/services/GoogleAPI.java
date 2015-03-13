@@ -91,7 +91,10 @@ public class GoogleAPI {
     public static Events findEvents(EventType type, Long millisMin, Long millisMax, String accessToken) throws IOException {
         DateTime dateTimeMin = millisMin == null ? null : new DateTime(millisMin);
         DateTime dateTimeMax = millisMax == null ? null : new DateTime(millisMax);
+        return findEvents(type, dateTimeMin, dateTimeMax, accessToken);
+    }
 
+    public static Events findEvents(EventType type,  DateTime dateTimeMin, DateTime dateTimeMax, String accessToken) throws IOException {
         return calendar()
                 .events()
                 .list(calIds.get(type))
@@ -100,7 +103,6 @@ public class GoogleAPI {
                 .setOauthToken(accessToken)
                 .execute();
     }
-
 
     private static Calendar calendar() {
         Calendar.Builder builder = new Calendar.Builder(HTTP_TRANSPORT, JSON_FACTORY, null);

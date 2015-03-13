@@ -1,7 +1,7 @@
 package controllers;
 
 import com.google.api.services.calendar.model.Event;
-import dto.ActionsContainer;
+import dto.EventsContainer;
 import dto.EntriesContainer;
 import dto.EventTO;
 import dto.EventType;
@@ -66,7 +66,7 @@ public class Events extends Controller {
         try {
             Event e = GoogleAPI.findEvent(EventType.INSTALLATION, id);
             com.google.api.services.calendar.model.Events events = GoogleAPI.findEvents(EventType.ACTION, (new Date()).getTime(), null);
-            ActionsContainer upcomingActions = new ActionsContainer(events);
+            EventsContainer upcomingActions = new EventsContainer(events);
             EventTO eventTO = new EventTO(e);
             Installation inst = Installation.find.byId(eventTO.id);
             eventTO.actionId = inst == null ? null : inst.actionId;
@@ -208,7 +208,7 @@ public class Events extends Controller {
 
     public static Result upcomingActions() throws IOException {
         com.google.api.services.calendar.model.Events events = GoogleAPI.findEvents(EventType.ACTION, (new Date()).getTime(), null);
-        return ok(toJson((new ActionsContainer(events)).actions));
+        return ok(toJson((new EventsContainer(events)).actions));
     }
 
     public static Result getEntries(String eventType, String id) {

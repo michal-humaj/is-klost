@@ -53,15 +53,15 @@ form{
     display: inline-block;
 }
 
-.badgeAction {
+.badgeACTION {
     background-color: #7BD148;
 }
 
-.badgeReservationn {
+.badgeRESERVATION {
     background-color: #F691B2;
 }
 
-.badgeSelftransport {
+.badgeSELFTRANSPORT {
     background-color: #FAD165;
 }
 
@@ -85,6 +85,10 @@ input[type=checkbox].ace.ace-switch.ace-switch-6:checked+.lbl::before {
     color: #2e8965;
 }
 
+.textRed{
+    color: #ff0000;
+}
+
 table.tableScrollable thead, table.tableScrollable tbody, table.tableScrollable tr, table.tableScrollable td, table.tableScrollable th { display: block; }
 
 table.tableScrollable tr:after {
@@ -104,12 +108,17 @@ table.tableScrollable tbody {
 }
 
 table.tableNoBorder>tbody>tr.lastInCategory>td{
-    border-bottom-color: #404040;
+    border-bottom-color: #438eb9;
 }
+
+table.tableNoBorder>tbody>tr.lastInCategoryA>td{
+    border-bottom-color: #2e8965;
+}
+
 
 /* Cell widths*/
 table.tableScrollable .thItemName{
-    width: 380px;
+    width: 320px;
     float: left;
 }
 

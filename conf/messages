@@ -116,6 +116,7 @@ t.reserved=Reserved
 t.rented=Rented
 t.action=Action
 t.tent=Tent
+t.type=Type
 
 #Tooltips
 tooltip.import=Import

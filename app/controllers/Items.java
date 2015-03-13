@@ -29,7 +29,7 @@ public class Items extends Controller {
     }
 
     public static Result listTentItems() {
-        List<StoredItem> items = StoredItem.find.where().not((or(eq("category", Category.PB), eq("category", Category.CARPET)))).orderBy("category").findList();
+        List<StoredItem> items = StoredItem.find.where().not(or(eq("category", Category.PB), eq("category", Category.CARPET))).orderBy("category").findList();
         return ok(toJson(items));
     }
 
