@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for is-klost#is-klost_2.11;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->org.scala-lang#scala-library;2.11.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@24010633[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@15c17092[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.1 in sbt-chain[0m
@@ -546,7 +546,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@1579b94b[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@4c42130[0m
 [0m[[0minfo[0m] [0mResolving javax.validation#validation-api;1.1.0.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: javax.validation#validation-api;1.1.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: javax.validation#validation-api;1.1.0.Final[0m
@@ -559,7 +559,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@1a09681[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@16b72dbe[0m
 [0m[[0minfo[0m] [0mResolving org.jboss.logging#jboss-logging;3.1.1.GA ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.jboss.logging#jboss-logging;3.1.1.GA[0m
@@ -577,7 +577,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@62d0aa87[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@66c32222[0m
 [0m[[0minfo[0m] [0mResolving com.fasterxml#classmate;1.0.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.fasterxml#classmate;1.0.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.fasterxml#classmate;1.0.0[0m
@@ -1059,7 +1059,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->mysql#mysql-connector-java;5.1.34 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies is-klost#is-klost_2.11;1.0->joda-time#joda-time;2.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving joda-time#joda-time;2.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@50804617[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3360813a[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: joda-time#joda-time;2.7[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: joda-time#joda-time;2.7[0m
 [0m[[0mdebug[0m] [0m	found joda-time#joda-time;2.7 in sbt-chain[0m
@@ -1855,8 +1855,8 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@6da4fa43[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@6a2a7cf1[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@14d05099[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@785b777b[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -1864,8 +1864,8 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@21bb386b[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@a750a1a[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@27d43812[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@5dad3a2b[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
@@ -1875,8 +1875,8 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@6f94883a[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@7bd111[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@4b85f080[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@46708a3c[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->com.fasterxml#classmate;1.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -2766,9 +2766,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@388f5fb0[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@4cd338d2[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@3f378a65[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@f6b8d91[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@5e1b327f[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@4b90601d[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -2776,9 +2776,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@2162ea59[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@65078a2e[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@520105d3[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@adf917d[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@5bc8ab1e[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@535a6da5[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
@@ -2788,9 +2788,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@773a9d6[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@3a93246c[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@123c4c7f[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@77dd699a[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@69403af0[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@77dd988b[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->com.fasterxml#classmate;1.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -4981,10 +4981,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@2786f36[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@30cd437e[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@740a1e39[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@44466bb3[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@59a9533[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@67b94a24[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@35b2b6af[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@67f7b6b3[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -4992,10 +4992,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@7b4f0425[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@995862[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@53798a3c[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@506293f4[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@76e6855e[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@183e1b4e[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@1572aa51[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@1b0bb6d7[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
@@ -5005,10 +5005,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@7add6d05[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@5f20a247[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@577e141b[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@165a257d[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@68bc914b[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@33e708a5[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@4e8a342[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@45364492[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->com.fasterxml#classmate;1.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -5902,10 +5902,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@38ff2ba4[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@788a3937[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@3ab287b4[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@1eeb5887[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@e3142e1[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@441dc90e[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@7f7ad911[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@5a412c79[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -5913,10 +5913,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@628817dc[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@54d69f0d[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@566439fe[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@4e1b7f01[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@4737bfe[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@39d162fa[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@61b928bd[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@4321c26a[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
@@ -5926,10 +5926,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@7c4f3c1[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@135f07e3[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@43fed204[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@e8e277c[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@6449d72[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@2bcaa95[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@30631d9a[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@3b2c8247[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->com.fasterxml#classmate;1.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -6823,12 +6823,12 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@789db1d3[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@3905d182[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@2cfdcb0d[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@4a1dd98e[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@6db61fa5[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@4fd7c1e8[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@140a8e68[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@410b581f[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@4fc67c95[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@701d431d[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@11215e6c[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@25be0d3d[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -6836,12 +6836,12 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@2e7cb521[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@7d57a15e[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@423629c[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@2f1ef1e3[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@189a8640[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@48e3e05e[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@7cdf3533[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@221de751[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@593d8856[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@56c1f3df[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@5771e1f8[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@75aa8da1[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
@@ -6851,12 +6851,12 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.jboss.logging#jboss-logging;3.2.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@3785ff15[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@3e2dd82d[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@33cb923f[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@79ee80a9[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@194115c9[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@50804617 => sbt.ivyint.MergedDescriptors@7ffd4c12[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@6db60f98[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@4bb9fc6d[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@1f6b7ef2[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@4a5b51fb[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@31635be0[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@3360813a => sbt.ivyint.MergedDescriptors@7224e874[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.3.Final->com.fasterxml#classmate;1.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -9182,7 +9182,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.1!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.11!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 19217ms :: artifacts dl 168ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4298ms :: artifacts dl 140ms[0m
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 compile produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 runtime produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 test produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-test.xml[0m
@@ -9196,5 +9196,5 @@
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 docs produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 pom produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for is-klost#is-klost_2.11;1.0 scala-tool produced in C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\resolution-cache\reports\is-klost-is-klost_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (19217ms resolve - 168ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (4298ms resolve - 140ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

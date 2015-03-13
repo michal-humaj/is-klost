@@ -226,6 +226,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\lib\class_big.png[0m
 [0m[[0mdebug[0m] [0m	views\html\storeAdmin$.html[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\views\html\storeAdmin$.html[0m
+[0m[[0mdebug[0m] [0m	dto\EventsContainer.html[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\dto\EventsContainer.html[0m
 [0m[[0mdebug[0m] [0m	lib\packagesbg.gif[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\lib\packagesbg.gif[0m
 [0m[[0mdebug[0m] [0m	views\html\event\popoverStrmn$.html[0m
@@ -246,8 +248,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\com\feth\play\module\pa\controllers\ref[0m
 [0m[[0mdebug[0m] [0m	lib\type_to_object_big.png[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\lib\type_to_object_big.png[0m
-[0m[[0mdebug[0m] [0m	dto\ActionsContainer.html[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\dto\ActionsContainer.html[0m
 [0m[[0mdebug[0m] [0m	com\feth\play\module\pa[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\com\feth\play\module\pa[0m
 [0m[[0mdebug[0m] [0m	controllers\LoggedStoremanOrAdmin.html[0m
@@ -328,6 +328,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\lib\trait_to_object_big.png[0m
 [0m[[0mdebug[0m] [0m	controllers\ref\ReverseAssets.html[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\controllers\ref\ReverseAssets.html[0m
+[0m[[0mdebug[0m] [0m	dto\AvailTO.html[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\dto\AvailTO.html[0m
 [0m[[0mdebug[0m] [0m	com\feth[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\target\scala-2.11\api\com\feth[0m
 [0m[[0mdebug[0m] [0m	lib\object_diagram.png[0m

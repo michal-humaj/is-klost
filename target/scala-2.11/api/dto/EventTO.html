@@ -105,6 +105,23 @@
     </span>
       
     </li><li name="dto.EventTO#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(e:com.google.api.services.calendar.model.Event,eventType:dto.EventType):dto.EventTO"></a>
+      <a id="&lt;init&gt;:EventTO"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EventTO</span><span class="params">(<span name="e">e: <span class="extype" name="com.google.api.services.calendar.model.Event">Event</span></span>, <span name="eventType">eventType: <a href="EventType.html" class="extype" name="dto.EventType">EventType</a></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#dto.EventTO@&lt;init&gt;(e:com.google.api.services.calendar.model.Event,eventType:dto.EventType):dto.EventTO" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="dto.EventTO#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="&lt;init&gt;():dto.EventTO"></a>
       <a id="&lt;init&gt;:EventTO"></a>
       <h4 class="signature">
@@ -238,8 +255,8 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a>
+    </li><li name="dto.EventTO#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(o:Any):Boolean"></a>
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -247,14 +264,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">equals</span><span class="params">(<span name="o">o: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../index.html#dto.EventTO@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../index.html#dto.EventTO@equals(o:Any):Boolean" title="Permalink" target="_top">
         <img src="../lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="dto.EventTO">EventTO</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -295,7 +312,7 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="dto.EventTO#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -311,7 +328,7 @@
         <img src="../lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="dto.EventTO">EventTO</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -410,6 +427,23 @@
       </span>
       </h4><span class="permalink">
       <a href="../index.html#dto.EventTO@toGoogleEvent(id:String,entriesInfo:String):com.google.api.services.calendar.model.Event" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="dto.EventTO#toGoogleEvent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toGoogleEvent(id:String,entriesInfo:String,dontSplit:Boolean):com.google.api.services.calendar.model.Event"></a>
+      <a id="toGoogleEvent(String,String,Boolean):Event"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toGoogleEvent</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="entriesInfo">entriesInfo: <span class="extype" name="java.lang.String">String</span></span>, <span name="dontSplit">dontSplit: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="com.google.api.services.calendar.model.Event">Event</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#dto.EventTO@toGoogleEvent(id:String,entriesInfo:String,dontSplit:Boolean):com.google.api.services.calendar.model.Event" title="Permalink" target="_top">
         <img src="../lib/permalink.png" />
       </a>
     </span>
