@@ -28,6 +28,7 @@ public class LoggedAdmin extends Security.Authenticator {
 
     @Override
     public String getUsername(final Http.Context ctx) {
+
         final AuthUser u = PlayAuthenticate.getUser(session());
         if (u == null) return null;
         if (isAdminId(u.getId())) {
@@ -59,7 +60,7 @@ public class LoggedAdmin extends Security.Authenticator {
     protected void revokeAccessTokenIfExpired(AuthUser authUser) {
         try {
             long lastUpdate = session().get("lastUpdate") == null ? 0L : Long.parseLong(session().get("lastUpdate"));
-            System.out.println("revoke access token - last update :" + lastUpdate);
+            System.out.println("revoke access token - last update :" + new Date(lastUpdate));
             if ((new Date()).getTime() - lastUpdate < ACCESS_TOKEN_LIFETIME) return;
             final User dbUser = User.find.byId(authUser.getId());
             if (dbUser != null) {

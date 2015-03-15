@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/MiHu/Documents/projects/is-klost/is-klost/conf/routes
 // @HASH:8f4d11c44bcc0dd7ec15b2d19ac4da82942428a6
-// @DATE:Sun Mar 15 10:05:12 CET 2015
+// @DATE:Sun Mar 15 13:14:03 CET 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
