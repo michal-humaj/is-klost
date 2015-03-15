@@ -1,6 +1,8 @@
 package controllers;
 
 import jsmessages.JsMessages;
+import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 import play.Play;
 import play.Routes;
 import play.i18n.Messages;
@@ -30,7 +32,8 @@ public class App extends Controller {
             validDate = date.substring(0, 10);
         }
         if ("TODAY".equals(date) || !Util.isDateValid(date)) {
-            validDate = Util.sdf.format(new Date(1427583600000l)); //TODO testovacie datumy
+            DateTime today = new LocalDate().toDateTimeAtStartOfDay();
+            validDate = Util.sdf.format(new Date(today.getMillis()));
         }
         return ok(calendar.render(validDate));
     }
@@ -42,7 +45,8 @@ public class App extends Controller {
             validDate = date.substring(0, 10);
         }
         if ("TOMORROW".equals(date) || !Util.isDateValid(date)) {
-            validDate = Util.sdf.format(new Date(1427583600000l));
+            DateTime today = new LocalDate().toDateTimeAtStartOfDay().plusDays(1);
+            validDate = Util.sdf.format(new Date(today.getMillis()));
         }
         if (isUserAdmin()) {
             return ok(storeAdmin.render(validDate));

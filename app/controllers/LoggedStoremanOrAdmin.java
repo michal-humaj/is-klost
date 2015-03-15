@@ -15,7 +15,7 @@ import static play.mvc.Http.Context.Implicit.session;
  */
 public class LoggedStoremanOrAdmin extends LoggedAdmin {
 
-    private static List<String> storemanIds = Arrays.asList("116064143718081568408", "105229600961564914963", "105150527948667127205");
+    private static List<String> storemanIds = Arrays.asList("116064143718081568408", "105229600961564914963");
 
     @Override
     public String getUsername(final Http.Context ctx) {

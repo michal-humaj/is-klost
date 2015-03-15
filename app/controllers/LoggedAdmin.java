@@ -22,9 +22,9 @@ import static play.mvc.Http.Context.Implicit.session;
  */
 public class LoggedAdmin extends Security.Authenticator {
 
-    public static final String adminId = "104577664461666247347";
-    private static List<String> adminIds = Arrays.asList("104577664461666247347");
-    public static final Long ACCESS_TOKEN_LIFETIME = 1_500_000L;
+    public static final String adminId = "104577664461666247347"; // Michal cron
+    private static List<String> adminIds = Arrays.asList("104577664461666247347", "105150527948667127205");
+    public static final Long ACCESS_TOKEN_LIFETIME = 3_000_000L;
 
     @Override
     public String getUsername(final Http.Context ctx) {
