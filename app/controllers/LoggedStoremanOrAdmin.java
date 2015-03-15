@@ -19,9 +19,9 @@ public class LoggedStoremanOrAdmin extends LoggedAdmin {
 
     @Override
     public String getUsername(final Http.Context ctx) {
-        System.out.println("check login status, access token: " + session().get("accessToken"));
+        System.out.println("1.)check login status, access token: " + session().get("accessToken"));
         long lastUpdate = session().get("lastUpdate") == null ? 0L : Long.parseLong(session().get("lastUpdate"));
-        System.out.println("check login status,c last update :" + new Date(lastUpdate));
+        System.out.println("2.) check login status, last update :" + new Date(lastUpdate));
         final AuthUser u = PlayAuthenticate.getUser(session());
         if (u == null || u.getId() == null) return null;
         if (storemanIds.contains(u.getId())) {

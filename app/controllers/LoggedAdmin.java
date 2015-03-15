@@ -66,7 +66,7 @@ public class LoggedAdmin extends Security.Authenticator {
                 String accessToken = dbUser.getFreshAccessToken();
                 System.out.println("Access token retrieved: " + accessToken);
                 if (accessToken != null) {
-                    session().put("acessToken", accessToken);
+                    session().put("accessToken", accessToken);
                     session().put("lastUpdate", Long.toString(new Date().getTime()));
                 }
             }

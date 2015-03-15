@@ -70,7 +70,7 @@ Seq[Any](format.raw/*1.1*/("""<div class="modal fade" id="modalEditItem" tabinde
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 15 16:41:30 CET 2015
+                  DATE: Sun Mar 15 16:58:07 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/item/modalEdit.scala.html
                   HASH: 2ca3d4cc8fdc8fe15e5d798b17118f2f96593f04
                   MATRIX: 807->0|1372->538|1415->560|1540->658|1554->663|1616->704|1664->724|1887->920|1931->942|2061->1045|2103->1065

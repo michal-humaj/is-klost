@@ -38,12 +38,12 @@ public class Global extends GlobalSettings {
         System.setProperty("user.timezone", "Europe/Warsaw");
         TimeZone.setDefault(TimeZone.getTimeZone("Europe/Warsaw"));
 
-        /*Akka.system().scheduler().schedule(
+        Akka.system().scheduler().schedule(
                 Duration.create(25, TimeUnit.MINUTES),
                 Duration.create(25, TimeUnit.MINUTES),
                 new Cron(),
                 Akka.system().dispatcher()
-        );*/
+        );
 
         PlayAuthenticate.setResolver(new Resolver() {
             @Override
