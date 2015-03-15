@@ -5,6 +5,7 @@ import com.feth.play.module.pa.user.AuthUser;
 import play.mvc.Http;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import static play.mvc.Http.Context.Implicit.session;
@@ -18,7 +19,9 @@ public class LoggedStoremanOrAdmin extends LoggedAdmin {
 
     @Override
     public String getUsername(final Http.Context ctx) {
-        System.out.println("Storeman or admin LAST UPDATE: " + session().get("lastUpdate"));
+        System.out.println("check login status, access token: " + session().get("accessToken"));
+        long lastUpdate = session().get("lastUpdate") == null ? 0L : Long.parseLong(session().get("lastUpdate"));
+        System.out.println("check login status,c last update :" + new Date(lastUpdate));
         final AuthUser u = PlayAuthenticate.getUser(session());
         if (u == null || u.getId() == null) return null;
         if (storemanIds.contains(u.getId())) {
