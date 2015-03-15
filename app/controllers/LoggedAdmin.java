@@ -58,19 +58,18 @@ public class LoggedAdmin extends Security.Authenticator {
 
     protected void revokeAccessTokenIfExpired(AuthUser authUser) {
         try {
-            if (session().get("lastUpdate") == null) return;
-            final Long lastUpdate = Long.parseLong(session().get("lastUpdate"));
+            long lastUpdate = session().get("lastUpdate") == null ? 0L : Long.parseLong(session().get("lastUpdate"));
+            System.out.println("revoke access token - last update :" + lastUpdate);
             if ((new Date()).getTime() - lastUpdate < ACCESS_TOKEN_LIFETIME) return;
             final User dbUser = User.find.byId(authUser.getId());
             if (dbUser != null) {
                 String accessToken = dbUser.getFreshAccessToken();
-                System.out.println("ACess token: " + accessToken);
+                System.out.println("ACess token retrieved: " + accessToken);
                 if (accessToken != null) {
                     session().put("acessToken", accessToken);
                     session().put("lastUpdate", Long.toString(new Date().getTime()));
                 }
             }
-
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
