@@ -39,8 +39,8 @@ public class Global extends GlobalSettings {
         TimeZone.setDefault(TimeZone.getTimeZone("Europe/Warsaw"));
 
         Akka.system().scheduler().schedule(
-                Duration.create(10, TimeUnit.SECONDS),
-                Duration.create(10, TimeUnit.SECONDS),
+                Duration.create(25, TimeUnit.MINUTES),
+                Duration.create(25, TimeUnit.MINUTES),
                 new Cron(),
                 Akka.system().dispatcher()
         );
