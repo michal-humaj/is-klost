@@ -1,10 +1,10 @@
 package controllers;
 
 import com.google.api.services.calendar.model.Event;
-import dto.EventsContainer;
 import dto.EntriesContainer;
 import dto.EventTO;
 import dto.EventType;
+import dto.EventsContainer;
 import models.Entry;
 import models.Installation;
 import play.data.Form;
@@ -14,7 +14,9 @@ import play.mvc.Result;
 import play.mvc.Security;
 import services.GoogleAPI;
 import views.html.error404;
-import views.html.event.*;
+import views.html.event.editAdmin;
+import views.html.event.editInstallation;
+import views.html.event.editStrmn;
 
 import java.io.IOException;
 import java.util.Date;
@@ -135,7 +137,7 @@ public class Events extends Controller {
             Installation inst = Installation.find.byId(id);
             if (inst == null) {
                 (new Installation(id, eventTO.actionId)).save();
-            }else{
+            } else {
                 inst.actionId = eventTO.actionId;
                 inst.update();
             }
@@ -162,7 +164,7 @@ public class Events extends Controller {
     public static Result deleteInstl(String id) throws IOException {
         GoogleAPI.deleteEvent(EventType.INSTALLATION, id);
         Installation inst = Installation.find.byId(id);
-        if (inst != null){
+        if (inst != null) {
             inst.delete();
         }
         return ok();
@@ -188,9 +190,14 @@ public class Events extends Controller {
         final List<Entry> entries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
         for (Entry entry : entries) {
             entry.eventType = eventType == EventType.ACTION ? EventType.RESERVATION : EventType.ACTION;
-            entry.update(entry.id);
+            entry.update();
         }
-        //TODO mozno treba zmazat instalacie
+        if (eventType == EventType.ACTION) {//delete installations
+            List<Installation> installations = Installation.find.where().eq("actionId", id).findList();
+            for (Installation inst : installations) {
+                inst.delete();
+            }
+        }
         return ok();
     }
 

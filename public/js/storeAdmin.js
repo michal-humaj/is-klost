@@ -177,8 +177,8 @@ function StoreViewModel() {
             var it = storeViewModel.item();
             var insertItem = {id: newId, category: it.category(), name: it.name(), amount: +it.amount(), weight: +it.weight(), available: +it.amount(), reserved: 0, rented: 0};
             var i = 0;
-            while (storeViewModel.items()[i].category !== it.category()) i++;
-            while (storeViewModel.items()[i].category == it.category()) i++;
+            while (storeViewModel.items()[i].category !== it.category() && i < storeViewModel.items().length-1) i++;
+            while (storeViewModel.items()[i].category == it.category() && i < storeViewModel.items().length-1) i++;
             storeViewModel.items.splice(i, 0, insertItem);
             initTooltips();
         });
