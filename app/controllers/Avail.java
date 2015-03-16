@@ -29,13 +29,11 @@ public class Avail extends Controller {
         DateTime dateTimeNow = new DateTime((new LocalDate()).toDateTimeAtStartOfDay().getMillis());
         DateTime dateTimeMin = new DateTime(localDate.toDateTimeAtStartOfDay().getMillis());
         DateTime dateTimeMax = new DateTime(localDate.toDateTimeAtStartOfDay().plusDays(1).getMillis());
-        //System.out.println("------------- zacinam s datumom: " + date);
         Set<EventTO> eventTOList = new HashSet<>();
         com.google.api.services.calendar.model.Events events;
         for (EventType eType : EventType.values()) {
             events = GoogleAPI.findEvents(eType, dateTimeMin, dateTimeMax, session("accessToken"));
             for (Event e : events.getItems()) {
-                //System.out.println("-- ID "+e.getId() + " typ: " + eType + " " + e.getSummary() + " zaciatok " + e.getStart());
                 if (eType != EventType.INSTALLATION) {
                     eventTOList.add(new EventTO(e, eType));
                     continue;
@@ -44,7 +42,6 @@ public class Avail extends Controller {
                 if (inst == null) continue;
                 try {
                     Event action = GoogleAPI.findEvent(EventType.ACTION, inst.actionId);
-                    System.out.println("action for installation : installation: " + e.getSummary() + "action found " + action.getSummary());
                     eventTOList.add(new EventTO(action, EventType.ACTION));
                 } catch (IOException ex) {
                     inst.delete();
@@ -66,8 +63,7 @@ public class Avail extends Controller {
         return ok(toJson(container));
     }
 
-    public static Result availability() throws InterruptedException {
-        System.out.println("----------------------------");
+    public static Result availability() {
         List<StoredItem> items = StoredItem.find.all();
         Map<Long, AvailTO> map = new HashMap();
         Iterator<StoredItem> it = items.iterator();
@@ -81,7 +77,6 @@ public class Avail extends Controller {
         EventsContainer container = form(EventsContainer.class).bindFromRequest().get();
         for (EventTO eventTO : container.actions) {
             List<Entry> eventEntries = Entry.find.where().eq("eventType", eventTO.eventType).eq("eventId", eventTO.id).findList();
-            System.out.println(eventTO.eventType + " " + eventTO.id);
             for (Entry entry : eventEntries) {
                 AvailTO availTO = map.get(entry.item.id);
                 if (availTO == null) {//je to stan
@@ -106,7 +101,6 @@ public class Avail extends Controller {
         }
         for (EventTO eventTO : container.tilDateActions) {
             List<Entry> eventEntries = Entry.find.where().eq("eventType", eventTO.eventType).eq("eventId", eventTO.id).or(eq("item.category", Category.CARPET), eq("item.category", Category.PB)).findList();
-            System.out.println(eventTO.eventType + " " + eventTO.id);
             for (Entry entry : eventEntries) {
                 AvailTO availTO = map.get(entry.item.id);
                 if (eventTO.eventType.equals(EventType.RESERVATION)) {
@@ -118,7 +112,6 @@ public class Avail extends Controller {
         }
         ArrayList<AvailTO> availTos = new ArrayList(map.values());
         sort(availTos);
-        System.out.println("----------------------------");
         return ok(toJson(availTos));
     }
 }

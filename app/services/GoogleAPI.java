@@ -24,10 +24,10 @@ public class GoogleAPI {
     private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
     private static final JsonFactory JSON_FACTORY = new JacksonFactory();
     public static final Map<EventType, String> calIds = ImmutableMap.of(
-            EventType.ACTION, "o776rmha219v92fvejs0hahsso@group.calendar.google.com",
-            EventType.RESERVATION, "3jg1lna270kjsjb0jjrhhqo5m8@group.calendar.google.com",
-            EventType.INSTALLATION, "gehqh0ptgh0i2hkh3f1l4tlerg@group.calendar.google.com",
-            EventType.SELFTRANSPORT, "hq8a7ru1eh0qoj7bpn05amtsg8@group.calendar.google.com"
+            EventType.ACTION, "gkga73e3s4bklif5eltqb41gno@group.calendar.google.com",
+            EventType.RESERVATION, "qe79trfqih92ah9rnq19h5pmto@group.calendar.google.com",
+            EventType.INSTALLATION, "rt1atosnnssnfqp0nmupusq31g@group.calendar.google.com",
+            EventType.SELFTRANSPORT, "ccb1islld3e8s5iukdksp6k4k0@group.calendar.google.com"
     );
 
     public static Event addEvent(Event event, EventType eventType) throws IOException {

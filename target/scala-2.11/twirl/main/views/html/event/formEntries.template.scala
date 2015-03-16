@@ -68,7 +68,7 @@ Seq[Any](format.raw/*1.1*/("""<h4 class="col-sm-offset-2 header blue lighter sma
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 15 19:57:54 CET 2015
+                  DATE: Mon Mar 16 10:25:18 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/event/formEntries.scala.html
                   HASH: d4ace93e09f71957f4b9a96e1681ae53bce9e54b
                   MATRIX: 810->0|893->57|937->81|1054->171|1082->172|1110->173|1203->238|1232->239|1533->512|1562->513|1591->514|1635->530|1664->531|1906->745|1935->746|1964->747|2057->811|2087->812

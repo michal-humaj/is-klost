@@ -73,7 +73,6 @@ public class Events extends Controller {
             Installation inst = Installation.find.byId(eventTO.id);
             eventTO.actionId = inst == null ? null : inst.actionId;
             Form<EventTO> eventForm = form(EventTO.class).fill(eventTO);
-            System.out.println(eventTO.actionId);
             return ok(editInstallation.render(id, eventTO.allDay, eventForm, upcomingActions, eventTO.startDate));
         } catch (IOException | IllegalArgumentException e1) {
             e1.printStackTrace();

@@ -22,7 +22,7 @@ import static play.mvc.Http.Context.Implicit.session;
  */
 public class LoggedAdmin extends Security.Authenticator {
 
-    public static final String adminId = "104577664461666247347"; // Michal cron
+    public static final String adminId = "105150527948667127205"; // Lukas Cron
     private static List<String> adminIds = Arrays.asList("104577664461666247347", "105150527948667127205");
     public static final Long ACCESS_TOKEN_LIFETIME = 3_000_000L;
 
@@ -64,7 +64,6 @@ public class LoggedAdmin extends Security.Authenticator {
             final User dbUser = User.find.byId(authUser.getId());
             if (dbUser != null) {
                 String accessToken = dbUser.getFreshAccessToken();
-                System.out.println("Access token retrieved: " + accessToken);
                 if (accessToken != null) {
                     session().put("accessToken", accessToken);
                     session().put("lastUpdate", Long.toString(new Date().getTime()));

@@ -24,7 +24,6 @@ public class Documents extends Controller {
     public static final String PATH_TO_REPO = System.getenv("OPENSHIFT_REPO_DIR") == null ? "" : System.getenv("OPENSHIFT_REPO_DIR") + "";
 
     public static Result priceOffer(String eventType, String id) throws IOException {
-        System.out.println("------------------------" + PATH_TO_REPO);
         EventType type = EventType.valueOf(eventType);
         response().setContentType("application/vnd.ms-excel");
         List<Entry> entries = Entry.find.where().eq("eventType", type).eq("eventId", id).findList();

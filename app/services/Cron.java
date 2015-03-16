@@ -26,7 +26,6 @@ public class Cron implements Runnable {
         System.out.println((new Date()) + " Cron is running");
         try {
             User admin = User.find.byId(LoggedAdmin.adminId);
-            if (admin == null) (new Exception("Cron run: could not find admin in DB")).printStackTrace();
             String accessToken = admin.getFreshAccessToken();
 
             for (EventType type : EventType.values()) { //iterating over SELF TRANSPORTS and ACTIONS
