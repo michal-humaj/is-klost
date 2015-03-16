@@ -27,11 +27,19 @@ public class EventTO {
     public EventTO() {
     }
 
+    public EventTO(Event e, EventType eventType) {
+        this(e);
+        this.eventType = eventType;
+    }
+
     public EventTO(Event e) {
         name = e.getSummary() == null ? "" : e.getSummary().split(" →")[0];
         DateTime startDateTime;
         DateTime endDateTime;
         id = e.getId();
+        if (e.getStart() == null) {
+            return;
+        }
         allDay = null == e.getStart().getDateTime();
         if (allDay) {
             startDateTime = e.getStart().getDate();
@@ -52,9 +60,9 @@ public class EventTO {
         }
     }
 
-    public Event toGoogleEvent(String id, String entriesInfo) {
+    public Event toGoogleEvent(String id, String entriesInfo, boolean dontSplit) {
         Event e = new Event();
-        name = name.split(" →")[0];
+        if (!dontSplit) name = name.split(" →")[0];
         if (entriesInfo == null) {
             e.setSummary(name);
         } else {
@@ -98,5 +106,30 @@ public class EventTO {
             endEventDateTime.setDateTime(endDateTime);
         }
         return e.setStart(startEventDateTime).setEnd(endEventDateTime);
+    }
+
+    public Event toGoogleEvent(String id, String entriesInfo) {
+        return toGoogleEvent(id, entriesInfo, false);
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof EventTO)) return false;
+
+        EventTO eventTO = (EventTO) o;
+
+        if (eventType != eventTO.eventType) return false;
+        if (id != null ? !id.equals(eventTO.id) : eventTO.id != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (eventType != null ? eventType.hashCode() : 0);
+        return result;
     }
 }

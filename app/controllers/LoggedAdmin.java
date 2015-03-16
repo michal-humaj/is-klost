@@ -22,12 +22,13 @@ import static play.mvc.Http.Context.Implicit.session;
  */
 public class LoggedAdmin extends Security.Authenticator {
 
-    public static final String adminId = "104577664461666247347";
-    private static List<String> adminIds = Arrays.asList("104577664461666247347");
+    public static final String adminId = "104577664461666247347"; // Michal cron
+    private static List<String> adminIds = Arrays.asList("104577664461666247347", "105150527948667127205");
     public static final Long ACCESS_TOKEN_LIFETIME = 3_000_000L;
 
     @Override
     public String getUsername(final Http.Context ctx) {
+
         final AuthUser u = PlayAuthenticate.getUser(session());
         if (u == null) return null;
         if (isAdminId(u.getId())) {
@@ -58,18 +59,17 @@ public class LoggedAdmin extends Security.Authenticator {
 
     protected void revokeAccessTokenIfExpired(AuthUser authUser) {
         try {
-            if (session().get("lastUpdate") == null) return;
-            final Long lastUpdate = Long.parseLong(session().get("lastUpdate"));
+            long lastUpdate = session().get("lastUpdate") == null ? 0L : Long.parseLong(session().get("lastUpdate"));
             if ((new Date()).getTime() - lastUpdate < ACCESS_TOKEN_LIFETIME) return;
             final User dbUser = User.find.byId(authUser.getId());
             if (dbUser != null) {
                 String accessToken = dbUser.getFreshAccessToken();
+                System.out.println("Access token retrieved: " + accessToken);
                 if (accessToken != null) {
-                    session().put("acessToken", accessToken);
+                    session().put("accessToken", accessToken);
                     session().put("lastUpdate", Long.toString(new Date().getTime()));
                 }
             }
-
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }

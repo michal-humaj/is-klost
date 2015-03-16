@@ -21,29 +21,32 @@ import java.util.List;
 @Security.Authenticated(LoggedStoremanOrAdmin.class)
 public class Documents extends Controller {
 
+    public static final String PATH_TO_REPO = System.getenv("OPENSHIFT_REPO_DIR") == null ? "" : System.getenv("OPENSHIFT_REPO_DIR") + "";
+
     public static Result priceOffer(String eventType, String id) throws IOException {
+        System.out.println("------------------------" + PATH_TO_REPO);
         EventType type = EventType.valueOf(eventType);
-        response().setContentType("application/x-download");
+        response().setContentType("application/vnd.ms-excel");
         List<Entry> entries = Entry.find.where().eq("eventType", type).eq("eventId", id).findList();
         if (type.equals(EventType.SELFTRANSPORT)) {
             response().setHeader("Content-disposition", "attachment; filename=ponuka_dasa_VD.xlsx");
-            return ok(excel("PATH_TO_ASSETS_FOLDER" + "/docs/ponuka_dasa_VD.xlsx", entries, 18, 0, 5).toByteArray());
+            return ok(excel(PATH_TO_REPO + "public/docs/ponuka_dasa_VD.xlsx", entries, 18, 0, 5).toByteArray());
         } else {
             response().setHeader("Content-disposition", "attachment; filename=ponuka_dasa.xlsx");
-            return ok(excel("PATH_TO_ASSETS_FOLDER" + "/docs/ponuka_dasa.xlsx", entries, 18, 0, 5).toByteArray());
+            return ok(excel(PATH_TO_REPO + "public/docs/ponuka_dasa.xlsx", entries, 18, 0, 5).toByteArray());
         }
     }
 
     public static Result contract(String eventType, String id) throws IOException {
         EventType type = EventType.valueOf(eventType);
-        response().setContentType("application/x-download");
+        response().setContentType("application/vnd.ms-excel");
         List<Entry> entries = Entry.find.where().eq("eventType", type).eq("eventId", id).findList();
         if (type.equals(EventType.SELFTRANSPORT)) {
             response().setHeader("Content-disposition", "attachment; filename=zmluva-vlastna_doprava.xlsx");
-            return ok(excel("PATH_TO_ASSETS_FOLDER" + "/docs/zmluva-vlastna_doprava.xlsx", entries, 11, 1, 2).toByteArray());
+            return ok(excel(PATH_TO_REPO + "public/docs/zmluva-vlastna_doprava.xlsx", entries, 11, 1, 2).toByteArray());
         } else {
             response().setHeader("Content-disposition", "attachment; filename=vykaz_na_akciu_NEW.xlsx");
-            return ok(excel("PATH_TO_ASSETS_FOLDER" + "/docs/vykaz_na_akciu_NEW.xlsx", entries, 9, 0, 5).toByteArray());
+            return ok(excel(PATH_TO_REPO + "public/docs/vykaz_na_akciu_NEW.xlsx", entries, 9, 0, 5).toByteArray());
         }
     }
 

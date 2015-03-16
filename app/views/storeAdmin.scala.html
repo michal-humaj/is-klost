@@ -1,9 +1,153 @@
+@(date: String)
+
 @views.html.master.main(Messages("nav.store"))(1) {
 
     @views.html.master.datepicker()
     @views.html.master.categories()
 } {
-    Store
+    @views.html.item.modalNew()
+
+    @views.html.item.modalEdit()
+
+    @views.html.item.modalImport()
+
+    @views.html.item.modalExport()
+
+    @views.html.item.modalDelete()
+
+    <div class="row">
+        <div class="col-xs-12">
+
+            <div class="widget-box " id="widgetEvents" data-date="@date">
+                <div class="widget-header widget-header-flat ">
+                    <h4 class="widget-title">
+                        <i class="ace-icon fa fa-calendar-o "></i>
+                            <!--ko text: headingWidgetEvents--><!--/ko-->
+                    </h4>
+
+                    <div class="widget-toolbar">
+                        <a href="#" data-action="collapse" id="btnCollapseEventsWidget">
+                            <i class="ace-icon fa fa-chevron-up "></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="widget-body">
+                    <div class="widget-main no-padding">
+                        <table class="table">
+                            <thead class="thin-border-bottom">
+                                <tr>
+                                    <th>@Messages("t.type")</th>
+                                    <th>@Messages("t.event")</th>
+                                    <th class="thEventStartEnd">@Messages("t.start")</th>
+                                    <th class="thEventStartEnd">@Messages("t.end")</th>
+                                    <th>@Messages("lbl.calcAvail")</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: events">
+                                <tr>
+                                    <td><span class="badge badgeAction" data-bind="text: Messages(eventType), attr: {class: 'badge badge' + eventType }"></span></td>
+                                    <td data-bind="text: name"></td>
+                                    <td data-bind="text: startTime"></td>
+                                    <td data-bind="text: endTime"></td>
+                                    <td class="tdSwitch">
+                                        <label>
+                                            <input class="ace ace-switch ace-switch-6" type="checkbox"
+                                            data-bind="checked: calcAvail">
+                                            <span class="lbl"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- /.widget-main -->
+                </div><!-- /.widget-body -->
+            </div>
+
+        </div>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="row">
+        <div class="col-xs-12">
+
+            <div class="widget-box widget-color-green2 light-border widgetContentWidth" id="widgetItems">
+                <div class="widget-header widget-header-flat">
+                    <h4 class="widget-title ">
+                        <i class="ace-icon fa fa-cubes"></i>
+                        @Messages("h.itemAvail")
+                    </h4>
+
+                    <div class="widget-toolbar no-border">
+                        <button class="btn btn-white btn-success btn-xs" id="btnModalNewItem" data-toggle="modal"
+                        data-target="#modalNewItem" data-bind="click: modalAdd">
+                            <b class="textGreen">@Messages("btn.newItem")</b>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="widget-body">
+                    <div class="widget-main no-padding">
+
+                        <table class="table table-striped table-bordered  tableNoBorder tableScrollable">
+                            <thead class="thin-border-bottom">
+                                <tr>
+                                    <th class="thItemName">@Messages("t.item")</th>
+                                    <th class="thNumberValue">@Messages("t.available")</th>
+                                    <th class="thNumberValue">@Messages("t.rented")</th>
+                                    <th class="thNumberValue">@Messages("t.reserved")</th>
+                                    <th class="thItemControls">@Messages("t.action")</th>
+                                </tr>
+                            </thead>
+
+                            <tbody data-bind="foreach: items" data-spy="scroll">
+
+                                <tr data-bind="attr: { id: category, class: $parent.items()[$index()].category !== $parent.items()[$index()+1 < $parent.items().length-1 ? $index()+1 : $parent.items().length-1].category ? 'lastInCategoryA' : ''}">
+                                    <td class="thItemName" data-bind="text: name"></td>
+                                    <td class="thNumberValue" data-bind="attr: {class: available < 0 ? 'thNumberValue textRed' : 'thNumberValue' }"><b data-bind="text: available"></b></td>
+                                    <td class="thNumberValue textRented"><b data-bind="text: rented !== 0 ? rented : '.' "></b></td>
+                                    <td class="thNumberValue textReserved"><b data-bind="text: reserved !== 0 ? reserved : '.' "></b></td>
+                                    <td class="tdItemControls">
+                                        <div class="action-buttons">
+                                            <a class="textBlack tooltip-success linkImportItem" data-rel="tooltip"
+                                            title='@Messages("tooltip.import")' data-bind="click: $parent.edit"
+                                            data-toggle="modal" data-target="#modalImportItem">
+                                                <i class="ace-icon fa fa-plus bigger-130"></i>
+                                            </a>
+
+                                            <a class="textBlack tooltip-warning linkExportItem" data-rel="tooltip"
+                                            title='@Messages("tooltip.export")' data-bind="click: $parent.edit"
+                                            data-toggle="modal" data-target="#modalExportItem">
+                                                <i class="ace-icon fa fa-minus bigger-130"></i>
+                                            </a>
+
+                                            <a class="textBlack tooltip-info linkEditItem" data-rel="tooltip"
+                                            title='@Messages("tooltip.edit")' data-bind="click: $parent.edit"
+                                            data-toggle="modal" data-target="#modalEditItem">
+                                                <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                            </a>
+
+                                            <a class="textBlack tooltip-error linkDeleteItem" data-rel="tooltip"
+                                            title='@Messages("tooltip.delete")' data-bind="click: $parent.edit"
+                                            data-toggle="modal" data-target="#modalDeleteItem">
+                                                <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div><!-- /.widget-main -->
+                </div><!-- /.widget-body -->
+
+            </div>
+
+        </div>
+    </div>
 } {
+    <script src='@routes.Assets.at("js/storeCommon.js")'></script>
     <script src='@routes.Assets.at("js/storeAdmin.js")'></script>
 }

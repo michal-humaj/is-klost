@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/MiHu/Documents/projects/is-klost/is-klost/conf/routes
-// @HASH:460799986c53ad4b1fb4405044eed545ab1bb284
-// @DATE:Wed Mar 11 23:40:12 CET 2015
+// @HASH:8f4d11c44bcc0dd7ec15b2d19ac4da82942428a6
+// @DATE:Sun Mar 15 19:57:53 CET 2015
 
 package com.feth.play.module.pa.controllers;
 

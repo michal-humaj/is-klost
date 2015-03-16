@@ -51,7 +51,7 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverNew" class="hide">
         <div class="form-group" data-bind="attr: """),format.raw/*23.50*/("""{"""),format.raw/*23.51*/(""" """),format.raw/*23.52*/("""class: event().eventType() === 'INSTALLATION' ? 'form-group' : 'form-group hide' """),format.raw/*23.133*/("""}"""),format.raw/*23.134*/("""" >
             <label class="col-sm-2 control-label no-padding-right">"""),_display_(/*24.69*/Messages("lbl.assignedAction")),format.raw/*24.99*/("""</label>
             <div class="col-sm-10">
-                <select name="actionId" class="form-control" required data-bind="foreach: upcomingActions, value: event().actionId">
+                <select name="actionId" class="form-control" data-bind="foreach: upcomingActions, value: event().actionId">
                     <option data-bind="text: name, attr: """),format.raw/*27.58*/("""{"""),format.raw/*27.59*/("""value: id"""),format.raw/*27.68*/("""}"""),format.raw/*27.69*/(""""></option>
                 </select>
             </div>
@@ -82,10 +82,10 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverNew" class="hide">
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 11 23:40:20 CET 2015
+                  DATE: Sun Mar 15 19:57:55 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/event/popoverNew.scala.html
-                  HASH: bfbe833355b04d213dd830b2f451c3a5ecf2308b
-                  MATRIX: 809->0|948->113|962->119|1003->139|1136->246|1176->266|1573->636|1619->661|1820->835|1872->871|1912->873|1962->895|2005->911|2031->916|2061->919|2108->945|2167->973|2213->991|2339->1089|2368->1090|2397->1091|2507->1172|2537->1173|2637->1246|2688->1276|2954->1514|2983->1515|3020->1524|3049->1525|3602->2050|3648->2074|3748->2146|3777->2147|3806->2148|3934->2247|3964->2248|4120->2376|4173->2407
+                  HASH: 975de00c387e392b3edc4d8fe98576c9b8cda857
+                  MATRIX: 809->0|948->113|962->119|1003->139|1136->246|1176->266|1573->636|1619->661|1820->835|1872->871|1912->873|1962->895|2005->911|2031->916|2061->919|2108->945|2167->973|2213->991|2339->1089|2368->1090|2397->1091|2507->1172|2537->1173|2637->1246|2688->1276|2945->1505|2974->1506|3011->1515|3040->1516|3593->2041|3639->2065|3739->2137|3768->2138|3797->2139|3925->2238|3955->2239|4111->2367|4164->2398
                   LINES: 29->1|30->2|30->2|30->2|32->4|32->4|41->13|41->13|44->16|44->16|44->16|45->17|45->17|45->17|45->17|45->17|46->18|47->19|51->23|51->23|51->23|51->23|51->23|52->24|52->24|55->27|55->27|55->27|55->27|66->38|66->38|68->40|68->40|68->40|68->40|68->40|69->41|69->41
                   -- GENERATED --
               */

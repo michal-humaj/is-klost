@@ -1,6 +1,8 @@
 package controllers;
 
 import jsmessages.JsMessages;
+import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 import play.Play;
 import play.Routes;
 import play.i18n.Messages;
@@ -25,18 +27,29 @@ public class App extends Controller {
 
     @Security.Authenticated(LoggedStoremanOrAdmin.class)
     public static Result calendar(String date) { // only valid date format is 2015-05-28
-        if("TODAY".equals(date) || !Util.isDateValid(date)){
-            String todayDate = Util.sdf.format(new Date(1427583600000l)); //TODO bacha na casovu zonu na serveri
-            return ok(calendar.render(todayDate));
+        String validDate = date;
+        if (date.length() > 9) {
+            validDate = date.substring(0, 10);
         }
-        return ok(calendar.render(date));
+        if ("TODAY".equals(date) || !Util.isDateValid(date)) {
+            DateTime today = new LocalDate().toDateTimeAtStartOfDay();
+            validDate = Util.sdf.format(new Date(today.getMillis()));
+        }
+        return ok(calendar.render(validDate));
     }
 
     @Security.Authenticated(LoggedStoremanOrAdmin.class)
     public static Result store(String date) {
-
+        String validDate = date;
+        if (date.length() > 9) {
+            validDate = date.substring(0, 10);
+        }
+        if ("TOMORROW".equals(date) || !Util.isDateValid(date)) {
+            DateTime today = new LocalDate().toDateTimeAtStartOfDay().plusDays(1);
+            validDate = Util.sdf.format(new Date(today.getMillis()));
+        }
         if (isUserAdmin()) {
-            return ok(storeAdmin.render());
+            return ok(storeAdmin.render(validDate));
         } else {
             return ok(storeStrmn.render());
         }
@@ -60,9 +73,9 @@ public class App extends Controller {
                         routes.javascript.Events.getEntries(),
                         routes.javascript.Events.changeCal(),
                         routes.javascript.Events.upcomingActions(),
-                        routes.javascript.Events.deleteInstl()
-
-
+                        routes.javascript.Events.deleteInstl(),
+                        routes.javascript.Avail.getEventsAt(),
+                        routes.javascript.Avail.availability()
                 )
         );
     }

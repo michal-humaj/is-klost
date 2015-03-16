@@ -2,10 +2,14 @@
 [0m[[0mdebug[0m] [0mInput file mappings:[0m
 [0m[[0mdebug[0m] [0m	public/js\storeStrmn.js[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\storeStrmn.js[0m
+[0m[[0mdebug[0m] [0m	public/js\calendarStrmn.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\calendarStrmn.js[0m
 [0m[[0mdebug[0m] [0m	public/js\tentEdit.js[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\tentEdit.js[0m
 [0m[[0mdebug[0m] [0m	public/docs\ponuka_dasa_VD.xlsx[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\docs\ponuka_dasa_VD.xlsx[0m
+[0m[[0mdebug[0m] [0m	public/js\storeCommon.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\storeCommon.js[0m
 [0m[[0mdebug[0m] [0m	public/css\bootstrap.min.css[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\css\bootstrap.min.css[0m
 [0m[[0mdebug[0m] [0m	public/js\lib\jquery-ui.min.js[0m
@@ -70,14 +74,20 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\img[0m
 [0m[[0mdebug[0m] [0m	public/fonts\glyphicons-halflings-regular.svg[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\glyphicons-halflings-regular.svg[0m
+[0m[[0mdebug[0m] [0m	public/js\lib\spin.min.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\spin.min.js[0m
 [0m[[0mdebug[0m] [0m	public/js\lib\jquery.min.js[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\jquery.min.js[0m
 [0m[[0mdebug[0m] [0m	public/css\fullcalendar.min.css[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\css\fullcalendar.min.css[0m
+[0m[[0mdebug[0m] [0m	public/js\storeAdmin.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\storeAdmin.js[0m
 [0m[[0mdebug[0m] [0m	public/js\lib\moment.min.js[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\lib\moment.min.js[0m
 [0m[[0mdebug[0m] [0m	public/css[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\css[0m
+[0m[[0mdebug[0m] [0m	public/js\eventEditCommon.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\eventEditCommon.js[0m
 [0m[[0mdebug[0m] [0m	public/fonts\glyphicons-halflings-regular.woff[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\fonts\glyphicons-halflings-regular.woff[0m
 [0m[[0mdebug[0m] [0m	public/css\ace-fonts.min.css[0m
@@ -118,4 +128,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\calendarAdmin.js[0m
 [0m[[0mdebug[0m] [0m	public/js\calendarCommon.js[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\calendarCommon.js[0m
+[0m[[0mdebug[0m] [0m	public/js\eventEditStrmn.js[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\MiHu\Documents\projects\is-klost\is-klost\public\js\eventEditStrmn.js[0m
 [0m[[0minfo[0m] [0mDone packaging.[0m

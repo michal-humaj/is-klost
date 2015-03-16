@@ -5,6 +5,7 @@ import com.feth.play.module.pa.user.AuthUser;
 import play.mvc.Http;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import static play.mvc.Http.Context.Implicit.session;
@@ -14,11 +15,13 @@ import static play.mvc.Http.Context.Implicit.session;
  */
 public class LoggedStoremanOrAdmin extends LoggedAdmin {
 
-    private static List<String> storemanIds = Arrays.asList("116064143718081568408", "105229600961564914963", "105150527948667127205");
+    private static List<String> storemanIds = Arrays.asList("116064143718081568408", "105229600961564914963");
 
     @Override
     public String getUsername(final Http.Context ctx) {
-        System.out.println("Storeman or admin LAST UPDATE: " + session().get("lastUpdate"));
+        System.out.println("1.)check login status, access token: " + session().get("accessToken"));
+        long lastUpdate = session().get("lastUpdate") == null ? 0L : Long.parseLong(session().get("lastUpdate"));
+        System.out.println("2.) check login status, last update :" + new Date(lastUpdate));
         final AuthUser u = PlayAuthenticate.getUser(session());
         if (u == null || u.getId() == null) return null;
         if (storemanIds.contains(u.getId())) {

@@ -1,10 +1,10 @@
 package controllers;
 
 import com.google.api.services.calendar.model.Event;
-import dto.ActionsContainer;
 import dto.EntriesContainer;
 import dto.EventTO;
 import dto.EventType;
+import dto.EventsContainer;
 import models.Entry;
 import models.Installation;
 import play.data.Form;
@@ -16,6 +16,7 @@ import services.GoogleAPI;
 import views.html.error404;
 import views.html.event.editAdmin;
 import views.html.event.editInstallation;
+import views.html.event.editStrmn;
 
 import java.io.IOException;
 import java.util.Date;
@@ -52,23 +53,22 @@ public class Events extends Controller {
     }
 
     public static Result edit(String eventType, String id) {
-        Event e;
         try {
-            e = GoogleAPI.findEvent(EventType.valueOf(eventType), id);
+            Event e = GoogleAPI.findEvent(EventType.valueOf(eventType), id);
+            EventTO eventTO = new EventTO(e);
+            Form<EventTO> eventForm = form(EventTO.class).fill(eventTO);
+            return ok(editAdmin.render(eventType, id, eventTO.allDay, eventForm, eventTO.startDate));
         } catch (IOException | IllegalArgumentException e1) {
             e1.printStackTrace();
             return notFound(error404.render());
         }
-        EventTO eventTO = new EventTO(e);
-        Form<EventTO> eventForm = form(EventTO.class).fill(eventTO);
-        return ok(editAdmin.render(eventType, id, eventTO.allDay, eventForm, eventTO.startDate));
     }
 
     public static Result editInstl(String id) {
         try {
             Event e = GoogleAPI.findEvent(EventType.INSTALLATION, id);
             com.google.api.services.calendar.model.Events events = GoogleAPI.findEvents(EventType.ACTION, (new Date()).getTime(), null);
-            ActionsContainer upcomingActions = new ActionsContainer(events);
+            EventsContainer upcomingActions = new EventsContainer(events);
             EventTO eventTO = new EventTO(e);
             Installation inst = Installation.find.byId(eventTO.id);
             eventTO.actionId = inst == null ? null : inst.actionId;
@@ -107,6 +107,29 @@ public class Events extends Controller {
         }
     }
 
+    public static Result updateStrmn(String sEventType, String id) throws Exception {
+        try {
+            EventType eventType = EventType.valueOf(sEventType);
+            Event e = GoogleAPI.findEvent(eventType, id);
+            EntriesContainer container = form(EntriesContainer.class).bindFromRequest().get();
+            List<Entry> oldEntries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
+            for (Entry entry : oldEntries) entry.delete();
+            for (Entry entry : container.entries) {
+                entry.eventType = eventType;
+                entry.eventId = e.getId();
+                entry.save();
+            }
+            container.entries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
+            EventTO eventTO = new EventTO(e);
+            e = eventTO.toGoogleEvent(e.getId(), container.getEntriesInfo());
+            GoogleAPI.updateEvent(e, eventType);
+            return redirect(routes.App.calendar(eventTO.startDate));
+        } catch (IOException | IllegalArgumentException e1) {
+            e1.printStackTrace();
+            return notFound(error404.render());
+        }
+    }
+
     public static Result updateInstl(String id) {
         try {
             Event e = GoogleAPI.findEvent(EventType.INSTALLATION, id);
@@ -114,7 +137,7 @@ public class Events extends Controller {
             Installation inst = Installation.find.byId(id);
             if (inst == null) {
                 (new Installation(id, eventTO.actionId)).save();
-            }else{
+            } else {
                 inst.actionId = eventTO.actionId;
                 inst.update();
             }
@@ -141,7 +164,7 @@ public class Events extends Controller {
     public static Result deleteInstl(String id) throws IOException {
         GoogleAPI.deleteEvent(EventType.INSTALLATION, id);
         Installation inst = Installation.find.byId(id);
-        if (inst != null){
+        if (inst != null) {
             inst.delete();
         }
         return ok();
@@ -149,7 +172,7 @@ public class Events extends Controller {
 
     public static Result drag(String eventType, String id) throws IOException {
         EventTO eventTO = form(EventTO.class).bindFromRequest().get();
-        GoogleAPI.updateEvent(eventTO.toGoogleEvent(id, null), eventTO.eventType);
+        GoogleAPI.updateEvent(eventTO.toGoogleEvent(id, null, true), eventTO.eventType);
         return ok();
     }
 
@@ -167,29 +190,36 @@ public class Events extends Controller {
         final List<Entry> entries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
         for (Entry entry : entries) {
             entry.eventType = eventType == EventType.ACTION ? EventType.RESERVATION : EventType.ACTION;
-            entry.update(entry.id);
+            entry.update();
         }
-        //TODO kod na zmazanie instalacii
+        if (eventType == EventType.ACTION) {//delete installations
+            List<Installation> installations = Installation.find.where().eq("actionId", id).findList();
+            for (Installation inst : installations) {
+                inst.delete();
+            }
+        }
         return ok();
     }
 
     public static Result editStrmn(String eventType, String id) {
-        return play.mvc.Results.TODO;
-    }
-
-    public static Result updateStrmn(String eventType, String id) {
-        return play.mvc.Results.TODO;
+        try {
+            Event e = GoogleAPI.findEvent(EventType.valueOf(eventType), id);
+            EventTO eventTO = new EventTO(e);
+            Form<EventTO> eventForm = form(EventTO.class).fill(eventTO);
+            return ok(editStrmn.render(eventType, id, eventTO.allDay, eventForm, eventTO.startDate));
+        } catch (IOException | IllegalArgumentException e1) {
+            e1.printStackTrace();
+            return notFound(error404.render());
+        }
     }
 
     public static Result upcomingActions() throws IOException {
         com.google.api.services.calendar.model.Events events = GoogleAPI.findEvents(EventType.ACTION, (new Date()).getTime(), null);
-        return ok(toJson((new ActionsContainer(events)).actions));
+        return ok(toJson((new EventsContainer(events)).actions));
     }
 
     public static Result getEntries(String eventType, String id) {
         List<Entry> entries = Entry.find.where().eq("eventType", EventType.valueOf(eventType)).eq("eventId", id).findList();
         return ok(toJson(entries));
     }
-
-
 }
