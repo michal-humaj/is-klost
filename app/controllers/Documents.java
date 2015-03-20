@@ -1,7 +1,10 @@
 package controllers;
 
+import dto.Category;
 import dto.EventType;
+import models.Accessory;
 import models.Entry;
+import models.Tent;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -13,7 +16,10 @@ import services.Util;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+
+import static com.avaje.ebean.Expr.eq;
 
 /**
  * Created by MiHu on 11.1.2015.
@@ -39,7 +45,7 @@ public class Documents extends Controller {
     public static Result contract(String eventType, String id) throws IOException {
         EventType type = EventType.valueOf(eventType);
         response().setContentType("application/vnd.ms-excel");
-        List<Entry> entries = Entry.find.where().eq("eventType", type).eq("eventId", id).findList();
+        List<Entry> entries = Entry.find.where().eq("eventType", type).eq("eventId", id).not(eq("item.category", Category.TOOL)).findList();
         if (type.equals(EventType.SELFTRANSPORT)) {
             response().setHeader("Content-disposition", "attachment; filename=zmluva-vlastna_doprava.xlsx");
             return ok(excel(PATH_TO_REPO + "public/docs/zmluva-vlastna_doprava.xlsx", entries, 11, 1, 2).toByteArray());
@@ -54,6 +60,7 @@ public class Documents extends Controller {
         XSSFSheet sheet = workbook.getSheetAt(0);
         int rowCounter = beginRownum;
         for (Entry e : entries) {
+            System.out.println("-----------1");
             XSSFRow row = sheet.getRow(rowCounter);
             XSSFCell cell = row.getCell(nameColnum);
             cell.setCellValue(e.item.name);
@@ -65,5 +72,27 @@ public class Documents extends Controller {
         workbook.write(out);
         out.close();
         return out;
+    }
+
+    public static Result loadingList(String eventType, String id) throws IOException {
+        EventType type = EventType.valueOf(eventType);
+        response().setContentType("application/vnd.ms-excel");
+        List<Entry> entries = Entry.find.where().eq("eventType", type).eq("eventId", id).findList();
+        List<Entry> loadListEntries = new ArrayList<>();
+        for (Entry entry : entries){
+            if(entry.item.category !=  Category.TENT){
+                loadListEntries.add(entry);
+                continue;
+            }
+            Tent tent = (Tent) entry.item;
+            for(Accessory a : tent.accessories){
+                Entry tentE = new Entry();
+                tentE.item = a.item;
+                tentE.amount = entry.amount.multiply(a.amount);
+                loadListEntries.add(tentE);
+            }
+        }
+        response().setHeader("Content-disposition", "attachment; filename=nakladaci_list.xlsx");
+        return ok(excel(PATH_TO_REPO + "public/docs/nakladaci_list.xlsx", loadListEntries, 0, 0, 1).toByteArray());
     }
 }

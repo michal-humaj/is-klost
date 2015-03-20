@@ -29,15 +29,14 @@
                         @Messages("nav.cal")
                     </a>
                 </li>
-
-                <li class='@if(tabNumber.equals(1)) {grey} else {transparent}'>
-                    <a href='@routes.App.store("TOMORROW")'>
-                        <i class="ace-icon fa fa-cubes"></i>
-                        @Messages("nav.store")
-                    </a>
-                </li>
                 @currentAuth() { auth =>
                     @if(LoggedAdmin.isAdminId(auth.getId())){
+                        <li class='@if(tabNumber.equals(1)) {grey} else {transparent}'>
+                            <a href='@routes.App.store("TOMORROW")'>
+                                <i class="ace-icon fa fa-cubes"></i>
+                                @Messages("nav.store")
+                            </a>
+                        </li>
                         <li class='@if(tabNumber.equals(2)) {grey} else {transparent}'>
                             <a href='@routes.Tents.list()'>
                                 <img src='@routes.Assets.at("img/tent.png")' width="24" height="24">

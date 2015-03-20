@@ -57,6 +57,7 @@ btn.toReservation=To Reservation
 btn.priceOffer=Price offer
 btn.contract=Contract
 btn.specs=Action specification
+btn.loadingList=Loading list
 
 # Labels
 lbl.name=Name

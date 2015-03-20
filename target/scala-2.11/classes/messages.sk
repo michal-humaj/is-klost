@@ -57,6 +57,7 @@ btn.toReservation=Na rezerváciu
 btn.priceOffer=Cenová ponuka
 btn.contract=Zmluva
 btn.specs=Výkaz
+btn.loadingList=Nakladací list
 
 # Labels
 lbl.name=Názov

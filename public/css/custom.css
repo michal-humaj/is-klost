@@ -145,3 +145,7 @@ table.tableScrollable .tdItemControls{
 .btnPopover{
     width: 100%;
 }
+
+.btnDocument{
+    width: 75px;
+}

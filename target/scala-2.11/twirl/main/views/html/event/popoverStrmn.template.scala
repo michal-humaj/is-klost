@@ -39,9 +39,9 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverStrmn" class="hide">
             </div>
 
             <div class="col-sm-6">
-                <a class="btn btn-sm btn-info btnPopover" href data-bind="attr: """),format.raw/*14.81*/("""{"""),format.raw/*14.82*/(""" """),format.raw/*14.83*/("""href: '/event/storeman/' + event().eventType() + '/' + event().id() """),format.raw/*14.151*/("""}"""),format.raw/*14.152*/("""">
-                    <i class="ace-icon fa fa-pencil bigger-110"></i>
-                    """),_display_(/*16.22*/Messages("btn.edit")),format.raw/*16.42*/("""
+                <a class="btn btn-white btn-inverse btnPopover" href data-bind="attr: """),format.raw/*14.87*/("""{"""),format.raw/*14.88*/(""" """),format.raw/*14.89*/("""href: '/loadingList/' + event().eventType() + '/' + event().id() """),format.raw/*14.154*/("""}"""),format.raw/*14.155*/("""">
+                    <i class="ace-icon fa fa-truck bigger-110"></i>
+                    """),_display_(/*16.22*/Messages("btn.loadingList")),format.raw/*16.49*/("""
                 """),format.raw/*17.17*/("""</a>
             </div>
         </div>
@@ -59,10 +59,10 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverStrmn" class="hide">
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 16 10:25:18 CET 2015
+                  DATE: Fri Mar 20 13:13:41 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/event/popoverStrmn.scala.html
-                  HASH: 2b9e27b27063607afe746f66e3e5c03dda9c0ff1
-                  MATRIX: 811->0|1012->174|1040->175|1068->176|1168->248|1197->249|1360->385|1388->386|1416->387|1506->449|1535->450|1866->753|1895->754|1924->755|2021->823|2051->824|2173->919|2214->939|2260->957
+                  HASH: 11ca3dcd53c1aa2e6be18daad5184fec2cea742a
+                  MATRIX: 811->0|1012->174|1040->175|1068->176|1168->248|1197->249|1360->385|1388->386|1416->387|1506->449|1535->450|1872->759|1901->760|1930->761|2024->826|2054->827|2175->921|2223->948|2269->966
                   LINES: 29->1|33->5|33->5|33->5|33->5|33->5|35->7|35->7|35->7|35->7|35->7|42->14|42->14|42->14|42->14|42->14|44->16|44->16|45->17
                   -- GENERATED --
               */

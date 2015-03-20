@@ -9,6 +9,7 @@ import play.mvc.Security;
 import views.html.tent.edit;
 import views.html.tent.list;
 import views.html.tent.neu;
+import views.html.tent.neuFromTemplate;
 
 import java.util.List;
 
@@ -74,5 +75,9 @@ public class Tents extends Controller {
         Tent tent = Tent.find.byId(id);
         if (tent == null) return notFound();
         return ok(toJson(tent));
+    }
+
+    public static Result neuFromTemplate(long id) {
+        return ok(neuFromTemplate.render(id));
     }
 }

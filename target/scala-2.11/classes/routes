@@ -39,6 +39,7 @@ GET           /tents                                      controllers.Tents.list
 GET           /tent                                       controllers.Tents.neu()
 POST          /tent                                       controllers.Tents.add()
 GET           /tent/:id                                   controllers.Tents.edit(id:Long)
+GET           /tent/:id/fromTemplate                      controllers.Tents.neuFromTemplate(id:Long)
 POST          /tent/:id                                   controllers.Tents.update(id:Long)
 POST          /tent/:id/delete                            controllers.Tents.delete(id:Long)
 GET           /ajax/tent/:id                              controllers.Tents.getTent(id:Long)
@@ -47,6 +48,7 @@ GET           /ajax/tent/:id                              controllers.Tents.getT
 #-----------------------
 GET           /priceOffer/:eventType/:id                  controllers.Documents.priceOffer(eventType, id)
 GET           /contract/:eventType/:id                    controllers.Documents.contract(eventType, id)
+GET           /loadingList/:eventType/:id                 controllers.Documents.loadingList(eventType, id)
 
 # Play-authenticate routes
 GET           /login                                      controllers.App.login()

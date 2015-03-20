@@ -15,12 +15,11 @@ import play.mvc.Http;
 import play.mvc.Result;
 import scala.concurrent.duration.Duration;
 import services.Cron;
-import controllers.routes;
 
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
-
+import controllers.routes;
 import static play.mvc.Results.*;
 
 /**
@@ -30,6 +29,10 @@ public class Global extends GlobalSettings {
 
 
     public void onStart(final Application app) {
+
+        if (Ebean.find(StoredItem.class).findRowCount() == 0) {
+            Ebean.save((List) Yaml.load("initial-data.yml"));
+        }
 
         System.setProperty("user.timezone", "Europe/Warsaw");
         TimeZone.setDefault(TimeZone.getTimeZone("Europe/Warsaw"));

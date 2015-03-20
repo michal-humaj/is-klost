@@ -54,7 +54,7 @@ Seq[Any](format.raw/*1.1*/("""<ul class="nav nav-list">
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 16 10:25:18 CET 2015
+                  DATE: Fri Mar 20 13:13:41 CET 2015
                   SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/master/categories.scala.html
                   HASH: c43860f56cad0e933bb43487f9e27093384517db
                   MATRIX: 810->0|863->28|911->61|950->63|981->69|1023->103|1062->105|1097->114|1151->142|1174->145|1244->189|1288->213|1362->257|1394->259|1423->261
