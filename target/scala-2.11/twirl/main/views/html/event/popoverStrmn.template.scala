@@ -59,8 +59,8 @@ Seq[Any](format.raw/*1.1*/("""<div id="popoverStrmn" class="hide">
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 20 13:13:41 CET 2015
-                  SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/event/popoverStrmn.scala.html
+                  DATE: Wed Apr 08 17:32:51 CEST 2015
+                  SOURCE: C:/Users/MiHu/projects/is-klost/is-klost/app/views/event/popoverStrmn.scala.html
                   HASH: 11ca3dcd53c1aa2e6be18daad5184fec2cea742a
                   MATRIX: 811->0|1012->174|1040->175|1068->176|1168->248|1197->249|1360->385|1388->386|1416->387|1506->449|1535->450|1872->759|1901->760|1930->761|2024->826|2054->827|2175->921|2223->948|2269->966
                   LINES: 29->1|33->5|33->5|33->5|33->5|33->5|35->7|35->7|35->7|35->7|35->7|42->14|42->14|42->14|42->14|42->14|44->16|44->16|45->17

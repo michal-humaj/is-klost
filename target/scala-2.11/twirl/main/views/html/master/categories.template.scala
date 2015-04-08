@@ -54,8 +54,8 @@ Seq[Any](format.raw/*1.1*/("""<ul class="nav nav-list">
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 20 13:13:41 CET 2015
-                  SOURCE: C:/Users/MiHu/Documents/projects/is-klost/is-klost/app/views/master/categories.scala.html
+                  DATE: Wed Apr 08 17:32:51 CEST 2015
+                  SOURCE: C:/Users/MiHu/projects/is-klost/is-klost/app/views/master/categories.scala.html
                   HASH: c43860f56cad0e933bb43487f9e27093384517db
                   MATRIX: 810->0|863->28|911->61|950->63|981->69|1023->103|1062->105|1097->114|1151->142|1174->145|1244->189|1288->213|1362->257|1394->259|1423->261
                   LINES: 29->1|31->3|31->3|31->3|32->4|32->4|32->4|33->5|34->6|34->6|35->7|35->7|38->10|39->11|41->13
