@@ -1,6 +1,7 @@
 package controllers;
 
-
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
 import com.feth.play.module.pa.PlayAuthenticate;
 import com.feth.play.module.pa.user.AuthUser;
 import models.User;
@@ -22,13 +23,17 @@ import static play.mvc.Http.Context.Implicit.session;
  */
 public class LoggedAdmin extends Security.Authenticator {
 
-    public static final String adminId = "105150527948667127205"; // Lukas Cron
+    public static String adminId = null; // Lukas Cron
     private static List<String> adminIds = Arrays.asList("104577664461666247347", "105150527948667127205");
     public static final Long ACCESS_TOKEN_LIFETIME = 3_000_000L;
 
+    static{
+        Config conf = ConfigFactory.load();
+        adminId = conf.getString("admin.id");
+    }
+
     @Override
     public String getUsername(final Http.Context ctx) {
-
         final AuthUser u = PlayAuthenticate.getUser(session());
         if (u == null) return null;
         if (isAdminId(u.getId())) {

@@ -1,5 +1,6 @@
 package controllers;
 
+import com.avaje.ebean.Ebean;
 import com.google.api.services.calendar.model.Event;
 import dto.EntriesContainer;
 import dto.EventTO;
@@ -81,11 +82,15 @@ public class Events extends Controller {
     }
 
     public static Result update(String sEventType, String id) throws Exception {
+        Ebean.beginTransaction();
         try {
             EventType eventType = EventType.valueOf(sEventType);
             Event e = GoogleAPI.findEvent(eventType, id);
             EventTO eventTO = form(EventTO.class).bindFromRequest().get();
             EntriesContainer container = form(EntriesContainer.class).bindFromRequest().get();
+            //TODO zistit dostupnost
+
+
             List<Entry> oldEntries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
             for (Entry entry : oldEntries) entry.delete();
             for (Entry entry : container.entries) {
@@ -96,6 +101,7 @@ public class Events extends Controller {
             container.entries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
             e = eventTO.toGoogleEvent(e.getId(), container.getEntriesInfo());
             GoogleAPI.updateEvent(e, eventType);
+            Ebean.commitTransaction();
             return redirect(routes.App.calendar(eventTO.startDate));
         } catch (IOException | IllegalArgumentException e1) {
             e1.printStackTrace();
@@ -103,6 +109,8 @@ public class Events extends Controller {
         } catch (IllegalStateException e1) {
             current().flash().put("error", Messages.get("err.eventStartEnd", id));
             return redirect(routes.Events.edit(sEventType, id));
+        } finally {
+            Ebean.endTransaction();
         }
     }
 

@@ -1,5 +1,6 @@
 package controllers;
 
+import com.google.api.services.calendar.model.Event;
 import dto.Category;
 import dto.EventType;
 import models.Accessory;
@@ -12,6 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
+import services.GoogleAPI;
 import services.Util;
 
 import java.io.ByteArrayOutputStream;
@@ -60,7 +62,6 @@ public class Documents extends Controller {
         XSSFSheet sheet = workbook.getSheetAt(0);
         int rowCounter = beginRownum;
         for (Entry e : entries) {
-            System.out.println("-----------1");
             XSSFRow row = sheet.getRow(rowCounter);
             XSSFCell cell = row.getCell(nameColnum);
             cell.setCellValue(e.item.name);
@@ -92,7 +93,10 @@ public class Documents extends Controller {
                 loadListEntries.add(tentE);
             }
         }
-        response().setHeader("Content-disposition", "attachment; filename=nakladaci_list.xlsx");
+        Event e = GoogleAPI.findEvent(type, id);
+        String eventName =  e.getSummary();
+        String fileName = eventName.substring(0, Math.min(eventName.length(), 20));
+        response().setHeader("Content-disposition", "attachment; filename=" + fileName + ".xlsx");
         return ok(excel(PATH_TO_REPO + "public/docs/nakladaci_list.xlsx", loadListEntries, 0, 0, 1).toByteArray());
     }
 }

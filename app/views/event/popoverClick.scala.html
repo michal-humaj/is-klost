@@ -17,12 +17,7 @@
                 </a>
             </div>
 
-            <div class="col-sm-6" data-bind="attr: { class: event().isChangeCalBtnVisible() ? 'col-sm-6' : 'col-sm-6 hide' }" >
-                <a class="btn btn-white btn-inverse btnPopover" type="submit" data-bind="click: changeCal">
-                    <i class="ace-icon fa fa-calendar-o bigger-110"></i>
-                        <!--ko text: event().changeCalText--><!--/ko-->
-                </a>
-            </div>
+
         </div>
 
         <div class="form-group">
@@ -32,12 +27,14 @@
                     @Messages("btn.delete")
                 </a>
             </div>
-            <div class="col-sm-6">
-                <a class="btn btn-sm btn-info btnPopover" href data-bind="attr: { href: '/event/' + event().eventType() + '/' + event().id() }">
-                    <i class="ace-icon fa fa-pencil bigger-110"></i>
-                    @Messages("btn.edit")
+
+            <div class="col-sm-6" data-bind="attr: { class: event().isChangeCalBtnVisible() ? 'col-sm-6' : 'col-sm-6 hide' }" >
+                <a class="btn btn-white btn-inverse btnPopover" type="submit" data-bind="click: changeCal">
+                    <i class="ace-icon fa fa-calendar-o bigger-110"></i>
+                        <!--ko text: event().changeCalText--><!--/ko-->
                 </a>
             </div>
+
         </div>
 
     </form>

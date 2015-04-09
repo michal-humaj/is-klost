@@ -1,6 +1,7 @@
 @(date: String)
 
 @import com.feth.play.module.pa.views.html._
+@import com.typesafe.config.ConfigFactory
 
 @views.html.master.main(Messages("nav.cal"))(0) {
 
@@ -13,6 +14,13 @@
     @views.html.event.popoverStrmn()
 
     @views.html.event.modalDelete()
+
+    <div id="calIds"
+        data-calIdsAction='@ConfigFactory.load().getString("calIds.action")'
+        data-calIdsReservation='@ConfigFactory.load().getString("calIds.reservation")'
+        data-calIdsInstallation='@ConfigFactory.load().getString("calIds.installation")'
+        data-calIdsSelftransport='@ConfigFactory.load().getString("calIds.selftransport")'>
+    </div>
 
     <div class="row">
         <div class="col-sm-12">

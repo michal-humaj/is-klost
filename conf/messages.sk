@@ -44,6 +44,7 @@ btn.addTent=Vytvoriť
 btn.addEvent=Vytvoriť 
 btn.addItem=Vytvoriť
 btn.addEventAndEdit=Vytvoriť a priradiť položky
+btn.newTentFromTemplate=Vytvoriť stan zo šablóny
 
 btn.import=Naskladniť
 btn.export=Vyskladniť
@@ -88,6 +89,7 @@ h.itemAvail=Dostupnosť položiek
 h.items=Položky
 
 h.newTent=Nový typ stanu
+h.newTentFromTemplate=Nový typ stanu na základe existujúceho
 h.newEvent=Nová udalosť
 h.newItem=Nová položka
 

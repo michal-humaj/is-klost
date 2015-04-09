@@ -9,9 +9,12 @@ import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.Events;
 import com.google.common.collect.ImmutableMap;
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
 import dto.EventType;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 import static play.mvc.Controller.session;
@@ -23,12 +26,15 @@ public class GoogleAPI {
 
     private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
     private static final JsonFactory JSON_FACTORY = new JacksonFactory();
-    public static final Map<EventType, String> calIds = ImmutableMap.of(
-            EventType.ACTION, "gkga73e3s4bklif5eltqb41gno@group.calendar.google.com",
-            EventType.RESERVATION, "qe79trfqih92ah9rnq19h5pmto@group.calendar.google.com",
-            EventType.INSTALLATION, "rt1atosnnssnfqp0nmupusq31g@group.calendar.google.com",
-            EventType.SELFTRANSPORT, "ccb1islld3e8s5iukdksp6k4k0@group.calendar.google.com"
-    );
+    public static final Map<EventType, String> calIds = new HashMap<>();
+
+    static{
+        Config conf = ConfigFactory.load();
+        calIds.put(EventType.ACTION, conf.getString("calIds.action"));
+        calIds.put(EventType.RESERVATION, conf.getString("calIds.reservation"));
+        calIds.put(EventType.INSTALLATION, conf.getString("calIds.installation"));
+        calIds.put(EventType.SELFTRANSPORT, conf.getString("calIds.selftransport"));
+    }
 
     public static Event addEvent(Event event, EventType eventType) throws IOException {
         return calendar()

@@ -44,6 +44,7 @@ btn.addTent=Create
 btn.addEvent=Create 
 btn.addItem=Create
 btn.addEventAndEdit=Create and assign items
+btn.newTentFromTemplate=Create tent from template
 
 btn.import=Import
 btn.export=Export
@@ -88,6 +89,7 @@ h.itemAvail=Item availability
 h.items=Items
 
 h.newTent=New tent type
+h.newTentFromTemplate=New tent type based on existing
 h.newEvent=New event
 h.newItem=New item
 

@@ -1,5 +1,7 @@
 function initKlostIS() {
 
+    initCalendarVariables();
+
     eventViewModel = new EventViewModel();
 
     $('html').on('click', function () {
@@ -46,7 +48,7 @@ function eventClick(event, jsEvent, view) {
     $(jsEvent.target).popover({
         animation: false,
         container: '#fullcalendar',
-        title: event.title.split(' →')[0],
+        title: '<a href="/event/' + eventViewModel.event().eventType() + '/' + eventViewModel.event().id() + '">' + event.title.split(' →')[0] + '</a>',
         trigger: 'manual',
         placement: 'auto',
         html: true,

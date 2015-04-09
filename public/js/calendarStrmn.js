@@ -1,5 +1,7 @@
 function initKlostIS() {
 
+    initCalendarVariables();
+
     $('html').on('click', function () {
         removePopovers();
     });

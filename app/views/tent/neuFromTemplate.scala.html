@@ -3,8 +3,8 @@
 @views.html.master.main(Messages("h.editTent"))(2) {
 } {
     <div class="page-header">
-        <h1>Vyvtvorit nový stan na základe existujuceho
-
+        <h1>
+        @Messages("h.newTentFromTemplate")
         </h1>
     </div>
 
@@ -17,7 +17,7 @@
 
             <div class="clearfix form-actions">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary">@Messages("btn.add")</button>
+                    <button type="submit" class="btn btn-primary">@Messages("btn.addTent")</button>
                         &nbsp;
                     <a class="btn" type="reset" href="@routes.Tents.list">@Messages("btn.back")</a>
                 </div>
