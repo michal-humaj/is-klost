@@ -30,7 +30,7 @@ DELETE        /ajax/item/:id                              controllers.Items.dele
 
 #------------- AVAILABILITY
 #--------------------------
-GET           /ajax/events/:date                          controllers.Avail.getEventsAt(date)
+GET           /ajax/events/:date                          controllers.Avail.listEventsAt(date)
 POST          /ajax/availability                          controllers.Avail.availability()
 
 #------------- TENTS

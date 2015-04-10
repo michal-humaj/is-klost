@@ -74,7 +74,7 @@ public class App extends Controller {
                         routes.javascript.Events.changeCal(),
                         routes.javascript.Events.upcomingActions(),
                         routes.javascript.Events.deleteInstl(),
-                        routes.javascript.Avail.getEventsAt(),
+                        routes.javascript.Avail.listEventsAt(),
                         routes.javascript.Avail.availability()
                 )
         );

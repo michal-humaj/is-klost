@@ -2,12 +2,11 @@ package controllers;
 
 import com.avaje.ebean.Ebean;
 import com.google.api.services.calendar.model.Event;
-import dto.EntriesContainer;
-import dto.EventTO;
-import dto.EventType;
-import dto.EventsContainer;
+import dto.*;
 import models.Entry;
 import models.Installation;
+import models.StoredItem;
+import org.joda.time.LocalDate;
 import play.data.Form;
 import play.i18n.Messages;
 import play.mvc.Controller;
@@ -20,8 +19,9 @@ import views.html.event.editInstallation;
 import views.html.event.editStrmn;
 
 import java.io.IOException;
-import java.util.Date;
-import java.util.List;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.util.*;
 
 import static play.data.Form.form;
 import static play.libs.Json.toJson;
@@ -58,7 +58,7 @@ public class Events extends Controller {
             Event e = GoogleAPI.findEvent(EventType.valueOf(eventType), id);
             EventTO eventTO = new EventTO(e);
             Form<EventTO> eventForm = form(EventTO.class).fill(eventTO);
-            return ok(editAdmin.render(eventType, id, eventTO.allDay, eventForm, eventTO.startDate));
+            return ok(editAdmin.render(eventType, id, eventTO.allDay, eventForm, eventTO.startDate, null));
         } catch (IOException | IllegalArgumentException e1) {
             e1.printStackTrace();
             return notFound(error404.render());
@@ -82,15 +82,11 @@ public class Events extends Controller {
     }
 
     public static Result update(String sEventType, String id) throws Exception {
-        Ebean.beginTransaction();
         try {
             EventType eventType = EventType.valueOf(sEventType);
             Event e = GoogleAPI.findEvent(eventType, id);
             EventTO eventTO = form(EventTO.class).bindFromRequest().get();
             EntriesContainer container = form(EntriesContainer.class).bindFromRequest().get();
-            //TODO zistit dostupnost
-
-
             List<Entry> oldEntries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
             for (Entry entry : oldEntries) entry.delete();
             for (Entry entry : container.entries) {
@@ -101,7 +97,30 @@ public class Events extends Controller {
             container.entries = Entry.find.where().eq("eventType", eventType).eq("eventId", id).findList();
             e = eventTO.toGoogleEvent(e.getId(), container.getEntriesInfo());
             GoogleAPI.updateEvent(e, eventType);
-            Ebean.commitTransaction();
+
+            SortedMap<LocalDate, List<AvailTO>> availMap = new TreeMap<>();
+            LocalDate date = new LocalDate(eventTO.start);
+            LocalDate endDate = new LocalDate(eventTO.end);
+            while(date.isBefore(endDate) || (!eventTO.allDay && date.equals(endDate))) {
+                EventsContainer eventsContainer = Avail.getEventsContainerForDate(date);
+                ArrayList<AvailTO> availList = Avail.getAvailListForEvents(eventsContainer);
+                Iterator<AvailTO> it = availList.iterator();
+                while (it.hasNext()) {
+                    AvailTO availTO = it.next();
+                    if (availTO.available.compareTo(BigDecimal.ZERO) >= 0) {
+                        it.remove();
+                    }
+                }
+                if(availList.size() > 0){
+                    availMap.put(date, availList);
+                }
+                date = date.plusDays(1);
+            }
+            if (availMap.keySet().size() > 0) {
+                Form<EventTO> eventForm = form(EventTO.class).fill(eventTO);
+                return ok(editAdmin.render(sEventType, id, eventTO.allDay, eventForm, eventTO.startDate, availMap));
+            }
+
             return redirect(routes.App.calendar(eventTO.startDate));
         } catch (IOException | IllegalArgumentException e1) {
             e1.printStackTrace();
@@ -109,8 +128,6 @@ public class Events extends Controller {
         } catch (IllegalStateException e1) {
             current().flash().put("error", Messages.get("err.eventStartEnd", id));
             return redirect(routes.Events.edit(sEventType, id));
-        } finally {
-            Ebean.endTransaction();
         }
     }
 

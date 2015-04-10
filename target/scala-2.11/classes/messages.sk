@@ -44,6 +44,7 @@ btn.addTent=Vytvoriť
 btn.addEvent=Vytvoriť 
 btn.addItem=Vytvoriť
 btn.addEventAndEdit=Vytvoriť a priradiť položky
+btn.newTentFromTemplate=Vytvoriť stan zo šablóny
 
 btn.import=Naskladniť
 btn.export=Vyskladniť
@@ -88,6 +89,7 @@ h.itemAvail=Dostupnosť položiek
 h.items=Položky
 
 h.newTent=Nový typ stanu
+h.newTentFromTemplate=Nový typ stanu na základe existujúceho
 h.newEvent=Nová udalosť
 h.newItem=Nová položka
 
@@ -103,6 +105,7 @@ h.tentItems=Potrebné položky
 h.deleteTent=Vymazať stan?
 h.deleteEvent=Vymazať udalosť?
 h.deleteItem=Vymazať položku?
+h.itemsMissing=Položky chýbajú v dňoch
 
 h.success=Úspech
 h.err=Chyba
@@ -152,6 +155,12 @@ f.deleteTent=Stan {0} bol vymazaný.
 
 f.importItem=Množstvo položky {0} ste z zvýšili z {1} na {2}.
 f.exportItem=Množstvo položky {0} ste z znížili z {1} na {2}.
+
+f.warning=Pozor!
+f.moreItemsReserved=Zarezervovali ste viac položiek ako v skutočnosti máte na sklade
+f.changesSaved=Zmeny sú uložené
+f.checkAvail=Skontrolujte dostupnosť kliknutím na dátum, alebo
+f.goToCal=prejdite do kalendára
 
 # Errors
 err.general=Požadovanú operáciu sa nepodarilo vykonať. Skontrolujte svoje pripojenie a skúste reštartovať prehliadač, odhlásiť sa a prihlásiť sa znova.

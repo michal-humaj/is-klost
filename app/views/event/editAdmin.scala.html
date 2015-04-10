@@ -1,5 +1,5 @@
-@(eventType: String, eventId: String, allDay: Boolean, eventForm: Form[dto.EventTO], returnDate: String)
-
+@(eventType: String, eventId: String, allDay: Boolean, eventForm: Form[dto.EventTO], returnDate: String, availMap: Map[org.joda.time.LocalDate, List[dto.AvailTO]])
+@import java.text.DecimalFormat
 @views.html.master.main(Messages("h.editEvent"))(0) {
 } {
     <div class="page-header">
@@ -14,6 +14,39 @@
             @if(flash.containsKey("error")) {
                 <div class="alert alert-danger">
                 @flash.get("error")
+                </div>
+            }
+            @if(availMap != null) {
+                <div class="alert alert-info">
+                    <div>
+                        <strong>
+                            <i class="ace-icon fa fa-times"></i>
+                            @Messages("f.warning")
+                        </strong>
+                            @Messages("f.moreItemsReserved")
+                    </div>
+                    <h5><b>@Messages("h.itemsMissing")</b></h5>
+
+                    <div>
+                    @availMap.keySet.map { a =>
+                        <a href='@routes.App.store(a.toString)' class="text-primary"><b>@a.toString("dd.MM. yyyy")</b></a>
+                        <ul>
+                        @availMap.get(a).map { availTo =>
+                            <li>
+                                @availTo.name
+                            <strong class="text-danger">@((new DecimalFormat("#0.##")).format(availTo.available))</strong>
+                            </li>
+                        }
+                        </ul>
+                    }
+                    </div>
+                    <div>
+                        <strong>
+                            <i class="ace-icon fa fa-floppy-o"></i>
+                            @Messages("f.changesSaved")
+                        </strong>
+                        <p>@Messages("f.checkAvail") <a href='@routes.App.calendar(returnDate)'><b>@Messages("f.goToCal")</b></a></p>
+                    </div>
                 </div>
             }
 

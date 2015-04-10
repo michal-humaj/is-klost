@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/MiHu/projects/is-klost/is-klost/conf/routes
-// @HASH:ea6b3fba3a994eec3362864731091dace84d53cc
-// @DATE:Wed Apr 08 17:32:50 CEST 2015
+// @HASH:fe8911292138a3334b4cfa07e65a15119df2a326
+// @DATE:Fri Apr 10 11:40:17 CEST 2015
 
 package controllers;
 

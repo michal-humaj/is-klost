@@ -44,6 +44,7 @@ btn.addTent=Create
 btn.addEvent=Create 
 btn.addItem=Create
 btn.addEventAndEdit=Create and assign items
+btn.newTentFromTemplate=Create tent from template
 
 btn.import=Import
 btn.export=Export
@@ -88,6 +89,7 @@ h.itemAvail=Item availability
 h.items=Items
 
 h.newTent=New tent type
+h.newTentFromTemplate=New tent type based on existing
 h.newEvent=New event
 h.newItem=New item
 
@@ -103,6 +105,7 @@ h.tentItems=Needed items
 h.deleteTent=Delete tent?
 h.deleteEvent=Delete event?
 h.deleteItem=Delete item?
+h.itemsMissing=Items are missing at following days
 
 h.success=Success
 h.err=Error
@@ -152,6 +155,12 @@ f.deleteTent=Tent {0} was deleted.
 
 f.importItem=Amount of item {0} increased from {1} to {2}
 f.exportItem=Amount of item {0} decreased from {1} to {2}
+
+f.warning=Warning!
+f.moreItemsReserved=You reserved more items than you have in the warehouse
+f.changesSaved=Changes are saved
+f.checkAvail=Check availability by clicking on date, or
+f.goToCal=go to calendar
 
 # Errors
 err.general=Operation could not be comlpeted. Check your connection and try to restart web browser, logout and login again.

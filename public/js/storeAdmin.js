@@ -77,7 +77,7 @@ function loadEventsAndAvailForSelectedDay() {
     startSpinWidgetEvents();
     startSpinWidgetItems();
 
-    var requestEvents = jsRoutes.controllers.Avail.getEventsAt(storeViewModel.dateSelected().format().split('T')[0]).ajax();
+    var requestEvents = jsRoutes.controllers.Avail.listEventsAt(storeViewModel.dateSelected().format().split('T')[0]).ajax();
     requestEvents.done(function (eventsContainer) {
         var atDateEvents = eventsContainer.actions.map(function (e) {
             if (e.allDay) {

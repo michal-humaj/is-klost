@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/MiHu/projects/is-klost/is-klost/conf/routes
-// @HASH:ea6b3fba3a994eec3362864731091dace84d53cc
-// @DATE:Wed Apr 08 17:32:50 CEST 2015
+// @HASH:fe8911292138a3334b4cfa07e65a15119df2a326
+// @DATE:Fri Apr 10 11:40:17 CEST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -185,7 +185,7 @@ class ReverseAvail {
 
 
 // @LINE:33
-def getEventsAt(date:String): Call = {
+def listEventsAt(date:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "ajax/events/" + implicitly[PathBindable[String]].unbind("date", dynamicString(date)))
 }
@@ -674,8 +674,8 @@ class ReverseAvail {
 
 
 // @LINE:33
-def getEventsAt : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Avail.getEventsAt",
+def listEventsAt : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Avail.listEventsAt",
    """
       function(date) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ajax/events/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("date", encodeURIComponent(date))})
@@ -1239,8 +1239,8 @@ class ReverseAvail {
 
 
 // @LINE:33
-def getEventsAt(date:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Avail.getEventsAt(date), HandlerDef(this.getClass.getClassLoader, "", "controllers.Avail", "getEventsAt", Seq(classOf[String]), "GET", """------------- AVAILABILITY
+def listEventsAt(date:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Avail.listEventsAt(date), HandlerDef(this.getClass.getClassLoader, "", "controllers.Avail", "listEventsAt", Seq(classOf[String]), "GET", """------------- AVAILABILITY
 --------------------------""", _prefix + """ajax/events/$date<[^/]+>""")
 )
                       
