@@ -10,7 +10,7 @@ function initKlostIS() {
 
     var datepicker = createDatepicker();
     var fullcalendar = $('#fullcalendar');
-
+    pMouseOverEvent = $('#pMouseOverEvent');
     fullcalendarArgs.eventSources.map(function (eSource) {
         eSource.editable = true;
     });
@@ -22,6 +22,7 @@ function initKlostIS() {
     fullcalendarArgs.eventDrop = dragEvent;
     fullcalendarArgs.eventResize = dragEvent;
     fullcalendarArgs.eventClick = eventClick;
+    fullcalendarArgs.eventMouseover = eventMouseover;
     fullcalendarArgs.viewRender = function (view, element) {
         datepicker.datepicker('setDate', view.intervalStart.format());
     };
@@ -41,6 +42,10 @@ function initKlostIS() {
     loadUpcomingActions();
 }
 
+function eventMouseover(event, jsEvent, view){
+    pMouseOverEvent.html(event.title);
+}
+
 function eventClick(event, jsEvent, view) {
     removePopovers();
     var eventType = calTypes[event.source.googleCalendarId];
@@ -48,7 +53,7 @@ function eventClick(event, jsEvent, view) {
     $(jsEvent.target).popover({
         animation: false,
         container: '#fullcalendar',
-        title: '<a href="/event/' + eventViewModel.event().eventType() + '/' + eventViewModel.event().id() + '">' + event.title.split(' →')[0] + '</a>',
+        title: '<a href="/event/' + eventViewModel.event().eventType() + '/' + eventViewModel.event().id() + '">' + event.title + '</a>',
         trigger: 'manual',
         placement: 'auto',
         html: true,

@@ -33,36 +33,44 @@ Seq[Any](format.raw/*1.16*/("""
 """),_display_(/*6.2*/views/*6.7*/.html.master.main(Messages("nav.cal"))/*6.45*/(0)/*6.48*/ {_display_(Seq[Any](format.raw/*6.50*/("""
 
     """),_display_(/*8.6*/views/*8.11*/.html.master.datepicker()),format.raw/*8.36*/("""
-""")))}/*9.2*/ {_display_(Seq[Any](format.raw/*9.4*/("""
-    """),_display_(/*10.6*/views/*10.11*/.html.event.popoverNew()),format.raw/*10.35*/("""
 
-    """),_display_(/*12.6*/views/*12.11*/.html.event.popoverClick()),format.raw/*12.37*/("""
+    """),format.raw/*10.5*/("""<div class="row">
+        <div class="col-xs-12">
+            <blockquote class="pull-right" style="font-size: 14px;">
+                <p id="pMouseOverEvent"></p>
+            </blockquote>
+        </div>
+    </div>
+""")))}/*17.2*/ {_display_(Seq[Any](format.raw/*17.4*/("""
+    """),_display_(/*18.6*/views/*18.11*/.html.event.popoverNew()),format.raw/*18.35*/("""
 
-    """),_display_(/*14.6*/views/*14.11*/.html.event.popoverStrmn()),format.raw/*14.37*/("""
+    """),_display_(/*20.6*/views/*20.11*/.html.event.popoverClick()),format.raw/*20.37*/("""
 
-    """),_display_(/*16.6*/views/*16.11*/.html.event.modalDelete()),format.raw/*16.36*/("""
+    """),_display_(/*22.6*/views/*22.11*/.html.event.popoverStrmn()),format.raw/*22.37*/("""
 
-    """),format.raw/*18.5*/("""<div id="calIds"
-        data-calIdsAction='"""),_display_(/*19.29*/ConfigFactory/*19.42*/.load().getString("calIds.action")),format.raw/*19.76*/("""'
-        data-calIdsReservation='"""),_display_(/*20.34*/ConfigFactory/*20.47*/.load().getString("calIds.reservation")),format.raw/*20.86*/("""'
-        data-calIdsInstallation='"""),_display_(/*21.35*/ConfigFactory/*21.48*/.load().getString("calIds.installation")),format.raw/*21.88*/("""'
-        data-calIdsSelftransport='"""),_display_(/*22.36*/ConfigFactory/*22.49*/.load().getString("calIds.selftransport")),format.raw/*22.90*/("""'>
+    """),_display_(/*24.6*/views/*24.11*/.html.event.modalDelete()),format.raw/*24.36*/("""
+
+    """),format.raw/*26.5*/("""<div id="calIds"
+        data-calIdsAction='"""),_display_(/*27.29*/ConfigFactory/*27.42*/.load().getString("calIds.action")),format.raw/*27.76*/("""'
+        data-calIdsReservation='"""),_display_(/*28.34*/ConfigFactory/*28.47*/.load().getString("calIds.reservation")),format.raw/*28.86*/("""'
+        data-calIdsInstallation='"""),_display_(/*29.35*/ConfigFactory/*29.48*/.load().getString("calIds.installation")),format.raw/*29.88*/("""'
+        data-calIdsSelftransport='"""),_display_(/*30.36*/ConfigFactory/*30.49*/.load().getString("calIds.selftransport")),format.raw/*30.90*/("""'>
     </div>
 
     <div class="row">
         <div class="col-sm-12">
-            <div id="fullcalendar" data-date=""""),_display_(/*27.48*/date),format.raw/*27.52*/(""""></div>
+            <div id="fullcalendar" data-date=""""),_display_(/*35.48*/date),format.raw/*35.52*/(""""></div>
         </div>
     </div>
-""")))}/*30.2*/ {_display_(Seq[Any](format.raw/*30.4*/("""
-    """),format.raw/*31.5*/("""<script src='"""),_display_(/*31.19*/routes/*31.25*/.Assets.at("js/calendarCommon.js")),format.raw/*31.59*/("""'></script>
-    """),_display_(/*32.6*/currentAuth()/*32.19*/ { auth =>_display_(Seq[Any](format.raw/*32.29*/("""
-        """),_display_(/*33.10*/if(LoggedAdmin.isAdminId(auth.getId()))/*33.49*/ {_display_(Seq[Any](format.raw/*33.51*/("""
-            """),format.raw/*34.13*/("""<script src='"""),_display_(/*34.27*/routes/*34.33*/.Assets.at("js/calendarAdmin.js")),format.raw/*34.66*/("""'></script>
-        """)))}/*35.11*/else/*35.16*/{_display_(Seq[Any](format.raw/*35.17*/("""
-            """),format.raw/*36.13*/("""<script src='"""),_display_(/*36.27*/routes/*36.33*/.Assets.at("js/calendarStrmn.js")),format.raw/*36.66*/("""'></script>
-        """)))}),format.raw/*37.10*/("""
-    """)))}),format.raw/*38.6*/("""
+""")))}/*38.2*/ {_display_(Seq[Any](format.raw/*38.4*/("""
+    """),format.raw/*39.5*/("""<script src='"""),_display_(/*39.19*/routes/*39.25*/.Assets.at("js/calendarCommon.js")),format.raw/*39.59*/("""'></script>
+    """),_display_(/*40.6*/currentAuth()/*40.19*/ { auth =>_display_(Seq[Any](format.raw/*40.29*/("""
+        """),_display_(/*41.10*/if(LoggedAdmin.isAdminId(auth.getId()))/*41.49*/ {_display_(Seq[Any](format.raw/*41.51*/("""
+            """),format.raw/*42.13*/("""<script src='"""),_display_(/*42.27*/routes/*42.33*/.Assets.at("js/calendarAdmin.js")),format.raw/*42.66*/("""'></script>
+        """)))}/*43.11*/else/*43.16*/{_display_(Seq[Any](format.raw/*43.17*/("""
+            """),format.raw/*44.13*/("""<script src='"""),_display_(/*44.27*/routes/*44.33*/.Assets.at("js/calendarStrmn.js")),format.raw/*44.66*/("""'></script>
+        """)))}),format.raw/*45.10*/("""
+    """)))}),format.raw/*46.6*/("""
 """)))}))}
   }
 
@@ -75,11 +83,11 @@ Seq[Any](format.raw/*1.16*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Apr 10 11:40:22 CEST 2015
+                  DATE: Tue Apr 14 14:48:10 CEST 2015
                   SOURCE: C:/Users/MiHu/projects/is-klost/is-klost/app/views/calendar.scala.html
-                  HASH: e0bf4a5a445ddd6e1ca270e3fd3cf6b277389478
-                  MATRIX: 726->1|912->15|942->108|970->111|982->116|1028->154|1039->157|1078->159|1112->168|1125->173|1170->198|1190->201|1228->203|1261->210|1275->215|1320->239|1355->248|1369->253|1416->279|1451->288|1465->293|1512->319|1547->328|1561->333|1607->358|1642->366|1715->412|1737->425|1792->459|1855->495|1877->508|1937->547|2001->584|2023->597|2084->637|2149->675|2171->688|2233->729|2381->850|2406->854|2463->893|2502->895|2535->901|2576->915|2591->921|2646->955|2690->973|2712->986|2760->996|2798->1007|2846->1046|2886->1048|2928->1062|2969->1076|2984->1082|3038->1115|3079->1138|3092->1143|3131->1144|3173->1158|3214->1172|3229->1178|3283->1211|3336->1233|3373->1240
-                  LINES: 26->1|30->1|32->5|33->6|33->6|33->6|33->6|33->6|35->8|35->8|35->8|36->9|36->9|37->10|37->10|37->10|39->12|39->12|39->12|41->14|41->14|41->14|43->16|43->16|43->16|45->18|46->19|46->19|46->19|47->20|47->20|47->20|48->21|48->21|48->21|49->22|49->22|49->22|54->27|54->27|57->30|57->30|58->31|58->31|58->31|58->31|59->32|59->32|59->32|60->33|60->33|60->33|61->34|61->34|61->34|61->34|62->35|62->35|62->35|63->36|63->36|63->36|63->36|64->37|65->38
+                  HASH: ad519cfd75705e63cfab211df82084639d086432
+                  MATRIX: 726->1|912->15|940->104|967->106|979->111|1025->149|1036->152|1075->154|1107->161|1120->166|1165->191|1198->197|1433->414|1472->416|1504->422|1518->427|1563->451|1596->458|1610->463|1657->489|1690->496|1704->501|1751->527|1784->534|1798->539|1844->564|1877->570|1949->615|1971->628|2026->662|2088->697|2110->710|2170->749|2233->785|2255->798|2316->838|2380->875|2402->888|2464->929|2607->1045|2632->1049|2686->1085|2725->1087|2757->1092|2798->1106|2813->1112|2868->1146|2911->1163|2933->1176|2981->1186|3018->1196|3066->1235|3106->1237|3147->1250|3188->1264|3203->1270|3257->1303|3297->1325|3310->1330|3349->1331|3390->1344|3431->1358|3446->1364|3500->1397|3552->1418|3588->1424
+                  LINES: 26->1|30->1|32->5|33->6|33->6|33->6|33->6|33->6|35->8|35->8|35->8|37->10|44->17|44->17|45->18|45->18|45->18|47->20|47->20|47->20|49->22|49->22|49->22|51->24|51->24|51->24|53->26|54->27|54->27|54->27|55->28|55->28|55->28|56->29|56->29|56->29|57->30|57->30|57->30|62->35|62->35|65->38|65->38|66->39|66->39|66->39|66->39|67->40|67->40|67->40|68->41|68->41|68->41|69->42|69->42|69->42|69->42|70->43|70->43|70->43|71->44|71->44|71->44|71->44|72->45|73->46
                   -- GENERATED --
               */
           

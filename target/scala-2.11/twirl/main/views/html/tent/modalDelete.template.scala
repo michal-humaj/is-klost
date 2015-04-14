@@ -65,7 +65,7 @@ Seq[Any](format.raw/*1.1*/("""<div class="modal fade" id="modalDeleteTent" tabin
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Apr 10 11:40:22 CEST 2015
+                  DATE: Tue Apr 14 14:48:11 CEST 2015
                   SOURCE: C:/Users/MiHu/projects/is-klost/is-klost/app/views/tent/modalDelete.scala.html
                   HASH: 214407de2f0d2b340fa081ab9bf4c670ed12fafd
                   MATRIX: 809->0|1396->560|1441->584|1483->598|1733->821|1776->843|1906->946|1948->966

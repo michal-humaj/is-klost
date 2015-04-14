@@ -60,7 +60,7 @@ Seq[Any](format.raw/*1.82*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Apr 10 11:40:22 CEST 2015
+                  DATE: Tue Apr 14 14:48:11 CEST 2015
                   SOURCE: C:/Users/MiHu/projects/is-klost/is-klost/app/views/master/main.scala.html
                   HASH: 3fe1314eb1a5483fe53efee081e3ede86a019767
                   MATRIX: 748->1|916->81|944->84|956->89|991->116|1010->127|1049->129|1081->136|1094->141|1144->171|1176->177|1353->327|1381->334|1417->343|1539->438|1567->445|1608->458|1662->494|1701->496|1733->502|1765->513
