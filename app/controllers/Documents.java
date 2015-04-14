@@ -48,31 +48,16 @@ public class Documents extends Controller {
         EventType type = EventType.valueOf(eventType);
         response().setContentType("application/vnd.ms-excel");
         List<Entry> entries = Entry.find.where().eq("eventType", type).eq("eventId", id).not(eq("item.category", Category.TOOL)).findList();
+        Event e = GoogleAPI.findEvent(type, id);
+        String eventName =  e.getSummary();
+        String fileName = eventName.substring(0, Math.min(eventName.length(), 20));
         if (type.equals(EventType.SELFTRANSPORT)) {
-            response().setHeader("Content-disposition", "attachment; filename=zmluva-vlastna_doprava.xlsx");
+            response().setHeader("Content-disposition", "attachment; filename=Z_" + fileName + ".xlsx");
             return ok(excel(PATH_TO_REPO + "public/docs/zmluva-vlastna_doprava.xlsx", entries, 11, 1, 2).toByteArray());
         } else {
-            response().setHeader("Content-disposition", "attachment; filename=vykaz_na_akciu_NEW.xlsx");
+            response().setHeader("Content-disposition", "attachment; filename=V_" + fileName + ".xlsx");
             return ok(excel(PATH_TO_REPO + "public/docs/vykaz_na_akciu_NEW.xlsx", entries, 9, 0, 5).toByteArray());
         }
-    }
-
-    public static ByteArrayOutputStream excel(String fileName, List<Entry> entries, int beginRownum, int nameColnum, int amountColnum) throws IOException {
-        XSSFWorkbook workbook = new XSSFWorkbook(fileName);
-        XSSFSheet sheet = workbook.getSheetAt(0);
-        int rowCounter = beginRownum;
-        for (Entry e : entries) {
-            XSSFRow row = sheet.getRow(rowCounter);
-            XSSFCell cell = row.getCell(nameColnum);
-            cell.setCellValue(e.item.name);
-            cell = row.getCell(amountColnum);
-            cell.setCellValue(Util.df.format(e.amount));
-            rowCounter++;
-        }
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        workbook.write(out);
-        out.close();
-        return out;
     }
 
     public static Result loadingList(String eventType, String id) throws IOException {
@@ -96,7 +81,25 @@ public class Documents extends Controller {
         Event e = GoogleAPI.findEvent(type, id);
         String eventName =  e.getSummary();
         String fileName = eventName.substring(0, Math.min(eventName.length(), 20));
-        response().setHeader("Content-disposition", "attachment; filename=" + fileName + ".xlsx");
+        response().setHeader("Content-disposition", "attachment; filename=N_" + fileName + ".xlsx");
         return ok(excel(PATH_TO_REPO + "public/docs/nakladaci_list.xlsx", loadListEntries, 0, 0, 1).toByteArray());
+    }
+
+    public static ByteArrayOutputStream excel(String fileName, List<Entry> entries, int beginRownum, int nameColnum, int amountColnum) throws IOException {
+        XSSFWorkbook workbook = new XSSFWorkbook(fileName);
+        XSSFSheet sheet = workbook.getSheetAt(0);
+        int rowCounter = beginRownum;
+        for (Entry e : entries) {
+            XSSFRow row = sheet.getRow(rowCounter);
+            XSSFCell cell = row.getCell(nameColnum);
+            cell.setCellValue(e.item.name);
+            cell = row.getCell(amountColnum);
+            cell.setCellValue(Util.df.format(e.amount));
+            rowCounter++;
+        }
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        workbook.write(out);
+        out.close();
+        return out;
     }
 }
