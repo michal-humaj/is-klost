@@ -6,6 +6,14 @@
 @views.html.master.main(Messages("nav.cal"))(0) {
 
     @views.html.master.datepicker()
+
+    <div class="row">
+        <div class="col-xs-12">
+            <blockquote class="pull-right" style="font-size: 14px;">
+                <p id="pMouseOverEvent"></p>
+            </blockquote>
+        </div>
+    </div>
 } {
     @views.html.event.popoverNew()
 

@@ -35,7 +35,7 @@ function eventClick(event, jsEvent, view) {
     $(jsEvent.target).popover({
         animation: false,
         container: '#fullcalendar',
-        title: event.title.split(' →')[0],
+        title: event.title,
         trigger: 'manual',
         placement: 'auto',
         html: true,
